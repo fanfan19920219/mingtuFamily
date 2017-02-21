@@ -9,13 +9,13 @@
 #import "showWebViewController.h"
 #import "Header.h"
 
-@interface showWebViewController() {
+@interface showWebViewController()<UIWebViewDelegate,SYLoadingLoopViewDelegate> {
     UIWebView *_showWebView;
     UIButton *_backButton;
     UIButton *_gobackButton; //返回按钮
     
     UIView *_downView;
-    
+    SYLoadingLoopView *loadingLoopView;
 }
 
 @end
@@ -29,11 +29,25 @@
     
 }
 
+-(void)createLoadView{
+    if(loadingLoopView==nil){
+        loadingLoopView = [[SYLoadingLoopView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2-50, VIEW_HEIGHT/2 - 50, 100, 100)];
+    }
+    loadingLoopView.roundDuration = 10;//旋转一圈所需时间
+    loadingLoopView.isDefaultEndAnimation = YES;//是否需要旋转结束后的默认动画
+    loadingLoopView.delegate = self;
+    [_showWebView addSubview:loadingLoopView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //[loadingLoopView endAnimation];
+    });
+}
+
 -(void)create_webView{
     _showWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 40, VIEW_WIDTH, VIEW_HEIGHT - 40)];
     //_showWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT/2)];
     _showWebView.scalesPageToFit = YES;                                  //自动对页面进行缩放以适应屏幕
     _showWebView.detectsPhoneNumbers = YES;//自动检测网页上的电话号码，单击可以拨打
+    _showWebView.delegate = self;
     [self.view addSubview:_showWebView];
     if(!self.orHTML){
         NSURL* url = [NSURL URLWithString:self.URL];//创建URL
@@ -83,6 +97,17 @@
     tipLabel.font = [UIFont systemFontOfSize:13 weight:0.001];
     //[_downView addSubview:tipLabel];
     
+}
+
+
+#pragma mark - uiwebViewDelegate
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    [self createLoadView];
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [loadingLoopView endAnimation];
 }
 
 

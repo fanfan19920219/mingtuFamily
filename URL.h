@@ -19,5 +19,7 @@
 #define PERSONAL_MAIN @"http://www.renyeping.icoc.me/"
 //美丽说主页
 #define MEILISHUO @"http://www.meilishuo.com/"
+//bilibili
+#define BILI @"http://www.bilibili.com/"
 
 #endif /* URL_h */

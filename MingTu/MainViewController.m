@@ -10,7 +10,7 @@
 
 #define HEIDER_HEIGHT  VIEW_WIDTH*0.8
 #define HEADERCOLOR RGBA(173, 79, 80, 1)
-#define BUTTON_FRAME CGRectMake(0, _headerImageView.frame.origin.y + _headerImageView.frame.size.height + 2, VIEW_WIDTH, VIEW_WIDTH * 0.8)
+#define BUTTON_FRAME CGRectMake(0, _headerImageView.frame.origin.y + _headerImageView.frame.size.height , VIEW_WIDTH, VIEW_WIDTH * 0.8)
 
 
 #define SPACE (VIEW_WIDTH - BUTTON_SIZE*3)/4.0
@@ -68,7 +68,21 @@
     [self create_buttonView];
     [self push];
     [self createPage];
+    [self registerNotifaction];
 }
+
+-(void)registerNotifaction{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshHeader) name:@"refreshHeader" object:nil];
+}
+
+-(void)refreshHeader{
+    UIImage *headerImage = [[ZZH_LoadingProject shareMBProgress]readImage:TRUEPATH_IMAGE(HEADER_IMAGENAME)];
+    if(headerImage==nil){
+        
+    }
+    _smallImageView.image =headerImage;
+}
+
 
 -(void)createPage{
     // =================== 背景图片 ===========================
@@ -143,7 +157,13 @@
     _headerImageView.image = [UIImage imageNamed:@"水冰月.jpeg"];
     _headerImageView.backgroundColor = [UIColor blackColor];
     _smallImageView = [[UIImageView alloc]init];
-    _smallImageView.image =[UIImage imageNamed:@"renyeping2.png"];
+    
+    UIImage *headerImage = [[ZZH_LoadingProject shareMBProgress]readImage:TRUEPATH_IMAGE(HEADER_IMAGENAME)];
+    if(headerImage==nil){
+        headerImage = [UIImage imageNamed:@"renyeping2.png"];
+    }
+    _smallImageView.image =headerImage;
+    [_smallImageView setContentMode:UIViewContentModeScaleAspectFill];
     _smallImageView.frame = HEADERVIEW_FRAME;
     //添加手势
     UITapGestureRecognizer* changeTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
@@ -181,7 +201,7 @@
     
     
     _buttonArray = [[NSMutableArray alloc]init];
-    _titleArray = [[NSArray alloc]initWithObjects:@"饿",@"困",@"无聊",@"喵",@"噗",@"约", nil];
+    _titleArray = [[NSArray alloc]initWithObjects:@"外卖",@"美丽说",@"无聊",@"bilibili",@"扑哧",@"约会", nil];
     for(int i = 0  ; i < _titleArray.count ; i++){
         UIButton *videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [videoButton setSlide:videoButton andSlideColor:nil];
@@ -197,7 +217,7 @@
                 [videoButton setImage:[UIImage imageNamed:@"hungry.jpg"] forState:UIControlStateNormal];
                 break;
             case 1:
-                [videoButton setImage:[UIImage imageNamed:@"sleep.jpeg"] forState:UIControlStateNormal];
+                [videoButton setImage:[UIImage imageNamed:@"美丽说.jpeg"] forState:UIControlStateNormal];
                 break;
             case 2:
                 [videoButton setImage:[UIImage imageNamed:@"kun.jpeg"] forState:UIControlStateNormal];
@@ -274,22 +294,28 @@
         }
             break;
         case 3:{
-            NSString*domainStr=@"http://localhost:8080/Tesrrr/gh";
-            
-            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-            
-            //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"成功了");
-                responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-                NSLog(@"success --- obj --- %@",responseObject);
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                
+            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+            showViewcontroller.URL = BILI;
+            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+            [self presentViewController:showViewcontroller animated:YES completion:^{
                 
             }];
+//            NSString*domainStr=@"http://localhost:8080/Tesrrr/gh";
+//            
+//            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+//            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+//            
+//            //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
+//            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//                
+//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                NSLog(@"成功了");
+//                responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+//                NSLog(@"success --- obj --- %@",responseObject);
+//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//                
+//                
+//            }];
         }
             
             break;
@@ -324,25 +350,7 @@
         }
             break;
         case 8:{
-            //例如QQ的登录
-            [ShareSDK getUserInfo:SSDKPlatformTypeSinaWeibo
-                   onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
-             {
-                 if (state == SSDKResponseStateSuccess)
-                 {
-                     
-                     NSLog(@"uid=%@",user.uid);
-                     NSLog(@"%@",user.credential);
-                     NSLog(@"token=%@",user.credential.token);
-                     NSLog(@"nickname=%@",user.nickname);
-                 }
-                 
-                 else
-                 {
-                     NSLog(@"%@",error);
-                 }
-                 
-             }];
+           
         }
             
             break;

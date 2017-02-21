@@ -27,6 +27,7 @@
 
 //View类
 #import "main_cell.h"
+#import "SYLoadingLoopView.h"
 
 
 //model
@@ -43,10 +44,12 @@
 #import "AFNetworking.h"
 #import "ZZH_LoadingProject.h"
 
+
 #define ADDVIEW(a) [self.view addSubview:a];
 //宽高
 #define VIEW_HEIGHT self.view.frame.size.height
 #define VIEW_WIDTH  self.view.frame.size.width
+#define HEADER_IMAGENAME @"headerImage"
 
 //颜色
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
@@ -69,19 +72,9 @@
 
 #define TRUEPATH(name) [NSString stringWithFormat:@"%@/%@.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
 
-
+#define TRUEPATH_IMAGE(name) [NSString stringWithFormat:@"%@/%@.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
 //shareSdk
-#import <ShareSDK/ShareSDK.h>
-#import <ShareSDKConnector/ShareSDKConnector.h>
-//腾讯开放平台（对应QQ和QQ空间）SDK头文件
-#import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/QQApiInterface.h>
 
-//微信SDK头文件
-#import "WXApi.h"
-
-//新浪微博SDK头文件
-#import "WeiboSDK.h"
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 
 
