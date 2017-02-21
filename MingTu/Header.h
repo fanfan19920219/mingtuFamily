@@ -1,0 +1,93 @@
+//
+//  Header.h
+//  MingTu
+//
+//  Created by zhangzhihua on 16/3/3.
+//  Copyright © 2016年 zhangzhihua. All rights reserved.
+//
+
+//$(PRODUCT_BUNDLE_IDENTIFIER)
+//self.view.frame.size.width
+//self.view.frame.size.height
+#ifndef Header_h
+#define Header_h
+
+#import "xjjProtocol.h"
+
+#import "MainViewController.h"
+#import "PersonalViewController.h"
+#import "videoViewController.h"
+#import "playVideoViewController.h"
+#import "exchangeViewController.h"
+#import "personInformationViewController.h"
+#import "addFriendViewController.h"
+#import "selectPersonViewController.h"
+#import "yue_ViewController.h"
+#import "SmileViewController.h"
+
+//View类
+#import "main_cell.h"
+
+
+//model
+#import "video_model.h"
+#import "player_model.h"
+#import "personModel.h"
+
+//链接文件
+#import "URL.h"
+
+//工具类
+#import "UIView+Layout.h"
+#import "showWebViewController.h"
+#import "AFNetworking.h"
+#import "ZZH_LoadingProject.h"
+
+#define ADDVIEW(a) [self.view addSubview:a];
+//宽高
+#define VIEW_HEIGHT self.view.frame.size.height
+#define VIEW_WIDTH  self.view.frame.size.width
+
+//颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define MainColor RGBA(252, 102, 137, 1)
+#define TEXT_COLOR RGBA(152, 122, 122, 1)
+
+//判断版本型号
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
+#define CGRECT_NO_NAV(x,y,w,h) CGRectMake((x), (y+(IsIOS7?20:0)), (w), (h))
+#define CGRECT_HAVE_NAV(x,y,w,h) CGRectMake((x), (y+(IsIOS7?64:0)), (w), (h))
+//by  Box
+#define isIPHONE4S ([UIScreen mainScreen].bounds.size.height == 480.0)
+#define isIPHONE5 ([UIScreen mainScreen].bounds.size.height == 568.0)
+#define isIPHONE6 ([UIScreen mainScreen].bounds.size.height == 667.0)
+#define isIPHONE6P ([UIScreen mainScreen].bounds.size.height == 736.0)
+#define isIPADAIR ([UIScreen mainScreen].bounds.size.height == 2048.0)
+
+#define PERSONAL_IMG_PATHNAME(name) [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/%@_img.plist",name]]
+#define PERSONAL_PATHNAME(name) [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/%@.plist",name]]
+
+#define TRUEPATH(name) [NSString stringWithFormat:@"%@/%@.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
+
+
+//shareSdk
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+//新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
+
+
+#define GETFRIEND [[NSUserDefaults standardUserDefaults]objectForKey:@"friend"]
+#define SAVEFRIEND(array)  [[NSUserDefaults standardUserDefaults]setObject:array forKey:@"friend"];\
+[[NSUserDefaults standardUserDefaults] synchronize];
+
+
+#endif /* Header_h */
