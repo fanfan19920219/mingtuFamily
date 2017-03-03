@@ -10,10 +10,14 @@
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
+		294ABDAA1E6909FF003AEF0D /* lookBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDA91E6909FF003AEF0D /* lookBianViewController.m */; };
+		294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDAC1E690CF1003AEF0D /* showBianViewController.m */; };
 		29532DB71E5BF45D00CBB8E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29532DB61E5BF45D00CBB8E5 /* QuartzCore.framework */; };
 		29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */ = {isa = PBXBuildFile; fileRef = 29532DB81E5BF4A500CBB8E5 /* 樱花瓣1.png */; };
 		29532DBE1E5BF4A500CBB8E5 /* 樱花瓣2.png in Resources */ = {isa = PBXBuildFile; fileRef = 29532DB91E5BF4A500CBB8E5 /* 樱花瓣2.png */; };
 		29532DC41E5C0FA300CBB8E5 /* SYLoadingLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29532DC31E5C0FA300CBB8E5 /* SYLoadingLoopView.m */; };
+		297295A41E68348000624F69 /* BianBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297295A31E68348000624F69 /* BianBianViewController.m */; };
+		297295A81E683FBA00624F69 /* BianModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297295A71E683FBA00624F69 /* BianModel.m */; };
 		298A5FAC1C8D23B60056AF35 /* tabbar_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298A5FA81C8D23B60056AF35 /* tabbar_me@2x.png */; };
 		298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298A5FA91C8D23B60056AF35 /* tabbar_me@3x.png */; };
 		298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 298A5FAA1C8D23B60056AF35 /* tabbar_meHL@2x.png */; };
@@ -104,11 +108,19 @@
 		2939C6011E55A0D700187BE3 /* smileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smileModel.m; sourceTree = "<group>"; };
 		2939C6031E55BA1A00187BE3 /* smilenextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smilenextViewController.h; sourceTree = "<group>"; };
 		2939C6041E55BA1A00187BE3 /* smilenextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smilenextViewController.m; sourceTree = "<group>"; };
+		294ABDA81E6909FF003AEF0D /* lookBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lookBianViewController.h; sourceTree = "<group>"; };
+		294ABDA91E6909FF003AEF0D /* lookBianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lookBianViewController.m; sourceTree = "<group>"; };
+		294ABDAB1E690CF1003AEF0D /* showBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showBianViewController.h; sourceTree = "<group>"; };
+		294ABDAC1E690CF1003AEF0D /* showBianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showBianViewController.m; sourceTree = "<group>"; };
 		29532DB61E5BF45D00CBB8E5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29532DB81E5BF4A500CBB8E5 /* 樱花瓣1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣1.png"; sourceTree = "<group>"; };
 		29532DB91E5BF4A500CBB8E5 /* 樱花瓣2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣2.png"; sourceTree = "<group>"; };
 		29532DC21E5C0FA300CBB8E5 /* SYLoadingLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLoadingLoopView.h; sourceTree = "<group>"; };
 		29532DC31E5C0FA300CBB8E5 /* SYLoadingLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLoadingLoopView.m; sourceTree = "<group>"; };
+		297295A21E68348000624F69 /* BianBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BianBianViewController.h; sourceTree = "<group>"; };
+		297295A31E68348000624F69 /* BianBianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BianBianViewController.m; sourceTree = "<group>"; };
+		297295A61E683FBA00624F69 /* BianModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BianModel.h; sourceTree = "<group>"; };
+		297295A71E683FBA00624F69 /* BianModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BianModel.m; sourceTree = "<group>"; };
 		298A5FA81C8D23B60056AF35 /* tabbar_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_me@2x.png"; sourceTree = "<group>"; };
 		298A5FA91C8D23B60056AF35 /* tabbar_me@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_me@3x.png"; sourceTree = "<group>"; };
 		298A5FAA1C8D23B60056AF35 /* tabbar_meHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_meHL@2x.png"; sourceTree = "<group>"; };
@@ -282,6 +294,29 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		297295A11E68346800624F69 /* BianBian */ = {
+			isa = PBXGroup;
+			children = (
+				297295A51E683FA900624F69 /* model */,
+				297295A21E68348000624F69 /* BianBianViewController.h */,
+				297295A31E68348000624F69 /* BianBianViewController.m */,
+				294ABDA81E6909FF003AEF0D /* lookBianViewController.h */,
+				294ABDA91E6909FF003AEF0D /* lookBianViewController.m */,
+				294ABDAB1E690CF1003AEF0D /* showBianViewController.h */,
+				294ABDAC1E690CF1003AEF0D /* showBianViewController.m */,
+			);
+			name = BianBian;
+			sourceTree = "<group>";
+		};
+		297295A51E683FA900624F69 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				297295A61E683FBA00624F69 /* BianModel.h */,
+				297295A71E683FBA00624F69 /* BianModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		298A5FA71C8D21E40056AF35 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +360,7 @@
 		298A5FBE1C8D2C2B0056AF35 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
+				297295A11E68346800624F69 /* BianBian */,
 				BD6770EF1E495F2200907B6A /* Model */,
 				BD6770EE1E495F1C00907B6A /* View */,
 				BD6770ED1E495BD200907B6A /* ViewController */,
@@ -747,12 +783,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3BB5231E4C40CC00BDD9CF /* yue_ViewController.m in Sources */,
+				294ABDAA1E6909FF003AEF0D /* lookBianViewController.m in Sources */,
 				BD6770F51E496A5C00907B6A /* personInformationViewController.m in Sources */,
 				298A5FC71C8D608F0056AF35 /* playVideoViewController.m in Sources */,
 				29B49EC01C8804DE00B53C5C /* AppDelegate.m in Sources */,
 				2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */,
 				29CC5D7A1C8E7621003129DE /* player_model.m in Sources */,
 				BD6770F21E49617100907B6A /* PersonalTableViewCell.m in Sources */,
+				297295A81E683FBA00624F69 /* BianModel.m in Sources */,
 				29B49EF01C881F1000B53C5C /* PersonalViewController.m in Sources */,
 				BDFD0F1E1E34B325003030ED /* boringTableViewCell.m in Sources */,
 				BD832D2D1D3F4D8C00E8B7E5 /* exchangeViewController.m in Sources */,
@@ -761,6 +799,7 @@
 				298A5FD11C8D80460056AF35 /* video_model.m in Sources */,
 				29532DC41E5C0FA300CBB8E5 /* SYLoadingLoopView.m in Sources */,
 				BD8CC9601E349022009BF861 /* AFNetworkReachabilityManager.m in Sources */,
+				294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */,
 				29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */,
 				29B49EF31C881F1C00B53C5C /* MainViewController.m in Sources */,
 				BD6770FE1E49742700907B6A /* addFriendViewController.m in Sources */,
@@ -774,6 +813,7 @@
 				BD8CC9611E349022009BF861 /* AFSecurityPolicy.m in Sources */,
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
+				297295A41E68348000624F69 /* BianBianViewController.m in Sources */,
 				BD6771011E49A01900907B6A /* personModel.m in Sources */,
 				BD6770F81E49712A00907B6A /* ZZH_LoadingProject.m in Sources */,
 				29B49EBD1C8804DE00B53C5C /* main.m in Sources */,

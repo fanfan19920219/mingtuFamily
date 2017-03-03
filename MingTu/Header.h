@@ -24,6 +24,8 @@
 #import "selectPersonViewController.h"
 #import "yue_ViewController.h"
 #import "SmileViewController.h"
+#import "BianBianViewController.h"
+#import "BianModel.h"
 
 //View类
 #import "main_cell.h"
@@ -49,7 +51,12 @@
 //宽高
 #define VIEW_HEIGHT self.view.frame.size.height
 #define VIEW_WIDTH  self.view.frame.size.width
+
+
 #define HEADER_IMAGENAME @"headerImage"
+#define HEAD_INDEXIMAGE @"indexImg.png"
+
+
 
 //颜色
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
@@ -67,12 +74,16 @@
 #define isIPHONE6P ([UIScreen mainScreen].bounds.size.height == 736.0)
 #define isIPADAIR ([UIScreen mainScreen].bounds.size.height == 2048.0)
 
+
+//特殊名称
+#define BIANNAME @"bianbian"
+
 #define PERSONAL_IMG_PATHNAME(name) [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/%@_img.plist",name]]
 #define PERSONAL_PATHNAME(name) [NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"/%@.plist",name]]
 
 #define TRUEPATH(name) [NSString stringWithFormat:@"%@/%@.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
 
-#define TRUEPATH_IMAGE(name) [NSString stringWithFormat:@"%@/%@.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
+#define TRUEPATH_IMAGE(name) [NSString stringWithFormat:@"%@/%@img.plist",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],name]
 //shareSdk
 
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"

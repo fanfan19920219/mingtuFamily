@@ -102,7 +102,7 @@ ZZH_LoadingProject *selfProject;
     }
 }
 
--(void)save:(NSString*)filePath andSaveObject:(NSObject*)obj{
+-(BOOL)save:(NSString*)filePath andSaveObject:(NSObject*)obj{
     //NSArray *paths = ;
     NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
@@ -122,6 +122,8 @@ ZZH_LoadingProject *selfProject;
         if(orSave){
             NSLog(@"保存成功");
         }
+    
+    return orSave;
 //    }
     
     //[NSHomeDirectory() stringByAppendingString:[NSString stringWithFormat:@"%@",filePath]];    

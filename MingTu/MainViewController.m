@@ -22,7 +22,7 @@
 
 
 //frame
-#define HEADERVIEW_FRAME CGRectMake(0, 20, VIEW_WIDTH, HEIDER_HEIGHT)
+#define HEADERVIEW_FRAME CGRectMake(0, 0, VIEW_WIDTH, HEIDER_HEIGHT)
 
 #import "MainViewController.h"
 #import "Header.h"
@@ -31,6 +31,8 @@
 
 
 @interface MainViewController () <UIScrollViewDelegate>{
+    
+    UIView *_headView;
     
     UIImageView *_headerImageView;
     
@@ -145,7 +147,7 @@
 -(void)create_header_Controller{
     self.automaticallyAdjustsScrollViewInsets = NO;
     //创建底部的scrollview
-    _backGroundView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 30, VIEW_WIDTH, VIEW_HEIGHT *0.9)];
+    _backGroundView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT  - 44)];
     _backGroundView.backgroundColor = RGBA(235, 235, 235, 1);
     _backGroundView.contentSize = CGSizeMake(0, VIEW_HEIGHT);
     _backGroundView.delegate = self;
@@ -160,7 +162,7 @@
     
     UIImage *headerImage = [[ZZH_LoadingProject shareMBProgress]readImage:TRUEPATH_IMAGE(HEADER_IMAGENAME)];
     if(headerImage==nil){
-        headerImage = [UIImage imageNamed:@"renyeping2.png"];
+        headerImage = [UIImage imageNamed:HEAD_INDEXIMAGE];
     }
     _smallImageView.image =headerImage;
     [_smallImageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -192,11 +194,24 @@
     _footLabel.textColor = RGBA(166, 166, 166, 1);
     _footLabel.alpha = 0.4;
     [_backGroundView addSubview:_footLabel];
+    
+    
+    self.navigationController.navigationBarHidden = YES;
+    _headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 50)];
+    _headView.backgroundColor = MainColor;
+    _headView.alpha = 0.95;
+    [self.view addSubview:_headView];
+    
 }
 
 -(void)create_buttonView{
     _ButtonView = [[UIView alloc]initWithFrame:BUTTON_FRAME];
     _ButtonView.backgroundColor = RGBA(255, 250, 250, 1);
+    UIView *colorLine = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 1)];
+    colorLine.backgroundColor = MainColor;
+    colorLine.alpha = 0.1;
+    [_ButtonView addSubview:colorLine];
+    
     [_backGroundView addSubview:_ButtonView];
     
     
@@ -300,7 +315,7 @@
             [self presentViewController:showViewcontroller animated:YES completion:^{
                 
             }];
-//            NSString*domainStr=@"http://localhost:8080/Tesrrr/gh";
+//            NSString*domainStr=@"http://localhost:8080/webTest/doServlet";
 //            
 //            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
 //            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
@@ -352,9 +367,7 @@
         case 8:{
            
         }
-            
             break;
-        
             
         default:
             break;
@@ -375,12 +388,14 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSLog(@"%f",scrollView.contentOffset.y);
     if(scrollView.contentOffset.y<0){
-        _headerImageView.frame = CGRectMake(scrollView.contentOffset.y/2.0, scrollView.contentOffset.y + 20, VIEW_WIDTH - scrollView.contentOffset.y, HEIDER_HEIGHT  - scrollView.contentOffset.y);
+        _headerImageView.frame = CGRectMake(scrollView.contentOffset.y/2.0, scrollView.contentOffset.y, VIEW_WIDTH - scrollView.contentOffset.y, HEIDER_HEIGHT  - scrollView.contentOffset.y);
         
-        _smallImageView.frame =CGRectMake(scrollView.contentOffset.y/2.0, scrollView.contentOffset.y + 20, VIEW_WIDTH - scrollView.contentOffset.y, HEIDER_HEIGHT  - scrollView.contentOffset.y);
+        _smallImageView.frame =CGRectMake(scrollView.contentOffset.y/2.0, scrollView.contentOffset.y, VIEW_WIDTH - scrollView.contentOffset.y, HEIDER_HEIGHT  - scrollView.contentOffset.y);
         
         _headerImageView.alpha = (100+scrollView.contentOffset.y)/100;
     }
+    _headView.alpha = (100 - ABS(scrollView.contentOffset.y))/100.0 - 0.05;
+    
 }
 
 -(void)drawLine{
@@ -463,6 +478,13 @@
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
+}
 
 
 - (void)didReceiveMemoryWarning {

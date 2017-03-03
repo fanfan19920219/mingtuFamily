@@ -36,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self create_Views];
     [self create_tableView];
 }
@@ -44,7 +45,7 @@
     
     UIImage *headImage = [[ZZH_LoadingProject shareMBProgress]readImage:TRUEPATH_IMAGE(HEADER_IMAGENAME)];
     if(headImage==nil){
-        headImage = [UIImage imageNamed:@"renyeping2.png"];
+        headImage = [UIImage imageNamed:HEAD_INDEXIMAGE];
     }
     _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 64,VIEW_WIDTH, HEADERVIEW_HEIGHT)];
     _headerView.backgroundColor = RGBA(255, 250, 250, 1);
@@ -68,14 +69,14 @@
     _titlelabel.textAlignment = NSTextAlignmentCenter;
     _titlelabel.font = [UIFont systemFontOfSize:13 weight:0.1];
     _titlelabel.textColor = RGBA(44, 44, 44, 1);
-    _titlelabel.text = @"任 叶 萍";
+    //_titlelabel.text = @"任 叶 萍";
     [_headerView addSubview:_titlelabel];
     
 }
 
 -(void)create_tableView{
     
-    _titleArray = @[@"常用联系人",@"个人主页",@"专属域名:www.renyeping.com"];
+    _titleArray = @[@"常用联系人",@"个人主页",@"专属域名:www.renyeping.com",@"BianBian"];
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, _headerView.frame.origin.y + HEADERVIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - (_headerView.frame.origin.y + HEADERVIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -153,6 +154,13 @@
             [self presentViewController:showViewcontroller animated:YES completion:^{
                 
             }];
+        }
+            break;
+            
+        case 3:{
+            BianBianViewController *bianbian = [[BianBianViewController alloc]init];
+            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+            [self.navigationController pushViewController:bianbian animated:YES];
         }
             break;
         default:

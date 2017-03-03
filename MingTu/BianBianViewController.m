@@ -6,12 +6,15 @@
 //  Copyright © 2017年 zhangzhihua. All rights reserved.
 //
 
-#import "yue_ViewController.h"
+#import "BianBianViewController.h"
 #import "Header.h"
 #import <MessageUI/MessageUI.h>
 #import "yue_scrollView.h"
+#import "lookBianViewController.h"
 #define SLIDECOLOR RGBA(222, 200, 200, 0.6)
-@interface yue_ViewController ()<SetPersonDelegate>{
+
+
+@interface BianBianViewController ()<SetPersonDelegate>{
     
     UITextView *_contentView;
     UITextField *_localLabel;
@@ -23,20 +26,45 @@
     
     personModel *person;
     
+    NSMutableArray *_modelArray;
     
 }
 @end
 
-@implementation yue_ViewController
+@implementation BianBianViewController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.automaticallyAdjustsScrollViewInsets = NO;
     [self create_Views];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
+    if([[ZZH_LoadingProject shareMBProgress]read:TRUEPATH(BIANNAME)]){
+        _modelArray =[(NSMutableArray*)[[ZZH_LoadingProject shareMBProgress]read:TRUEPATH(BIANNAME)] mutableCopy];
+        for(BianModel *model in _modelArray){
+            NSLog(@"bianname --- %@",model.time);
+        }
+    }else{
+        _modelArray = [[NSMutableArray alloc]init];
+    }
+    
+    [self create_rightButton];
+}
+
+-(void)create_rightButton{
+    UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc]initWithTitle:@"查看历史" style:UIBarButtonItemStylePlain target:self action:@selector(lookSave)];
+    
+    rightBtnItem.tintColor=[UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = rightBtnItem;
+}
+
+-(void)lookSave{
+    lookBianViewController *lookBian = [[lookBianViewController alloc]init];
+    [self.navigationController pushViewController:lookBian animated:YES];
 }
 
 -(void)create_Views{
@@ -45,7 +73,7 @@
     [self.view addSubview:_backScrollview];
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 100, 20)];
-    titleLabel.text = @" 想做的事:";
+    titleLabel.text = @" 记录:";
     titleLabel.font = [UIFont systemFontOfSize:13 weight:0.001];
     titleLabel.textColor = RGBA(122, 122, 122, 1);
     [_backScrollview addSubview:titleLabel];
@@ -61,40 +89,51 @@
     [_backScrollview addSubview:_contentView];
     
     
-    _localLabel = [[UITextField alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 25)];
-    _localLabel.placeholder = @"地点";
-    _localLabel.textColor = RGBA(122, 122, 122, 1);
-    _localLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
-    _localLabel.textAlignment = NSTextAlignmentCenter;
-    [_backScrollview addSubview:_localLabel];
-    UIView *Line1 = [[UIView alloc]initWithFrame:CGRectMake(30, 240, VIEW_WIDTH - 60, 1)];
-    Line1.backgroundColor =SLIDECOLOR;
-    [_backScrollview addSubview:Line1];
+//    _localLabel = [[UITextField alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 25)];
+//    _localLabel.placeholder = @"地点";
+//    _localLabel.textColor = RGBA(122, 122, 122, 1);
+//    _localLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
+//    _localLabel.textAlignment = NSTextAlignmentCenter;
+//    [_backScrollview addSubview:_localLabel];
+//    UIView *Line1 = [[UIView alloc]initWithFrame:CGRectMake(30, 240, VIEW_WIDTH - 60, 1)];
+//    Line1.backgroundColor =SLIDECOLOR;
+//    [_backScrollview addSubview:Line1];
+//    
+//    _personButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _personButton.frame =CGRectMake(30, 270, VIEW_WIDTH - 60, 25);
+//    _personButton.tag = 1;
+//    _personButton.titleLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
+//    [_personButton setTitle:@"选择联系人" forState:UIControlStateNormal];
+//    [_personButton addTarget:self action:@selector(selectPersonal) forControlEvents:UIControlEventTouchUpInside];
+//    [_personButton setTitleColor:RGBA(193, 193, 193,1) forState:UIControlStateNormal];
+//    [_backScrollview addSubview:_personButton];
     
-    _personButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _personButton.frame =CGRectMake(30, 270, VIEW_WIDTH - 60, 25);
-    _personButton.tag = 1;
-    _personButton.titleLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
-    [_personButton setTitle:@"选择联系人" forState:UIControlStateNormal];
-    [_personButton addTarget:self action:@selector(selectPersonal) forControlEvents:UIControlEventTouchUpInside];
-    [_personButton setTitleColor:RGBA(193, 193, 193,1) forState:UIControlStateNormal];
-    [_backScrollview addSubview:_personButton];
+//    UIView *Line2 = [[UIView alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 1)];
+//    Line2.backgroundColor =SLIDECOLOR;
+//    [_backScrollview addSubview:Line2];
     
-    UIView *Line2 = [[UIView alloc]initWithFrame:CGRectMake(30, 300, VIEW_WIDTH - 60, 1)];
-    Line2.backgroundColor =SLIDECOLOR;
-    [_backScrollview addSubview:Line2];
-    
-    UIView *Line3 = [[UIView alloc]initWithFrame:CGRectMake(30, 360, VIEW_WIDTH - 60, 1)];
+    UIView *Line3 = [[UIView alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 1)];
     Line3.backgroundColor =SLIDECOLOR;
     [_backScrollview addSubview:Line3];
     _timeLabel = [[UITextField alloc]initWithFrame:CGRectMake(30, Line3.frame.origin.y - 30, VIEW_WIDTH - 60, 25)];
     _timeLabel.placeholder = @"时间";
     _timeLabel.textColor = RGBA(122, 122, 122, 1);
+    _timeLabel.keyboardType  = UIKeyboardTypeNumbersAndPunctuation;
     _timeLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
     _timeLabel.textAlignment = NSTextAlignmentCenter;
     [_backScrollview addSubview:_timeLabel];
+    NSDate *date = [NSDate date];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    [formatter setDateFormat:@"YY年MM月dd日  hh:mm"];
+    NSString *DateTime = [formatter stringFromDate:date];
+    _timeLabel.text = DateTime;
     
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sendButton.bounds = CGRectMake(0, 0, VIEW_WIDTH - 80, 30);
@@ -102,8 +141,8 @@
     _sendButton.backgroundColor = MainColor;
     _sendButton.alpha = 0.9;
     _sendButton.titleLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
-    [_sendButton setTitle:@"发起约会" forState:UIControlStateNormal];
-    [_sendButton addTarget:self action:@selector(yue) forControlEvents:UIControlEventTouchUpInside];
+    [_sendButton setTitle:@"保存" forState:UIControlStateNormal];
+    [_sendButton addTarget:self action:@selector(save) forControlEvents:UIControlEventTouchUpInside];
     _sendButton.layer.cornerRadius = 15;
     [_backScrollview addSubview:_sendButton];
     
@@ -114,7 +153,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)yue{
+-(void)save{
     //    NSString *yueString = [NSString stringWithFormat:@"%@:/n      我想%@"]
     //    [self showMessageView:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@",person.phone], nil] title:@"test" body:@""];
     
@@ -123,20 +162,29 @@
      _timeLabel
      _personButton
      */
+//    if(([_localLabel.text isEqualToString:@""])||([_timeLabel.text isEqualToString:@""])||(_personButton.tag==1)){
+//        NSLog(@"信息没有填写完整 -- %@- ---- %@ ---- %ld",_localLabel.text,_timeLabel.text,(long)_personButton.tag);
+//        [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"信息没有填写完整 " andDelayDismissTime:1];
+//        return;
+//    }
+//    
+//    NSString *bodyString  = [NSString stringWithFormat:@"%@ :\n我要在%@去%@%@",person.name,_timeLabel.text,_localLabel.text,_contentView.text];
+//    
+//    NSLog(@"约会 -- %@",bodyString);
+//    [self showMessageView:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@",person.phone], nil] title:@"" body:bodyString];
     
     
-    if(([_localLabel.text isEqualToString:@""])||([_timeLabel.text isEqualToString:@""])||(_personButton.tag==1)){
-        NSLog(@"信息没有填写完整 -- %@- ---- %@ ---- %ld",_localLabel.text,_timeLabel.text,(long)_personButton.tag);
-        [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"信息没有填写完整 " andDelayDismissTime:1];
-        return;
+    BianModel *model = [[BianModel alloc]init];
+    model.time = _timeLabel.text;
+    model.content = _contentView.text;
+    
+    [_modelArray addObject:model];
+    
+    if([[ZZH_LoadingProject shareMBProgress]save:TRUEPATH(BIANNAME) andSaveObject:_modelArray]){
+        [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"保存成功" andDelayDismissTime:1];
     }
     
-    NSString *bodyString  = [NSString stringWithFormat:@"%@ :\n我要在%@去%@%@",person.name,_timeLabel.text,_localLabel.text,_contentView.text];
-    
-    NSLog(@"约会 -- %@",bodyString);
-    [self showMessageView:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@",person.phone], nil] title:@"" body:bodyString];
 }
-
 
 -(void)selectPersonal{
     selectPersonViewController *selectVC = [[selectPersonViewController alloc]init];
@@ -227,13 +275,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

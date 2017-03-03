@@ -28,6 +28,7 @@
     UIButton *_phoneButton;
     UIButton *_qqButton;
     
+    
     UIButton *_backButton;
     personModel*person;
     
@@ -137,6 +138,7 @@
     [_qqButton setTitle:person.qq forState:UIControlStateNormal];
     [_qqButton setTitleColor:TEXT_COLOR forState:UIControlStateNormal];
     [_bottomView addSubview:_qqButton];
+    
     
 }
 

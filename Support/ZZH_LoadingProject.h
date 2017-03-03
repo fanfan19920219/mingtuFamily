@@ -29,7 +29,9 @@
 -(void)removeObjectforKey:(NSString*)key;
 
 -(void)removeObjectforFilePath:(NSString*)path;
--(void)save:(NSString*)filePath andSaveObject:(NSObject*)obj;
+
+
+-(BOOL)save:(NSString*)filePath andSaveObject:(NSObject*)obj;
 -(NSObject*)read:(NSString *)filePath;
 
 //对图片进行存取
