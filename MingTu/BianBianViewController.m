@@ -14,19 +14,22 @@
 #define SLIDECOLOR RGBA(222, 200, 200, 0.6)
 
 
-@interface BianBianViewController ()<SetPersonDelegate>{
+@interface BianBianViewController ()<SetPersonDelegate,UIPickerViewDelegate>{
     
     UITextView *_contentView;
     UITextField *_localLabel;
     UITextField *_timeLabel;
     UIButton     *_personButton;
     UIButton     *_sendButton;
+    UIButton *_zhuaButton;
     
     yue_scrollView *_backScrollview;
     
     personModel *person;
     
     NSMutableArray *_modelArray;
+    
+    UIDatePicker *datePicker;
     
 }
 @end
@@ -89,6 +92,8 @@
     [_backScrollview addSubview:_contentView];
     
     
+    
+    
 //    _localLabel = [[UITextField alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 25)];
 //    _localLabel.placeholder = @"地点";
 //    _localLabel.textColor = RGBA(122, 122, 122, 1);
@@ -112,6 +117,21 @@
 //    Line2.backgroundColor =SLIDECOLOR;
 //    [_backScrollview addSubview:Line2];
     
+    
+    //创建一个UIPickView对象
+    datePicker = [[UIDatePicker alloc]init];
+    //自定义位置
+    datePicker.frame = CGRectMake(0, _backScrollview.frame.size.height - 150, VIEW_WIDTH, 150);
+    //设置背景颜色
+    datePicker.backgroundColor = [UIColor whiteColor];
+    //datePicker.center = self.center;
+    //设置本地化支持的语言（在此是中文)
+    datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
+    //显示方式是只显示年月日
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [datePicker addTarget:self action:@selector(changeDate:) forControlEvents:UIControlEventValueChanged];
+    
+    
     UIView *Line3 = [[UIView alloc]initWithFrame:CGRectMake(30, 210, VIEW_WIDTH - 60, 1)];
     Line3.backgroundColor =SLIDECOLOR;
     [_backScrollview addSubview:Line3];
@@ -131,7 +151,7 @@
     
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     
-    [formatter setDateFormat:@"YY年MM月dd日  hh:mm"];
+    [formatter setDateFormat:@"YY年MM月dd日"];
     NSString *DateTime = [formatter stringFromDate:date];
     _timeLabel.text = DateTime;
     
@@ -146,6 +166,32 @@
     _sendButton.layer.cornerRadius = 15;
     [_backScrollview addSubview:_sendButton];
     
+    
+    _zhuaButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _zhuaButton.frame = CGRectMake(30, Line3.frame.origin.y - 35, 40, 34);
+    [_zhuaButton addTarget:self action:@selector(selectDate) forControlEvents:UIControlEventTouchUpInside];
+    [_zhuaButton setImage:[UIImage imageNamed:@"zhua.png"] forState:UIControlStateNormal];
+    [_backScrollview addSubview:_zhuaButton];
+    
+}
+
+-(void)selectDate{
+    
+    //放在盖板上
+    [_backScrollview addSubview:datePicker];
+
+    
+    
+}
+
+-(void)changeDate:(UIDatePicker*)picker{
+    NSDate *date = datePicker.date;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yy年MM月dd日"];
+    NSString  *string = [[NSString alloc]init];
+    string = [dateFormatter stringFromDate:date];
+    _timeLabel.text = string;
+    // [datePicker removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -269,6 +315,7 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+    [datePicker removeFromSuperview];
 }
 
 //

@@ -75,6 +75,19 @@
     [self.navigationController pushViewController:showBian animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BianModel *model = [_modelArray objectAtIndex:indexPath.row];
+    [_modelArray removeObject:model];
+    [_tableView reloadData];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    if([[ZZH_LoadingProject shareMBProgress]save:TRUEPATH(BIANNAME) andSaveObject:_modelArray]){
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

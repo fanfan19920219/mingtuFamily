@@ -76,7 +76,7 @@
 
 -(void)create_tableView{
     
-    _titleArray = @[@"常用联系人",@"个人主页",@"专属域名:www.renyeping.com",@"BianBian"];
+    _titleArray = @[@"常用联系人",@"个人主页",@"专属域名",@"BianBian"];
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, _headerView.frame.origin.y + HEADERVIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - (_headerView.frame.origin.y + HEADERVIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -117,7 +117,18 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
     }
+    
+    [[cell.contentView viewWithTag:2] removeFromSuperview];
     cell.textLabel.text = [_titleArray objectAtIndex:indexPath.row];
+    if([[_titleArray objectAtIndex:indexPath.row] isEqualToString:@"BianBian"]){
+        cell.textLabel.text = @"";
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 20, 30, 30)];
+        imageView.layer.cornerRadius = imageView.frame.size.height/2;
+        imageView.clipsToBounds = YES;
+        imageView.image = [UIImage imageNamed:@"bianbian.png"];
+        imageView.tag = 2;
+        [cell.contentView addSubview:imageView];
+    }
     cell.textLabel.font = [UIFont systemFontOfSize:13 weight:0.001];
     cell.textLabel.textColor = RGBA(152, 122, 122, 1);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -139,21 +150,21 @@
         }
             break;
         case 1:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = PERSONAL_MAIN;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                
-            }];
+//            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+//            showViewcontroller.URL = PERSONAL_MAIN;
+//            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+//            [self presentViewController:showViewcontroller animated:YES completion:^{
+//                
+//            }];
         }
             break;
         case 2:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = SPEED;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                
-            }];
+//            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+//            showViewcontroller.URL = SPEED;
+//            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+//            [self presentViewController:showViewcontroller animated:YES completion:^{
+//                
+//            }];
         }
             break;
             

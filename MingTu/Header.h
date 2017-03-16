@@ -54,7 +54,7 @@
 
 
 #define HEADER_IMAGENAME @"headerImage"
-#define HEAD_INDEXIMAGE @"indexImg.png"
+#define HEAD_INDEXIMAGE @"dujuan1.png"
 
 
 

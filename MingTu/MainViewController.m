@@ -158,6 +158,7 @@
     _headerImageView.userInteractionEnabled = YES;
     _headerImageView.image = [UIImage imageNamed:@"水冰月.jpeg"];
     _headerImageView.backgroundColor = [UIColor blackColor];
+    [_headerImageView setContentMode:UIViewContentModeScaleAspectFill];
     _smallImageView = [[UIImageView alloc]init];
     
     UIImage *headerImage = [[ZZH_LoadingProject shareMBProgress]readImage:TRUEPATH_IMAGE(HEADER_IMAGENAME)];
@@ -187,7 +188,7 @@
     _LogoLabel.textColor = RGBA(166, 166, 166, 1);
     //[_backGroundView addSubview:_LogoLabel];
     
-    _footLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, _backGroundView.contentSize.height-20, VIEW_WIDTH, 20)];
+    _footLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, _backGroundView.contentSize.height-40, VIEW_WIDTH, 20)];
     _footLabel.text = @"create by : 张智华";
     _footLabel.textAlignment = NSTextAlignmentCenter;
     _footLabel.font = [UIFont systemFontOfSize:13 weight:0.1];
@@ -378,7 +379,7 @@
 #pragma mark -  单机手势
 -(void)tap:(UITapGestureRecognizer*)gesture{
     showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-    showViewcontroller.URL = PERSONAL_MAIN;
+    showViewcontroller.URL = @"http://www.wulin2.com.cn";
     [self presentViewController:showViewcontroller animated:YES completion:nil];
 //    NSURL* url = [[ NSURL alloc ] initWithString :PERSONAL_MAIN];
 //    [[UIApplication sharedApplication ] openURL: url];
@@ -428,11 +429,11 @@
             // 1、创建通知内容，注：这里得用可变类型的UNMutableNotificationContent，否则内容的属性是只读的
             UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
             // 标题
-            content.title = @"睡觉，睡觉，睡觉时间到";
+            content.title = @"凡凡提醒";
             // 次标题
 //            content.subtitle = @"柯梵办公室通知";
             // 内容
-            content.body = @"任叶萍睡觉睡觉睡觉睡觉睡觉！！！！！";
+            content.body = @"杜鹃小姐姐今天忘记记便签了吗？";
             
             self.badge++;
             // app显示通知数量的角标
@@ -457,8 +458,8 @@
              UNLocationNotificationTrigger : 进入或离开某个地理区域时触发
              */
             NSDateComponents *date = [[NSDateComponents alloc]init];
-            date.hour = 23;
-            date.minute = 45;
+            date.hour = 22;
+            date.minute = 30;
             date.second = 20;
             
             UNCalendarNotificationTrigger *trigger1 = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];
