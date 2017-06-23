@@ -130,7 +130,7 @@
 		298A5FB21C8D23C20056AF35 /* tabbar_discoverHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discoverHL@2x.png"; sourceTree = "<group>"; };
 		298A5FB31C8D23C20056AF35 /* tabbar_discoverHL@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discoverHL@3x.png"; sourceTree = "<group>"; };
 		298A5FBA1C8D2B420056AF35 /* showWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showWebViewController.h; sourceTree = "<group>"; };
-		298A5FBB1C8D2B420056AF35 /* showWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showWebViewController.m; sourceTree = "<group>"; };
+		298A5FBB1C8D2B420056AF35 /* showWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showWebViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		298A5FBD1C8D2BB50056AF35 /* URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
 		298A5FC01C8D2FC30056AF35 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		298A5FC21C8D306E0056AF35 /* videoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoViewController.h; sourceTree = "<group>"; };

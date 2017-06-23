@@ -37,6 +37,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.navigationBarHidden = YES;
     [self create_Views];
     [self create_tableView];
 }
@@ -47,9 +48,9 @@
     if(headImage==nil){
         headImage = [UIImage imageNamed:HEAD_INDEXIMAGE];
     }
-    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 64,VIEW_WIDTH, HEADERVIEW_HEIGHT)];
+    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,VIEW_WIDTH, HEADERVIEW_HEIGHT)];
     _headerView.backgroundColor = RGBA(255, 250, 250, 1);
-    UIImageView *backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"beijing.jpg"]];
+    UIImageView *backImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"个人中心背景.jpg"]];
     backImage.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT);
     backImage.alpha = 0.8;
     [_headerView addSubview:backImage];
@@ -57,28 +58,42 @@
     [self.view addSubview:_headerView];
     
     _headerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _headerButton.frame = CGRectMake((VIEW_WIDTH/2) - HEADERIMG_SIZE/2, 40, HEADERIMG_SIZE, HEADERIMG_SIZE);
+    _headerButton.frame = CGRectMake((VIEW_WIDTH/2) - HEADERIMG_SIZE/2, 104, HEADERIMG_SIZE, HEADERIMG_SIZE);
     _headerButton.layer.cornerRadius = HEADERIMG_SIZE/2;
     [_headerButton addTarget:self action:@selector(getHead) forControlEvents:UIControlEventTouchUpInside];
     [_headerButton setImage:headImage forState:UIControlStateNormal];
     [_headerButton.imageView setContentMode:UIViewContentModeScaleAspectFill];
-    [_headerView addSubview:_headerButton];
+//    [_headerView addSubview:_headerButton];
     [self setSlide:_headerButton];
     
-    _titlelabel = [[UILabel alloc]initWithFrame:CGRectMake((VIEW_WIDTH - TITLELABEL_WIDTH)/2, _headerButton.frame.origin.y + HEADERIMG_SIZE + 20, TITLELABEL_WIDTH, TITLELABEL_HEIGHT)];
+    _titlelabel = [[UILabel alloc]initWithFrame:CGRectMake((VIEW_WIDTH - TITLELABEL_WIDTH)/2, _headerButton.frame.origin.y + HEADERIMG_SIZE + 84, TITLELABEL_WIDTH, TITLELABEL_HEIGHT)];
     _titlelabel.textAlignment = NSTextAlignmentCenter;
     _titlelabel.font = [UIFont systemFontOfSize:13 weight:0.1];
     _titlelabel.textColor = RGBA(44, 44, 44, 1);
     //_titlelabel.text = @"任 叶 萍";
     [_headerView addSubview:_titlelabel];
     
+    //添加遮罩
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame =CGRectMake(0, 0, VIEW_WIDTH, 44);
+    //            [selfView.navigationController.view.layer addSublayer:gradient];
+    // 颜色分配
+    gradient.colors = @[(__bridge id)RGBA(163, 141, 185, 1).CGColor,(__bridge id)[UIColor clearColor].CGColor];
+    // 颜色分割线
+    gradient.locations  = @[@(0),@(1)];
+    // 起始点
+    gradient.startPoint = CGPointMake(0, 0);
+    // 结束点
+    gradient.endPoint   = CGPointMake(0, 1);
+    [self.view.layer addSublayer:gradient];
+    
 }
 
 -(void)create_tableView{
     
-    _titleArray = @[@"常用联系人",@"个人主页",@"专属域名",@"BianBian"];
+    _titleArray = @[@"常用联系人",@"联系人",@"更换壁纸"];
     
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, _headerView.frame.origin.y + HEADERVIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - (_headerView.frame.origin.y + HEADERVIEW_HEIGHT) - 44) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, _headerView.frame.origin.y + HEADERVIEW_HEIGHT + 64, VIEW_WIDTH, VIEW_HEIGHT - (_headerView.frame.origin.y + HEADERVIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 70.f;
@@ -207,6 +222,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
 }
 
 /*

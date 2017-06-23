@@ -36,22 +36,26 @@
     
     //创建个人中心和首页的控制器
     MainViewController *main = [[MainViewController alloc]init];
-    main.tabBarItem.image=[[UIImage imageNamed:@"all_bottomta.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    main.tabBarItem.selectedImage=[[UIImage imageNamed:@"all_bottomta_up.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    main.tabBarItem.image=[[UIImage imageNamed:@"tabBar_home_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    main.tabBarItem.selectedImage=[[UIImage imageNamed:@"tabBar_home_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [main.tabBarItem setImageInsets:UIEdgeInsetsMake(10, 0, -10, 0)];
+    
     UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:main];
     
     PersonalViewController *personal = [[PersonalViewController alloc]init];
-    personal.tabBarItem.image=[[UIImage imageNamed:@"all_bottommine.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    personal.tabBarItem.selectedImage=[[UIImage imageNamed:@"all_bottommine_up.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    personal.title = @"窝";
+    personal.tabBarItem.image=[[UIImage imageNamed:@"tabBar_myJD_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    personal.tabBarItem.selectedImage=[[UIImage imageNamed:@"tabBar_myJD_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [personal.tabBarItem setImageInsets:UIEdgeInsetsMake(10, 0, -10, 0)];
+//    personal.title = @"窝";
     UINavigationController *personalNav = [[UINavigationController alloc]initWithRootViewController:personal];
     
     NSArray *tabarr = [[NSArray alloc]initWithObjects:mainNav,personalNav,nil];
     
     UITabBarController *tabar = [[UITabBarController alloc]init];
     tabar.viewControllers = tabarr;
-    tabar.tabBar.barTintColor=  RGBA(66, 60, 64, 1);
+    tabar.tabBar.barTintColor=  RGBA(88, 80, 84, 1);
     [[UINavigationBar appearance]setBarTintColor: RGBA(252, 82, 117, 1)];
+//    [[UINavigationBar appearance]setBarTintColor: RGBA(44, 44, 44, 1)];
     self.window.rootViewController = tabar;
     
     

@@ -21,5 +21,15 @@
 #define MEILISHUO @"http://www.meilishuo.com/"
 //bilibili
 #define BILI @"http://www.bilibili.com/"
+//赛王集合
+#define SAIWANGJIhE @"https://tieba.baidu.com/p/5157565184?pid=108004907028&cid=0#108004907028"
+//赛道之王
+#define SAIDAOZHIWANG @"http://speed.gamebbs.qq.com/forum.php?mod=viewthread&tid=1466818&extra=page%3D1"
+//QQ飞车吧
+#define SPEEDBA @"https://tieba.baidu.com/f?kw=qq%B7%C9%B3%B5&fr=ala0&tpl=5"
+//飞车论坛
+#define SPEEDLUNTAN @"http://speed.gamebbs.qq.com/forum.php?mod=forumdisplay&fid=30501"
+
+#define TESTURL @"http://localhost:8080/localServlet/mainpage"
 
 #endif /* URL_h */

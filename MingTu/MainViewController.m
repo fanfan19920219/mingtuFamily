@@ -51,6 +51,8 @@
     NSMutableArray *_buttonArray;
     NSArray *_titleArray;
     
+    NSString *_testURL;
+    
 }
 
 @property (nonatomic ,assign)NSInteger badge;
@@ -63,7 +65,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"小姐姐";
+//    self.title = @"主页";
     
     // Do any additional setup after loading the view.
     [self create_header_Controller];
@@ -71,6 +73,7 @@
     [self push];
     [self createPage];
     [self registerNotifaction];
+    [self getTestUrl];
 }
 
 -(void)registerNotifaction{
@@ -156,7 +159,7 @@
     //创建头部的headerView
     _headerImageView = [[UIImageView alloc]initWithFrame:HEADERVIEW_FRAME];
     _headerImageView.userInteractionEnabled = YES;
-    _headerImageView.image = [UIImage imageNamed:@"水冰月.jpeg"];
+    _headerImageView.image = [UIImage imageNamed:@"背景大图.jpeg"];
     _headerImageView.backgroundColor = [UIColor blackColor];
     [_headerImageView setContentMode:UIViewContentModeScaleAspectFill];
     _smallImageView = [[UIImageView alloc]init];
@@ -201,6 +204,29 @@
     _headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 50)];
     _headView.backgroundColor = MainColor;
     _headView.alpha = 0.95;
+    //标题
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
+    titleLabel.text = @"命徒";
+    titleLabel.center = CGPointMake(_headView.frame.size.width/2, _headView.frame.size.height/2 + 10);
+    
+    //变色view
+            CAGradientLayer *gradient = [CAGradientLayer layer];
+            gradient.frame =CGRectMake(0, 0, VIEW_WIDTH, 64);
+//            [selfView.navigationController.view.layer addSublayer:gradient];
+            // 颜色分配
+            gradient.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor clearColor].CGColor];
+            // 颜色分割线
+            gradient.locations  = @[@(0),@(1)];
+            // 起始点
+            gradient.startPoint = CGPointMake(0, 0.4);
+            // 结束点
+            gradient.endPoint   = CGPointMake(0, 1);
+    
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = [UIColor whiteColor];
+    _headView.backgroundColor = [UIColor clearColor];
+    [_headView.layer addSublayer:gradient];
+    [_headView addSubview:titleLabel];
     [self.view addSubview:_headView];
     
 }
@@ -217,7 +243,7 @@
     
     
     _buttonArray = [[NSMutableArray alloc]init];
-    _titleArray = [[NSArray alloc]initWithObjects:@"外卖",@"美丽说",@"无聊",@"bilibili",@"扑哧",@"约会", nil];
+    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"命徒时刻",@"官方论坛",@"百度飞吧",@"xxxx",@"命徒外卖", nil];
     for(int i = 0  ; i < _titleArray.count ; i++){
         UIButton *videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [videoButton setSlide:videoButton andSlideColor:nil];
@@ -225,27 +251,27 @@
         videoButton.titleLabel.numberOfLines = 0;
         [videoButton.imageView setContentMode:UIViewContentModeScaleAspectFill];
         [videoButton addTarget:self action:@selector(videoClick:) forControlEvents:UIControlEventTouchUpInside];
-        [videoButton setTitle:[_titleArray objectAtIndex:i] forState:UIControlStateNormal];
+//        [videoButton setTitle:[_titleArray objectAtIndex:i] forState:UIControlStateNormal];
         videoButton.tag = i;
         
         switch (i) {
             case 0:
-                [videoButton setImage:[UIImage imageNamed:@"hungry.jpg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo1.png"] forState:UIControlStateNormal];
                 break;
             case 1:
-                [videoButton setImage:[UIImage imageNamed:@"美丽说.jpeg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo5.png"] forState:UIControlStateNormal];
                 break;
             case 2:
-                [videoButton setImage:[UIImage imageNamed:@"kun.jpeg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo3.png"] forState:UIControlStateNormal];
                 break;
             case 3:
-                [videoButton setImage:[UIImage imageNamed:@"招财猫.jpg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo4.png"] forState:UIControlStateNormal];
                 break;
             case 4:
-                [videoButton setImage:[UIImage imageNamed:@"噗.jpeg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo2.png"] forState:UIControlStateNormal];
                 break;
             case 5:
-                [videoButton setImage:[UIImage imageNamed:@"约会.jpeg"] forState:UIControlStateNormal];
+                [videoButton setBackgroundImage:[UIImage imageNamed:@"Logo6.png"] forState:UIControlStateNormal];
                 break;
             case 6:
                 
@@ -281,12 +307,10 @@
 -(void)videoClick:(UIButton*)sender{
     switch (sender.tag) {
         case 0:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = E_L_M;
-//            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"打开定位哦" andDelayDismissTime:1.5];
-            }];
+            yue_ViewController *yueVC = [[yue_ViewController alloc]init];
+            [self.navigationController pushViewController:yueVC animated:YES];
+            
+            
 //            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
 //            [[UIApplication sharedApplication ] openURL: url];
         }
@@ -296,7 +320,7 @@
 //            [self.navigationController pushViewController:videoVC animated:YES];
 //            [self push];
             showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = MEILISHUO;
+            showViewcontroller.URL = SAIWANGJIhE;
             //            [self.navigationController pushViewController:showViewcontroller animated:YES];
             [self presentViewController:showViewcontroller animated:YES completion:^{
                 
@@ -304,34 +328,29 @@
         }
             break;
         case 2:{
-            exchangeViewController *exchangeVC = [[exchangeViewController alloc]init];
-            [self.navigationController pushViewController:exchangeVC animated:YES];
+            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+            showViewcontroller.URL = SPEEDLUNTAN;
+            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+            [self presentViewController:showViewcontroller animated:YES completion:^{
+                
+            }];
+            //
+//            exchangeViewController *exchangeVC = [[exchangeViewController alloc]init];
+//            [self.navigationController pushViewController:exchangeVC animated:YES];
             
         }
             break;
         case 3:{
             showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = BILI;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+//            showViewcontroller.URL = [NSString stringWithFormat:@"%@",_testURL];
+            showViewcontroller.URL = @"https://tieba.baidu.com/f?kw=qq飞车&pn=0&";
             [self presentViewController:showViewcontroller animated:YES completion:^{
                 
             }];
-//            NSString*domainStr=@"http://localhost:8080/webTest/doServlet";
-//            
-//            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-//            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-//            
-//            //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-//            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//                
-//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                NSLog(@"成功了");
-//                responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-//                NSLog(@"success --- obj --- %@",responseObject);
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                
-//                
-//            }];
+            
+            
+            
+            
         }
             
             break;
@@ -341,8 +360,24 @@
         }
             break;
         case 5:{
-            yue_ViewController *yueVC = [[yue_ViewController alloc]init];
-            [self.navigationController pushViewController:yueVC animated:YES];
+            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+            showViewcontroller.URL = E_L_M;
+            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+            [self presentViewController:showViewcontroller animated:YES completion:^{
+                [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"打开定位哦" andDelayDismissTime:1.5];
+                AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+                manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+                
+                //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
+                [manager GET:TESTURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                    
+                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    NSLog(@"成功了");
+                    responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+                    NSLog(@"success --- obj --- %@",responseObject);
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                }];
+            }];
         }
             break;
         case 6:
@@ -376,10 +411,35 @@
 }
 
 
+-(void)getTestUrl{
+    
+    
+    NSString*domainStr=@"http://119.23.17.139/localServlet/mainpage";
+    
+    AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+    //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
+    [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"成功了");
+        NSString* resString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"success --- obj --- %@",resString);
+        _testURL = resString;
+        NSLog(@"testRUL --- %@",_testURL);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+       
+        
+    }];
+}
+
 #pragma mark -  单机手势
 -(void)tap:(UITapGestureRecognizer*)gesture{
     showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-    showViewcontroller.URL = @"http://www.wulin2.com.cn";
+    showViewcontroller.URL = @"http://speed.qq.com";
     [self presentViewController:showViewcontroller animated:YES completion:nil];
 //    NSURL* url = [[ NSURL alloc ] initWithString :PERSONAL_MAIN];
 //    [[UIApplication sharedApplication ] openURL: url];

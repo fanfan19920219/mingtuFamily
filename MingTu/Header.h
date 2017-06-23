@@ -53,14 +53,14 @@
 #define VIEW_WIDTH  self.view.frame.size.width
 
 
-#define HEADER_IMAGENAME @"headerImage"
-#define HEAD_INDEXIMAGE @"dujuan1.png"
+#define HEADER_IMAGENAME @"背景大图.png"
+#define HEAD_INDEXIMAGE @"背景大图1.png"
 
 
 
 //颜色
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define MainColor RGBA(252, 102, 137, 1)
+#define MainColor RGBA(198, 31, 30, 1)
 #define TEXT_COLOR RGBA(152, 122, 122, 1)
 
 //判断版本型号
