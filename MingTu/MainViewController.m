@@ -243,7 +243,7 @@
     
     
     _buttonArray = [[NSMutableArray alloc]init];
-    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"命徒时刻",@"官方论坛",@"百度飞吧",@"xxxx",@"命徒外卖", nil];
+    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"命徒时刻",@"官方论坛",@"百度飞吧",@"hahaha",@"命徒外卖", nil];
     for(int i = 0  ; i < _titleArray.count ; i++){
         UIButton *videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [videoButton setSlide:videoButton andSlideColor:nil];
@@ -307,12 +307,12 @@
 -(void)videoClick:(UIButton*)sender{
     switch (sender.tag) {
         case 0:{
-            yue_ViewController *yueVC = [[yue_ViewController alloc]init];
-            [self.navigationController pushViewController:yueVC animated:YES];
-            
-            
+//            yue_ViewController *yueVC = [[yue_ViewController alloc]init];
+//            [self.navigationController pushViewController:yueVC animated:YES];
 //            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
 //            [[UIApplication sharedApplication ] openURL: url];
+            [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"此功能暂未开启" andDelayDismissTime:1];
+            
         }
             break;
         case 1:{
@@ -347,10 +347,6 @@
             [self presentViewController:showViewcontroller animated:YES completion:^{
                 
             }];
-            
-            
-            
-            
         }
             
             break;
@@ -379,8 +375,6 @@
                 }];
             }];
         }
-            
-            
             break;
         case 6:
             
@@ -427,9 +421,9 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"成功了");
         NSString* resString = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-        NSLog(@"success --- obj --- %@",resString);
+//        NSLog(@"success --- obj --- %@",resString);
         _testURL = resString;
-        NSLog(@"testRUL --- %@",_testURL);
+//        NSLog(@"testRUL --- %@",_testURL);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -491,11 +485,11 @@
             // 1、创建通知内容，注：这里得用可变类型的UNMutableNotificationContent，否则内容的属性是只读的
             UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
             // 标题
-            content.title = @"凡凡提醒";
+            content.title = @"张蔚然提醒";
             // 次标题
 //            content.subtitle = @"柯梵办公室通知";
             // 内容
-            content.body = @"杜鹃小姐姐今天忘记记便签了吗？";
+            content.body = @"该睡觉啦";
             
             self.badge++;
             // app显示通知数量的角标
@@ -520,8 +514,8 @@
              UNLocationNotificationTrigger : 进入或离开某个地理区域时触发
              */
             NSDateComponents *date = [[NSDateComponents alloc]init];
-            date.hour = 22;
-            date.minute = 30;
+            date.hour = 23;
+            date.minute = 01;
             date.second = 20;
             
             UNCalendarNotificationTrigger *trigger1 = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:date repeats:YES];

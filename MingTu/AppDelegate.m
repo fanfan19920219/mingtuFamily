@@ -54,7 +54,9 @@
     UITabBarController *tabar = [[UITabBarController alloc]init];
     tabar.viewControllers = tabarr;
     tabar.tabBar.barTintColor=  RGBA(88, 80, 84, 1);
-    [[UINavigationBar appearance]setBarTintColor: RGBA(252, 82, 117, 1)];
+    
+    [[UINavigationBar appearance]setBarTintColor: RGBA(88, 80, 84, 1)];
+//    [[UINavigationBar appearance]setBarTintColor: RGBA(252, 82, 117, 1)];
 //    [[UINavigationBar appearance]setBarTintColor: RGBA(44, 44, 44, 1)];
     self.window.rootViewController = tabar;
     

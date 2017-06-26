@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */; };
+		290461501F0108AC009A5C86 /* SPeedMaxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */; };
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
@@ -102,6 +104,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPeedMaxViewController.h; sourceTree = "<group>"; };
+		2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPeedMaxViewController.m; sourceTree = "<group>"; };
+		2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPeedMaxViewController.xib; sourceTree = "<group>"; };
 		2939C5FB1E55853200187BE3 /* SmileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileViewController.h; sourceTree = "<group>"; };
 		2939C5FC1E55853200187BE3 /* SmileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileViewController.m; sourceTree = "<group>"; };
 		2939C6001E55A0D700187BE3 /* smileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smileModel.h; sourceTree = "<group>"; };
@@ -265,6 +270,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2904614B1F010872009A5C86 /*  赛王 */ = {
+			isa = PBXGroup;
+			children = (
+				2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */,
+				2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */,
+				2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */,
+			);
+			name = " 赛王";
+			sourceTree = "<group>";
+		};
 		2939C5FA1E5584E300187BE3 /* 笑话 */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				BD3715411E4ACF0400B885EE /* ViewController */,
+				2904614B1F010872009A5C86 /*  赛王 */,
 				298A5FCE1C8D80300056AF35 /* Model */,
 				298A5FC81C8D74270056AF35 /* View */,
 				BD3BB5201E4C406400BDD9CF /* 约 */,
@@ -700,7 +716,8 @@
 				TargetAttributes = {
 					29B49EB71C8804DE00B53C5C = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 69XHFZ45EF;
+						DevelopmentTeam = 5YR3RP559Y;
+						ProvisioningStyle = Manual;
 					};
 					29B49ED01C8804DE00B53C5C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -750,6 +767,7 @@
 				29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */,
 				BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */,
 				298A5FCD1C8D77480056AF35 /* 视频placeholer.jpg in Resources */,
+				290461501F0108AC009A5C86 /* SPeedMaxViewController.xib in Resources */,
 				BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */,
 				298A5FB61C8D23C20056AF35 /* tabbar_discoverHL@2x.png in Resources */,
 				298A5FC11C8D2FC30056AF35 /* back@2x.png in Resources */,
@@ -793,6 +811,7 @@
 				297295A81E683FBA00624F69 /* BianModel.m in Sources */,
 				29B49EF01C881F1000B53C5C /* PersonalViewController.m in Sources */,
 				BDFD0F1E1E34B325003030ED /* boringTableViewCell.m in Sources */,
+				2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */,
 				BD832D2D1D3F4D8C00E8B7E5 /* exchangeViewController.m in Sources */,
 				2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */,
 				BD8CC95F1E349022009BF861 /* AFHTTPSessionManager.m in Sources */,
@@ -971,7 +990,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 69XHFZ45EF;
+				DEVELOPMENT_TEAM = 5YR3RP559Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -989,9 +1008,10 @@
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.xiaojiejie-";
+				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "96242023-6178-4f58-b266-a5409965752b";
+				PROVISIONING_PROFILE_SPECIFIER = mingtuDeveloper1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1004,7 +1024,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 69XHFZ45EF;
+				DEVELOPMENT_TEAM = 5YR3RP559Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1022,9 +1042,10 @@
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.xiaojiejie-";
+				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "96242023-6178-4f58-b266-a5409965752b";
+				PROVISIONING_PROFILE_SPECIFIER = mingtuDeveloper1;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

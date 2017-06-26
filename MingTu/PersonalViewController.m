@@ -91,7 +91,7 @@
 
 -(void)create_tableView{
     
-    _titleArray = @[@"常用联系人",@"联系人",@"更换壁纸"];
+    _titleArray = @[@"常用联系人",@"更换壁纸"];
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, _headerView.frame.origin.y + HEADERVIEW_HEIGHT + 64, VIEW_WIDTH, VIEW_HEIGHT - (_headerView.frame.origin.y + HEADERVIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _tableView.delegate = self;

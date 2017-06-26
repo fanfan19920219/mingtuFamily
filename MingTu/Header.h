@@ -13,7 +13,7 @@
 #define Header_h
 
 #import "xjjProtocol.h"
-
+#import <MessageUI/MessageUI.h>
 #import "MainViewController.h"
 #import "PersonalViewController.h"
 #import "videoViewController.h"

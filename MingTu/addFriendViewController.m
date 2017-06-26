@@ -12,6 +12,7 @@
 
 #define HEADERBUTTON_SIZE 100.f
 #define HEADERVIEW_HEIGHT 240.f
+#define TOPBUTTONSIZE 33.f
 
 
 @interface addFriendViewController (){
@@ -27,6 +28,10 @@
     UIButton *_nameButton;
     UIButton *_phoneButton;
     UIButton *_qqButton;
+    
+    UIButton *_topMessageButton;
+    UIButton *_topPhoneButton;
+    UIButton *_topYueButton;
     
     
     UIButton *_backButton;
@@ -81,11 +86,40 @@
     
     _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _backButton.frame = CGRectMake(0, 20, 80, 40);
-    _backButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    [_backButton setTitle:@" back " forState:UIControlStateNormal];
+    _backButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [_backButton setTitle:@" << Back " forState:UIControlStateNormal];
     [_backButton setTitleColor:RGBA(250, 250, 250, 1) forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [_headerView addSubview:_backButton];
+    
+    
+    
+    if(!self.or_addPerson==YES){
+        _topMessageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _topMessageButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 120, TOPBUTTONSIZE, TOPBUTTONSIZE);
+        _topMessageButton.tag = 0;
+        [_topMessageButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_topMessageButton setBackgroundImage:[UIImage imageNamed:@"shopping_folder_chat_pres.png"] forState:UIControlStateNormal];
+        [_headerView addSubview:_topMessageButton];
+        
+        _topYueButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _topYueButton.tag=1;
+        _topYueButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 80, TOPBUTTONSIZE, TOPBUTTONSIZE);
+        [_topYueButton setBackgroundImage:[UIImage imageNamed:@"header_icon_group.png"] forState:UIControlStateNormal];
+        [_topYueButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        _topYueButton.alpha = 0.5;
+        [_headerView addSubview:_topYueButton];
+        
+        _topPhoneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _topPhoneButton.tag=2;
+        _topPhoneButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 40, TOPBUTTONSIZE, TOPBUTTONSIZE);
+        [_topPhoneButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [_topPhoneButton setBackgroundImage:[UIImage imageNamed:@"phone1.png"] forState:UIControlStateNormal];
+        [_headerView addSubview:_topPhoneButton];
+    }
+    
+    
+    
     
     _bottomView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, HEADERVIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - HEADERVIEW_HEIGHT - 44)];
     [self.view addSubview:_bottomView];
@@ -140,6 +174,85 @@
     [_bottomView addSubview:_qqButton];
     
     
+}
+
+-(void)headerButtonClick:(UIButton*)sender{
+    
+    switch (sender.tag) {
+        case 0:{
+            NSString *urlString = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",[_qqButton titleForState:UIControlStateNormal]];
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString]];
+        }
+            break;
+            
+        case 1:{
+            [self showMessageView:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@",[_phoneButton titleForState:UIControlStateNormal]], nil] title:@"test" body:@""];
+        }   break;
+            
+        case 2:{
+            NSString *urlString = [NSString stringWithFormat:@"tel://%@",[_phoneButton titleForState:UIControlStateNormal]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+
+}
+//smsDelegate
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    switch (result) {
+        case MessageComposeResultSent:{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                            message:[NSString stringWithFormat:@"发送成功"]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"确定"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            //信息传送成功
+            
+            break;
+        case MessageComposeResultFailed:
+            //信息传送失败
+            
+            break;
+        case MessageComposeResultCancelled:
+            //信息被用户取消传送
+            
+            break;
+        default:
+            break;
+    }
+}
+
+
+-(void)showMessageView:(NSArray *)phones title:(NSString *)title body:(NSString *)body
+{
+    if( [MFMessageComposeViewController canSendText] )
+    {
+        MFMessageComposeViewController * controller = [[MFMessageComposeViewController alloc] init];
+        controller.title = @"短信";
+        controller.recipients = phones;
+        controller.navigationBar.tintColor = [UIColor redColor];
+        controller.body = body;
+        controller.messageComposeDelegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+        //[[[[controller viewControllers] lastObject] navigationItem] setTitle:@"短信"];//修改短信界面标题
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示信息"
+                                                        message:@"该设备不支持短信功能"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 -(void)setSlide:(UIView*)view{

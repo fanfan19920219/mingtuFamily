@@ -42,7 +42,7 @@
     
     [self.view addSubview:_showTableView];
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, -20, VIEW_WIDTH, 50)];
-    titleLabel.text = @"小姐姐联系人";
+    titleLabel.text = @"常用联系人";
     titleLabel.font = [UIFont systemFontOfSize:14 weight:0.001];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = MainColor;
