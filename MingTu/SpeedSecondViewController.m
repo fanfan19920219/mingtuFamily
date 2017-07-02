@@ -1,25 +1,23 @@
 //
-//  SPeedMaxViewController.m
+//  SpeedSecondViewController.m
 //  MingTu
 //
-//  Created by zhangzhihua on 2017/6/26.
+//  Created by Star J on 2017/7/1.
 //  Copyright © 2017年 zhangzhihua. All rights reserved.
 //
 
-#import "SPeedMaxViewController.h"
 #import "SpeedSecondViewController.h"
-#import "Header.h"
 
-@interface SPeedMaxViewController ()<UITableViewDelegate , UITableViewDataSource>
+@interface SpeedSecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong)NSMutableArray *titleArray;
 @property (nonatomic , strong)UITableView *tableView;
 @property (nonatomic , strong)UIView *selfTabbar;
 
 
+
 @end
 
-@implementation SPeedMaxViewController
-
+@implementation SpeedSecondViewController
 
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = YES;
@@ -27,7 +25,6 @@
 -(void)viewWillDisappear:(BOOL)animated{
     self.navigationController.navigationBarHidden = NO;
 }
-
 
 
 - (void)viewDidLoad {
@@ -41,7 +38,7 @@
 
 -(void)initMethod{
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _titleArray = (NSMutableArray*)@[@"赛道之王",@"极速之王",@"飞驰之王",@"极限之王"];
+    _titleArray = (NSMutableArray*)@[@"海洋公园",@"十一城",@"老街迷宫",@"瓦特厂房"];
     [self.view addSubview:self.tableView];
 }
 
@@ -49,7 +46,7 @@
 -(UIView*)selfTabbar{
     if(!_selfTabbar){
         _selfTabbar = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 64)];
-        _selfTabbar.backgroundColor = RGBA(137, 137, 137, 0.7);
+        _selfTabbar.backgroundColor = RGBA(137, 192, 246, 0.7);
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
         titleLabel.center = CGPointMake(VIEW_WIDTH/2, 40);
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -70,12 +67,9 @@
     
     return _selfTabbar;
 }
-
-
 -(void)backMethod{
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 -(UITableView*)tableView{
     if(!_tableView){
@@ -83,7 +77,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc]init];
-        UIImageView *tableBackImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"赛道之王背景1.png"]];
+        UIImageView *tableBackImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"赛道之王背景.png"]];
         tableBackImageView.contentMode = UIViewContentModeScaleAspectFill;
         _tableView.backgroundView = tableBackImageView;
         UIView *cleanView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 64)];
@@ -99,40 +93,16 @@
 
 
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSString *titleString;
-    switch (indexPath.row) {
-        case 0:{
-            titleString = @"赛道之王";
-        }break;
-            
-        case 1:{
-            titleString = @"极速之王";
-        }break;
-
-            
-        case 2:{
-            titleString = @"飞驰之王";
-        }break;
-
-            
-        case 3:{
-            titleString = @"极限之王";
-        }break;
-
-            
-            
-            
-            
-        default:
-            break;
-    }
     
-    SpeedSecondViewController *secondViewController = [[SpeedSecondViewController alloc]init];
-    secondViewController.title = titleString;
-    [self.navigationController pushViewController:secondViewController animated:YES];
+    showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+                showViewcontroller.orHTML = YES;
+                showViewcontroller.URL = [NSString stringWithFormat:@"<iframe frameborder=0 width=1000 height=498 src=%@?vid=h0363yngwqp&tiny=0&auto=0 allowfullscreen></iframe>",HYGY_FC_URL];
+                //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+                [self presentViewController:showViewcontroller animated:YES completion:^{
+    
+                }];
     
 }
 
@@ -150,9 +120,10 @@
     cell.textLabel.text = [_titleArray objectAtIndex:indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = RGBA(255, 255, 255, 0.6);
-    cell.textLabel.textColor = RGBA(183, 68, 117, 1);
+    cell.textLabel.textColor = RGBA(55, 55, 55, 1);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+    
 }
 
 
@@ -161,15 +132,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

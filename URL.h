@@ -32,4 +32,21 @@
 
 #define TESTURL @"http://localhost:8080/localServlet/mainpage"
 
+
+
+
+
+
+
+
+//下面是单独的URL
+
+//海洋公园飞驰之王
+#define HYGY_FC_URL @"http://v.qq.com/x/page/z03454ezrmc.html"
+
+
+
+
+
+
 #endif /* URL_h */

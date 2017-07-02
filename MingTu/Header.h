@@ -25,6 +25,7 @@
 #import "yue_ViewController.h"
 #import "SmileViewController.h"
 #import "BianBianViewController.h"
+#import "SPeedMaxViewController.h"
 #import "BianModel.h"
 
 //View类

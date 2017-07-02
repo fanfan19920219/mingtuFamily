@@ -24,6 +24,8 @@
 //frame
 #define HEADERVIEW_FRAME CGRectMake(0, 0, VIEW_WIDTH, HEIDER_HEIGHT)
 
+#define URLSTRING @"<embed src=https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=x0513gu2hqc&auto=0 allowFullScreen=true quality=high width=480 height=400 align=middle allowScriptAccess=always type=application/x-shockwave-flash></embed>"
+
 #import "MainViewController.h"
 #import "Header.h"
 #import <UserNotifications/UserNotifications.h>
@@ -243,7 +245,7 @@
     
     
     _buttonArray = [[NSMutableArray alloc]init];
-    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"命徒时刻",@"官方论坛",@"百度飞吧",@"hahaha",@"命徒外卖", nil];
+    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"极限专区",@"官方论坛",@"百度飞吧",@"hahaha",@"命徒外卖", nil];
     for(int i = 0  ; i < _titleArray.count ; i++){
         UIButton *videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [videoButton setSlide:videoButton andSlideColor:nil];
@@ -316,15 +318,20 @@
         }
             break;
         case 1:{
-//            videoViewController *videoVC = [[videoViewController alloc]init];
-//            [self.navigationController pushViewController:videoVC animated:YES];
-//            [self push];
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = SAIWANGJIhE;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                
-            }];
+            
+            
+            SPeedMaxViewController *speedVC = [[SPeedMaxViewController alloc]init];
+            speedVC.title = @"极限专区";
+            [self.navigationController pushViewController:speedVC animated:YES];
+            
+            
+//            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+//            showViewcontroller.orHTML = YES;
+//            showViewcontroller.URL = @"<iframe frameborder=0 width=1000 height=498 src=https://v.qq.com/x/page/z03551xb72g.html?vid=h0363yngwqp&tiny=0&auto=0 allowfullscreen></iframe>";
+//            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+//            [self presentViewController:showViewcontroller animated:YES completion:^{
+//                
+//            }];
         }
             break;
         case 2:{

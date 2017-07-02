@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */; };
-		290461501F0108AC009A5C86 /* SPeedMaxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */; };
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
@@ -49,6 +48,7 @@
 		29B49F0F1C884E2000B53C5C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B49F0E1C884E2000B53C5C /* UIView+Layout.m */; };
 		29CC5D771C8E74FC003129DE /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC5D761C8E74FC003129DE /* playerViewController.m */; };
 		29CC5D7A1C8E7621003129DE /* player_model.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC5D791C8E7621003129DE /* player_model.m */; };
+		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
 		BD36EA151E31FD8C0002D3CF /* renyeping2.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA141E31FD8C0002D3CF /* renyeping2.png */; };
@@ -106,7 +106,6 @@
 /* Begin PBXFileReference section */
 		2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPeedMaxViewController.h; sourceTree = "<group>"; };
 		2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPeedMaxViewController.m; sourceTree = "<group>"; };
-		2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPeedMaxViewController.xib; sourceTree = "<group>"; };
 		2939C5FB1E55853200187BE3 /* SmileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileViewController.h; sourceTree = "<group>"; };
 		2939C5FC1E55853200187BE3 /* SmileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileViewController.m; sourceTree = "<group>"; };
 		2939C6001E55A0D700187BE3 /* smileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smileModel.h; sourceTree = "<group>"; };
@@ -175,6 +174,8 @@
 		29CC5D761C8E74FC003129DE /* playerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playerViewController.m; sourceTree = "<group>"; };
 		29CC5D781C8E7621003129DE /* player_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player_model.h; sourceTree = "<group>"; };
 		29CC5D791C8E7621003129DE /* player_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = player_model.m; sourceTree = "<group>"; };
+		361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedSecondViewController.h; sourceTree = "<group>"; };
+		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
 		BD36EA101E31F9870002D3CF /* renyeping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = renyeping.jpg; sourceTree = "<group>"; };
 		BD36EA121E31FBB70002D3CF /* renyeping1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping1.png; sourceTree = "<group>"; };
 		BD36EA141E31FD8C0002D3CF /* renyeping2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping2.png; sourceTree = "<group>"; };
@@ -275,7 +276,8 @@
 			children = (
 				2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */,
 				2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */,
-				2904614E1F0108AC009A5C86 /* SPeedMaxViewController.xib */,
+				361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */,
+				361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */,
 			);
 			name = " 赛王";
 			sourceTree = "<group>";
@@ -767,7 +769,6 @@
 				29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */,
 				BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */,
 				298A5FCD1C8D77480056AF35 /* 视频placeholer.jpg in Resources */,
-				290461501F0108AC009A5C86 /* SPeedMaxViewController.xib in Resources */,
 				BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */,
 				298A5FB61C8D23C20056AF35 /* tabbar_discoverHL@2x.png in Resources */,
 				298A5FC11C8D2FC30056AF35 /* back@2x.png in Resources */,
@@ -834,6 +835,7 @@
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
 				297295A41E68348000624F69 /* BianBianViewController.m in Sources */,
 				BD6771011E49A01900907B6A /* personModel.m in Sources */,
+				361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */,
 				BD6770F81E49712A00907B6A /* ZZH_LoadingProject.m in Sources */,
 				29B49EBD1C8804DE00B53C5C /* main.m in Sources */,
 				29CC5D771C8E74FC003129DE /* playerViewController.m in Sources */,
