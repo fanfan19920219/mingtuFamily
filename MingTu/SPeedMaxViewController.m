@@ -41,7 +41,7 @@
 
 -(void)initMethod{
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _titleArray = (NSMutableArray*)@[@"赛道之王",@"极速之王",@"飞驰之王",@"极限之王"];
+    _titleArray = (NSMutableArray*)@[@"赛道之王",@"极速之王",@"飞驰之王"];
     [self.view addSubview:self.tableView];
 }
 

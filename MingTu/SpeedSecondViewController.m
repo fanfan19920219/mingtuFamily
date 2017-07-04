@@ -10,8 +10,10 @@
 
 @interface SpeedSecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong)NSMutableArray *titleArray;
+@property (nonatomic , strong)NSMutableArray *urlArray;
 @property (nonatomic , strong)UITableView *tableView;
 @property (nonatomic , strong)UIView *selfTabbar;
+
 
 
 
@@ -39,6 +41,19 @@
 -(void)initMethod{
     self.automaticallyAdjustsScrollViewInsets = NO;
     _titleArray = (NSMutableArray*)@[@"海洋公园",@"十一城",@"老街迷宫",@"瓦特厂房"];
+    //赛道之王",@"极速之王",@"飞驰之王
+    if([self.title isEqualToString:@"赛道之王"]){
+        _urlArray = (NSMutableArray*)@[HYGY_SDZW_URL,SYS_SDZW_URL,LJMG_SDZW_URL,WTCF_SDZW_URL];
+    }
+    
+    if([self.title isEqualToString:@"极速之王"]){
+        _urlArray = (NSMutableArray*)@[HYGY_JSZW_URL,SYS_JSZW_URL,LJMG_JSZW_URL,WTCF_JSZW_URL];
+    }
+    
+    if([self.title isEqualToString:@"飞驰之王"]){
+        _urlArray = (NSMutableArray*)@[HYGY_FC_URL,SYS_FC_URL,LJMG_FC_URL,WTCF_FC_URL];
+    }
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -95,15 +110,16 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
     showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-                showViewcontroller.orHTML = YES;
-                showViewcontroller.URL = [NSString stringWithFormat:@"<iframe frameborder=0 width=1000 height=498 src=%@?vid=h0363yngwqp&tiny=0&auto=0 allowfullscreen></iframe>",HYGY_FC_URL];
-                //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-                [self presentViewController:showViewcontroller animated:YES completion:^{
+    showViewcontroller.orHTML = YES;
+    showViewcontroller.URL = [self htmlURL:[_urlArray objectAtIndex:indexPath.row]];
+    [self presentViewController:showViewcontroller animated:YES completion:^{
+        
+    }];
     
-                }];
-    
+}
+-(NSString*)htmlURL:(NSString*)url{
+    return [NSString stringWithFormat:@"<iframe frameborder=0 width=1000 height=498 src=%@?vid=h0363yngwqp&tiny=0&auto=0 allowfullscreen></iframe>",url];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

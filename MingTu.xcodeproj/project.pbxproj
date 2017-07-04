@@ -11,6 +11,17 @@
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
+		293E0B181F0B631D00DFD783 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B0D1F0B631D00DFD783 /* LICENSE */; };
+		293E0B191F0B631D00DFD783 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */; };
+		293E0B1A1F0B631D00DFD783 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B101F0B631D00DFD783 /* README.mdown */; };
+		293E0B1B1F0B631D00DFD783 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B121F0B631D00DFD783 /* LICENSE */; };
+		293E0B1C1F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */; };
+		293E0B1D1F0B631D00DFD783 /* MBProgressHUD+JDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */; };
+		293E0B1E1F0B631D00DFD783 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B171F0B631D00DFD783 /* README.md */; };
+		293E0B221F0B63CA00DFD783 /* MBProgressHUD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */; };
+		293E0B231F0B63CA00DFD783 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */; };
+		293E0B271F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */; };
+		293E0B281F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */; };
 		294ABDAA1E6909FF003AEF0D /* lookBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDA91E6909FF003AEF0D /* lookBianViewController.m */; };
 		294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDAC1E690CF1003AEF0D /* showBianViewController.m */; };
 		29532DB71E5BF45D00CBB8E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29532DB61E5BF45D00CBB8E5 /* QuartzCore.framework */; };
@@ -52,7 +63,6 @@
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
 		BD36EA151E31FD8C0002D3CF /* renyeping2.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA141E31FD8C0002D3CF /* renyeping2.png */; };
-		BD36EA171E3200CF0002D3CF /* 57x57.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA161E3200CF0002D3CF /* 57x57.jpg */; };
 		BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3715431E4B172100B885EE /* selectPersonViewController.m */; };
 		BD3BB5231E4C40CC00BDD9CF /* yue_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3BB5221E4C40CC00BDD9CF /* yue_ViewController.m */; };
 		BD66BE241DB8A98B00E4BD4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD66BE231DB8A98B00E4BD4E /* Security.framework */; };
@@ -112,6 +122,21 @@
 		2939C6011E55A0D700187BE3 /* smileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smileModel.m; sourceTree = "<group>"; };
 		2939C6031E55BA1A00187BE3 /* smilenextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smilenextViewController.h; sourceTree = "<group>"; };
 		2939C6041E55BA1A00187BE3 /* smilenextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smilenextViewController.m; sourceTree = "<group>"; };
+		293E0B0D1F0B631D00DFD783 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		293E0B0E1F0B631D00DFD783 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		293E0B101F0B631D00DFD783 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		293E0B121F0B631D00DFD783 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+JDragon.bundle"; sourceTree = "<group>"; };
+		293E0B151F0B631D00DFD783 /* MBProgressHUD+JDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JDragon.h"; sourceTree = "<group>"; };
+		293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JDragon.m"; sourceTree = "<group>"; };
+		293E0B171F0B631D00DFD783 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		293E0B211F0B63CA00DFD783 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "MBProgressHUD+JDragon.xcconfig"; sourceTree = "<group>"; };
+		293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JDragon-dummy.m"; sourceTree = "<group>"; };
+		293E0B261F0B63E500DFD783 /* MBProgressHUD+JDragon-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JDragon-prefix.pch"; sourceTree = "<group>"; };
 		294ABDA81E6909FF003AEF0D /* lookBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lookBianViewController.h; sourceTree = "<group>"; };
 		294ABDA91E6909FF003AEF0D /* lookBianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lookBianViewController.m; sourceTree = "<group>"; };
 		294ABDAB1E690CF1003AEF0D /* showBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showBianViewController.h; sourceTree = "<group>"; };
@@ -179,7 +204,6 @@
 		BD36EA101E31F9870002D3CF /* renyeping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = renyeping.jpg; sourceTree = "<group>"; };
 		BD36EA121E31FBB70002D3CF /* renyeping1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping1.png; sourceTree = "<group>"; };
 		BD36EA141E31FD8C0002D3CF /* renyeping2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping2.png; sourceTree = "<group>"; };
-		BD36EA161E3200CF0002D3CF /* 57x57.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 57x57.jpg; sourceTree = "<group>"; };
 		BD3715421E4B172100B885EE /* selectPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectPersonViewController.h; sourceTree = "<group>"; };
 		BD3715431E4B172100B885EE /* selectPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectPersonViewController.m; sourceTree = "<group>"; };
 		BD3BB5211E4C40CC00BDD9CF /* yue_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yue_ViewController.h; sourceTree = "<group>"; };
@@ -311,6 +335,43 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		293E0B0C1F0B631D00DFD783 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				293E0B0D1F0B631D00DFD783 /* LICENSE */,
+				293E0B0E1F0B631D00DFD783 /* MBProgressHUD.h */,
+				293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */,
+				293E0B101F0B631D00DFD783 /* README.mdown */,
+				293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */,
+				293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */,
+				293E0B211F0B63CA00DFD783 /* MBProgressHUD-prefix.pch */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		293E0B111F0B631D00DFD783 /* MBProgressHUD+JDragon */ = {
+			isa = PBXGroup;
+			children = (
+				293E0B121F0B631D00DFD783 /* LICENSE */,
+				293E0B131F0B631D00DFD783 /* MBProgressHUD+JDragon */,
+				293E0B171F0B631D00DFD783 /* README.md */,
+			);
+			path = "MBProgressHUD+JDragon";
+			sourceTree = "<group>";
+		};
+		293E0B131F0B631D00DFD783 /* MBProgressHUD+JDragon */ = {
+			isa = PBXGroup;
+			children = (
+				293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */,
+				293E0B151F0B631D00DFD783 /* MBProgressHUD+JDragon.h */,
+				293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */,
+				293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */,
+				293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */,
+				293E0B261F0B63E500DFD783 /* MBProgressHUD+JDragon-prefix.pch */,
+			);
+			path = "MBProgressHUD+JDragon";
+			sourceTree = "<group>";
+		};
 		297295A11E68346800624F69 /* BianBian */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +413,8 @@
 		298A5FB81C8D28DF0056AF35 /* ToolView */ = {
 			isa = PBXGroup;
 			children = (
+				293E0B0C1F0B631D00DFD783 /* MBProgressHUD */,
+				293E0B111F0B631D00DFD783 /* MBProgressHUD+JDragon */,
 				29532DC21E5C0FA300CBB8E5 /* SYLoadingLoopView.h */,
 				29532DC31E5C0FA300CBB8E5 /* SYLoadingLoopView.m */,
 				298A5FBA1C8D2B420056AF35 /* showWebViewController.h */,
@@ -456,7 +519,6 @@
 				29B49EF51C883A5100B53C5C /* 图片 */,
 				29B49EC41C8804DE00B53C5C /* Main.storyboard */,
 				29B49EC71C8804DE00B53C5C /* Assets.xcassets */,
-				BD36EA161E3200CF0002D3CF /* 57x57.jpg */,
 				29B49EC91C8804DE00B53C5C /* LaunchScreen.storyboard */,
 				29B49ECC1C8804DE00B53C5C /* Info.plist */,
 				29B49EBB1C8804DE00B53C5C /* Supporting Files */,
@@ -719,7 +781,7 @@
 					29B49EB71C8804DE00B53C5C = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 5YR3RP559Y;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					29B49ED01C8804DE00B53C5C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -769,14 +831,18 @@
 				29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */,
 				BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */,
 				298A5FCD1C8D77480056AF35 /* 视频placeholer.jpg in Resources */,
+				293E0B1B1F0B631D00DFD783 /* LICENSE in Resources */,
 				BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */,
 				298A5FB61C8D23C20056AF35 /* tabbar_discoverHL@2x.png in Resources */,
 				298A5FC11C8D2FC30056AF35 /* back@2x.png in Resources */,
+				293E0B1C1F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle in Resources */,
+				293E0B271F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig in Resources */,
+				293E0B181F0B631D00DFD783 /* LICENSE in Resources */,
 				298A5FB71C8D23C20056AF35 /* tabbar_discoverHL@3x.png in Resources */,
 				29B49EC61C8804DE00B53C5C /* Main.storyboard in Resources */,
 				298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */,
-				BD36EA171E3200CF0002D3CF /* 57x57.jpg in Resources */,
 				298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */,
+				293E0B221F0B63CA00DFD783 /* MBProgressHUD.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +874,7 @@
 				29B49EC01C8804DE00B53C5C /* AppDelegate.m in Sources */,
 				2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */,
 				29CC5D7A1C8E7621003129DE /* player_model.m in Sources */,
+				293E0B231F0B63CA00DFD783 /* MBProgressHUD-dummy.m in Sources */,
 				BD6770F21E49617100907B6A /* PersonalTableViewCell.m in Sources */,
 				297295A81E683FBA00624F69 /* BianModel.m in Sources */,
 				29B49EF01C881F1000B53C5C /* PersonalViewController.m in Sources */,
@@ -818,18 +885,23 @@
 				BD8CC95F1E349022009BF861 /* AFHTTPSessionManager.m in Sources */,
 				298A5FD11C8D80460056AF35 /* video_model.m in Sources */,
 				29532DC41E5C0FA300CBB8E5 /* SYLoadingLoopView.m in Sources */,
+				293E0B281F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m in Sources */,
 				BD8CC9601E349022009BF861 /* AFNetworkReachabilityManager.m in Sources */,
 				294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */,
 				29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */,
 				29B49EF31C881F1C00B53C5C /* MainViewController.m in Sources */,
 				BD6770FE1E49742700907B6A /* addFriendViewController.m in Sources */,
+				293E0B191F0B631D00DFD783 /* MBProgressHUD.m in Sources */,
 				29B49F0F1C884E2000B53C5C /* UIView+Layout.m in Sources */,
+				293E0B1E1F0B631D00DFD783 /* README.md in Sources */,
 				BD8CC9641E349022009BF861 /* AFURLSessionManager.m in Sources */,
 				BD8CC9631E349022009BF861 /* AFURLResponseSerialization.m in Sources */,
 				298A5FCB1C8D744A0056AF35 /* main_cell.m in Sources */,
 				298A5FBC1C8D2B420056AF35 /* showWebViewController.m in Sources */,
 				BD8CC9621E349022009BF861 /* AFURLRequestSerialization.m in Sources */,
+				293E0B1A1F0B631D00DFD783 /* README.mdown in Sources */,
 				2939C6021E55A0D700187BE3 /* smileModel.m in Sources */,
+				293E0B1D1F0B631D00DFD783 /* MBProgressHUD+JDragon.m in Sources */,
 				BD8CC9611E349022009BF861 /* AFSecurityPolicy.m in Sources */,
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
@@ -992,7 +1064,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5YR3RP559Y;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1012,8 +1084,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96242023-6178-4f58-b266-a5409965752b";
-				PROVISIONING_PROFILE_SPECIFIER = mingtuDeveloper1;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1026,7 +1098,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5YR3RP559Y;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1046,8 +1118,8 @@
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96242023-6178-4f58-b266-a5409965752b";
-				PROVISIONING_PROFILE_SPECIFIER = mingtuDeveloper1;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

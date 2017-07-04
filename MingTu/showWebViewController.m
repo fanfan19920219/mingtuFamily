@@ -32,15 +32,9 @@
 }
 
 -(void)createLoadView{
-//    if(loadingLoopView==nil){
-//        loadingLoopView = [[SYLoadingLoopView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2-50, VIEW_HEIGHT/2 - 50, 100, 100)];
-//    }
-//    loadingLoopView.roundDuration = 10;//旋转一圈所需时间
-//    loadingLoopView.isDefaultEndAnimation = YES;//是否需要旋转结束后的默认动画
-//    loadingLoopView.delegate = self;
-//    [_showWebView addSubview:loadingLoopView];
+    [MBProgressHUD showActivityMessageInView:@"加载中.."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //[loadingLoopView endAnimation];
+
     });
 }
 
@@ -127,6 +121,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 //    [loadingLoopView endAnimation];
+    [MBProgressHUD hideHUD];
 }
 
 

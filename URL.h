@@ -41,12 +41,25 @@
 
 //下面是单独的URL
 
-//海洋公园飞驰之王
+//海洋公园
 #define HYGY_FC_URL @"http://v.qq.com/x/page/z03454ezrmc.html"
+#define HYGY_SDZW_URL @"https://v.qq.com/x/page/v0349gi6abw.html"
+#define HYGY_JSZW_URL @"https://v.qq.com/x/page/k0368f002ex.html"
 
+//十一城
+#define SYS_FC_URL @"https://v.qq.com/x/page/w0520dq4l6l.html"
+#define SYS_JSZW_URL @"https://v.qq.com/x/page/q0399l1m6hh.html"
+#define SYS_SDZW_URL @"https://v.qq.com/x/page/p0500bpwovo.html"
 
+//老街迷宫
+#define LJMG_FC_URL @"https://v.qq.com/x/page/t0387dior2n.html"
+#define LJMG_JSZW_URL @"http://v.qq.com/page/x/6/y/x0175k7ql6y.html"
+#define LJMG_SDZW_URL @"http://v.qq.com/x/page/m0339xtdlp2.html"
 
-
+//瓦特厂房
+#define WTCF_FC_URL @"https://v.qq.com/x/page/p0378irn5fc.html"
+#define WTCF_JSZW_URL @"https://v.qq.com/x/page/u039176yxiy.html"
+#define WTCF_SDZW_URL @"https://v.qq.com/x/page/k05091v25ov.html"
 
 
 #endif /* URL_h */
