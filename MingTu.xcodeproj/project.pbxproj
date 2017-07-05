@@ -11,17 +11,6 @@
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
-		293E0B181F0B631D00DFD783 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B0D1F0B631D00DFD783 /* LICENSE */; };
-		293E0B191F0B631D00DFD783 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */; };
-		293E0B1A1F0B631D00DFD783 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B101F0B631D00DFD783 /* README.mdown */; };
-		293E0B1B1F0B631D00DFD783 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B121F0B631D00DFD783 /* LICENSE */; };
-		293E0B1C1F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */; };
-		293E0B1D1F0B631D00DFD783 /* MBProgressHUD+JDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */; };
-		293E0B1E1F0B631D00DFD783 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B171F0B631D00DFD783 /* README.md */; };
-		293E0B221F0B63CA00DFD783 /* MBProgressHUD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */; };
-		293E0B231F0B63CA00DFD783 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */; };
-		293E0B271F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */; };
-		293E0B281F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */; };
 		294ABDAA1E6909FF003AEF0D /* lookBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDA91E6909FF003AEF0D /* lookBianViewController.m */; };
 		294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 294ABDAC1E690CF1003AEF0D /* showBianViewController.m */; };
 		29532DB71E5BF45D00CBB8E5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29532DB61E5BF45D00CBB8E5 /* QuartzCore.framework */; };
@@ -60,6 +49,7 @@
 		29CC5D771C8E74FC003129DE /* playerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC5D761C8E74FC003129DE /* playerViewController.m */; };
 		29CC5D7A1C8E7621003129DE /* player_model.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC5D791C8E7621003129DE /* player_model.m */; };
 		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
+		4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965385CF518DAB551107FA8F /* libPods-MingTu.a */; };
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
 		BD36EA151E31FD8C0002D3CF /* renyeping2.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA141E31FD8C0002D3CF /* renyeping2.png */; };
@@ -122,21 +112,6 @@
 		2939C6011E55A0D700187BE3 /* smileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smileModel.m; sourceTree = "<group>"; };
 		2939C6031E55BA1A00187BE3 /* smilenextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smilenextViewController.h; sourceTree = "<group>"; };
 		2939C6041E55BA1A00187BE3 /* smilenextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = smilenextViewController.m; sourceTree = "<group>"; };
-		293E0B0D1F0B631D00DFD783 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		293E0B0E1F0B631D00DFD783 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		293E0B101F0B631D00DFD783 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
-		293E0B121F0B631D00DFD783 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+JDragon.bundle"; sourceTree = "<group>"; };
-		293E0B151F0B631D00DFD783 /* MBProgressHUD+JDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JDragon.h"; sourceTree = "<group>"; };
-		293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JDragon.m"; sourceTree = "<group>"; };
-		293E0B171F0B631D00DFD783 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		293E0B211F0B63CA00DFD783 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "MBProgressHUD+JDragon.xcconfig"; sourceTree = "<group>"; };
-		293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JDragon-dummy.m"; sourceTree = "<group>"; };
-		293E0B261F0B63E500DFD783 /* MBProgressHUD+JDragon-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JDragon-prefix.pch"; sourceTree = "<group>"; };
 		294ABDA81E6909FF003AEF0D /* lookBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lookBianViewController.h; sourceTree = "<group>"; };
 		294ABDA91E6909FF003AEF0D /* lookBianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lookBianViewController.m; sourceTree = "<group>"; };
 		294ABDAB1E690CF1003AEF0D /* showBianViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showBianViewController.h; sourceTree = "<group>"; };
@@ -201,6 +176,9 @@
 		29CC5D791C8E7621003129DE /* player_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = player_model.m; sourceTree = "<group>"; };
 		361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedSecondViewController.h; sourceTree = "<group>"; };
 		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
+		965385CF518DAB551107FA8F /* libPods-MingTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MingTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.release.xcconfig"; sourceTree = "<group>"; };
+		AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.debug.xcconfig"; sourceTree = "<group>"; };
 		BD36EA101E31F9870002D3CF /* renyeping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = renyeping.jpg; sourceTree = "<group>"; };
 		BD36EA121E31FBB70002D3CF /* renyeping1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping1.png; sourceTree = "<group>"; };
 		BD36EA141E31FD8C0002D3CF /* renyeping2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renyeping2.png; sourceTree = "<group>"; };
@@ -275,6 +253,7 @@
 				BD66BE281DB8A9A000E4BD4E /* SystemConfiguration.framework in Frameworks */,
 				BD66BE261DB8A99400E4BD4E /* libiconv.tbd in Frameworks */,
 				BD66BE241DB8A98B00E4BD4E /* Security.framework in Frameworks */,
+				4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,43 +314,6 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		293E0B0C1F0B631D00DFD783 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				293E0B0D1F0B631D00DFD783 /* LICENSE */,
-				293E0B0E1F0B631D00DFD783 /* MBProgressHUD.h */,
-				293E0B0F1F0B631D00DFD783 /* MBProgressHUD.m */,
-				293E0B101F0B631D00DFD783 /* README.mdown */,
-				293E0B1F1F0B63CA00DFD783 /* MBProgressHUD.xcconfig */,
-				293E0B201F0B63CA00DFD783 /* MBProgressHUD-dummy.m */,
-				293E0B211F0B63CA00DFD783 /* MBProgressHUD-prefix.pch */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		293E0B111F0B631D00DFD783 /* MBProgressHUD+JDragon */ = {
-			isa = PBXGroup;
-			children = (
-				293E0B121F0B631D00DFD783 /* LICENSE */,
-				293E0B131F0B631D00DFD783 /* MBProgressHUD+JDragon */,
-				293E0B171F0B631D00DFD783 /* README.md */,
-			);
-			path = "MBProgressHUD+JDragon";
-			sourceTree = "<group>";
-		};
-		293E0B131F0B631D00DFD783 /* MBProgressHUD+JDragon */ = {
-			isa = PBXGroup;
-			children = (
-				293E0B141F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle */,
-				293E0B151F0B631D00DFD783 /* MBProgressHUD+JDragon.h */,
-				293E0B161F0B631D00DFD783 /* MBProgressHUD+JDragon.m */,
-				293E0B241F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig */,
-				293E0B251F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m */,
-				293E0B261F0B63E500DFD783 /* MBProgressHUD+JDragon-prefix.pch */,
-			);
-			path = "MBProgressHUD+JDragon";
-			sourceTree = "<group>";
-		};
 		297295A11E68346800624F69 /* BianBian */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +355,6 @@
 		298A5FB81C8D28DF0056AF35 /* ToolView */ = {
 			isa = PBXGroup;
 			children = (
-				293E0B0C1F0B631D00DFD783 /* MBProgressHUD */,
-				293E0B111F0B631D00DFD783 /* MBProgressHUD+JDragon */,
 				29532DC21E5C0FA300CBB8E5 /* SYLoadingLoopView.h */,
 				29532DC31E5C0FA300CBB8E5 /* SYLoadingLoopView.m */,
 				298A5FBA1C8D2B420056AF35 /* showWebViewController.h */,
@@ -494,6 +434,7 @@
 				29B49EDF1C8804DE00B53C5C /* MingTuUITests */,
 				29B49EB91C8804DE00B53C5C /* Products */,
 				BD66BE221DB8A98A00E4BD4E /* Frameworks */,
+				C2173933E5885D1108E375D9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -618,6 +559,7 @@
 				BD66BE271DB8A9A000E4BD4E /* SystemConfiguration.framework */,
 				BD66BE251DB8A99400E4BD4E /* libiconv.tbd */,
 				BD66BE231DB8A98B00E4BD4E /* Security.framework */,
+				965385CF518DAB551107FA8F /* libPods-MingTu.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -713,6 +655,15 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		C2173933E5885D1108E375D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */,
+				A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -720,9 +671,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29B49EE51C8804DE00B53C5C /* Build configuration list for PBXNativeTarget "MingTu" */;
 			buildPhases = (
+				CC6AE5A6C867160FE50B6972 /* [CP] Check Pods Manifest.lock */,
 				29B49EB41C8804DE00B53C5C /* Sources */,
 				29B49EB51C8804DE00B53C5C /* Frameworks */,
 				29B49EB61C8804DE00B53C5C /* Resources */,
+				E7634DBFC656F512E4576D19 /* [CP] Embed Pods Frameworks */,
+				5CE42451575DE9D0577F49BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -831,18 +785,13 @@
 				29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */,
 				BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */,
 				298A5FCD1C8D77480056AF35 /* 视频placeholer.jpg in Resources */,
-				293E0B1B1F0B631D00DFD783 /* LICENSE in Resources */,
 				BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */,
 				298A5FB61C8D23C20056AF35 /* tabbar_discoverHL@2x.png in Resources */,
 				298A5FC11C8D2FC30056AF35 /* back@2x.png in Resources */,
-				293E0B1C1F0B631D00DFD783 /* MBProgressHUD+JDragon.bundle in Resources */,
-				293E0B271F0B63E500DFD783 /* MBProgressHUD+JDragon.xcconfig in Resources */,
-				293E0B181F0B631D00DFD783 /* LICENSE in Resources */,
 				298A5FB71C8D23C20056AF35 /* tabbar_discoverHL@3x.png in Resources */,
 				29B49EC61C8804DE00B53C5C /* Main.storyboard in Resources */,
 				298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */,
 				298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */,
-				293E0B221F0B63CA00DFD783 /* MBProgressHUD.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +811,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CE42451575DE9D0577F49BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MingTu/Pods-MingTu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6AE5A6C867160FE50B6972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MingTu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7634DBFC656F512E4576D19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MingTu/Pods-MingTu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29B49EB41C8804DE00B53C5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -874,7 +874,6 @@
 				29B49EC01C8804DE00B53C5C /* AppDelegate.m in Sources */,
 				2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */,
 				29CC5D7A1C8E7621003129DE /* player_model.m in Sources */,
-				293E0B231F0B63CA00DFD783 /* MBProgressHUD-dummy.m in Sources */,
 				BD6770F21E49617100907B6A /* PersonalTableViewCell.m in Sources */,
 				297295A81E683FBA00624F69 /* BianModel.m in Sources */,
 				29B49EF01C881F1000B53C5C /* PersonalViewController.m in Sources */,
@@ -885,23 +884,18 @@
 				BD8CC95F1E349022009BF861 /* AFHTTPSessionManager.m in Sources */,
 				298A5FD11C8D80460056AF35 /* video_model.m in Sources */,
 				29532DC41E5C0FA300CBB8E5 /* SYLoadingLoopView.m in Sources */,
-				293E0B281F0B63E500DFD783 /* MBProgressHUD+JDragon-dummy.m in Sources */,
 				BD8CC9601E349022009BF861 /* AFNetworkReachabilityManager.m in Sources */,
 				294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */,
 				29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */,
 				29B49EF31C881F1C00B53C5C /* MainViewController.m in Sources */,
 				BD6770FE1E49742700907B6A /* addFriendViewController.m in Sources */,
-				293E0B191F0B631D00DFD783 /* MBProgressHUD.m in Sources */,
 				29B49F0F1C884E2000B53C5C /* UIView+Layout.m in Sources */,
-				293E0B1E1F0B631D00DFD783 /* README.md in Sources */,
 				BD8CC9641E349022009BF861 /* AFURLSessionManager.m in Sources */,
 				BD8CC9631E349022009BF861 /* AFURLResponseSerialization.m in Sources */,
 				298A5FCB1C8D744A0056AF35 /* main_cell.m in Sources */,
 				298A5FBC1C8D2B420056AF35 /* showWebViewController.m in Sources */,
 				BD8CC9621E349022009BF861 /* AFURLRequestSerialization.m in Sources */,
-				293E0B1A1F0B631D00DFD783 /* README.mdown in Sources */,
 				2939C6021E55A0D700187BE3 /* smileModel.m in Sources */,
-				293E0B1D1F0B631D00DFD783 /* MBProgressHUD+JDragon.m in Sources */,
 				BD8CC9611E349022009BF861 /* AFSecurityPolicy.m in Sources */,
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
@@ -1058,8 +1052,13 @@
 		};
 		29B49EE61C8804DE00B53C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1081,19 +1080,24 @@
 					"$(PROJECT_DIR)/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
 				);
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Debug;
 		};
 		29B49EE71C8804DE00B53C5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1115,12 +1119,12 @@
 					"$(PROJECT_DIR)/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
 				);
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64 i386 x86_64";
 			};
 			name = Release;
 		};

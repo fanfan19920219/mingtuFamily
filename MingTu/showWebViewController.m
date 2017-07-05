@@ -32,7 +32,7 @@
 }
 
 -(void)createLoadView{
-    [MBProgressHUD showActivityMessageInView:@"加载中.."];
+//    [MBProgressHUD showActivityMessageInView:@"加载中.."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
     });
@@ -121,7 +121,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 //    [loadingLoopView endAnimation];
-    [MBProgressHUD hideHUD];
+//    [MBProgressHUD hideHUD];
 }
 
 
