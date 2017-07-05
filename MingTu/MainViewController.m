@@ -7,7 +7,7 @@
 //
 //self.view.frame.size.width
 //self.view.frame.size.height
-
+//up date
 #define HEIDER_HEIGHT  VIEW_WIDTH*0.8
 #define HEADERCOLOR RGBA(173, 79, 80, 1)
 #define BUTTON_FRAME CGRectMake(0, _headerImageView.frame.origin.y + _headerImageView.frame.size.height , VIEW_WIDTH, VIEW_WIDTH * 0.8)
