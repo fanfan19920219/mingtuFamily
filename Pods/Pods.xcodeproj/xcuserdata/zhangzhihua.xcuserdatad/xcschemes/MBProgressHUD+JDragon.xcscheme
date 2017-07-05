@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8F1F983EB9E6EFD2683B035EEE7040A8'
-               BlueprintName = 'Pods-MingTu'
+               BlueprintIdentifier = 'E1E7DE1ED655B8BD1D9C56CEAD18E7C7'
+               BlueprintName = 'MBProgressHUD+JDragon'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-MingTu.a'>
+               BuildableName = 'libMBProgressHUD+JDragon.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
