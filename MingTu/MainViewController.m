@@ -313,6 +313,39 @@
 //            [self.navigationController pushViewController:yueVC animated:YES];
 //            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
 //            [[UIApplication sharedApplication ] openURL: url];
+            NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
+            
+            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+            /*
+             + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+             if (jsonString == nil) {
+             return nil;
+             }
+             
+             NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+             NSError *err;
+             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+             options:NSJSONReadingMutableContainers
+             error:&err];
+             if(err) {
+             NSLog(@"json解析失败：%@",err);
+             return nil;
+             }
+             return dic;
+             }
+             */
+            
+            //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
+            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"成功了");
+                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+                NSLog(@"dic --- %@",dic);
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            }];
             [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"此功能暂未开启" andDelayDismissTime:1];
             
         }
@@ -412,7 +445,22 @@
             break;
     }
 }
-
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
 
 -(void)getTestUrl{
     

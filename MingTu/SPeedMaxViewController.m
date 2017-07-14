@@ -36,6 +36,7 @@
     [self initMethod];
     [self.view addSubview:self.selfTabbar];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 
