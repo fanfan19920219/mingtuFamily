@@ -9,7 +9,7 @@
 #import "showWebViewController.h"
 #import "Header.h"
 
-@interface showWebViewController()<UIWebViewDelegate,SYLoadingLoopViewDelegate> {
+@interface showWebViewController()<UIWebViewDelegate> {
     UIWebView *_showWebView;
     UIButton *_backButton;
     UIButton *_gobackButton; //返回按钮
@@ -22,12 +22,14 @@
 
 @implementation showWebViewController
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [MBProgressHUD hideHUD];
+}
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self create_webView];
     self.view.backgroundColor = [UIColor blackColor];
-    
-    
+    [MBProgressHUD showActivityMessageInWindow:@"加载中..."];
     
 }
 
@@ -121,7 +123,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 //    [loadingLoopView endAnimation];
-//    [MBProgressHUD hideHUD];
+    [MBProgressHUD hideHUD];
 }
 
 

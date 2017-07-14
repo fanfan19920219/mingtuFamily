@@ -46,6 +46,8 @@
 #import "showWebViewController.h"
 #import "AFNetworking.h"
 #import "ZZH_LoadingProject.h"
+#import "MBProgressHUD+JDragon.h"
+#import "MBProgressHUD.h"
 
 #define ADDVIEW(a) [self.view addSubview:a];
 //宽高

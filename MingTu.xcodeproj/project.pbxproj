@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */; };
+		292D49331F18701200715017 /* ShowZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292D49321F18701200715017 /* ShowZoneViewController.m */; };
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
 		2939C6051E55BA1A00187BE3 /* smilenextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6041E55BA1A00187BE3 /* smilenextViewController.m */; };
@@ -106,6 +107,8 @@
 /* Begin PBXFileReference section */
 		2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPeedMaxViewController.h; sourceTree = "<group>"; };
 		2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPeedMaxViewController.m; sourceTree = "<group>"; };
+		292D49311F18701200715017 /* ShowZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowZoneViewController.h; sourceTree = "<group>"; };
+		292D49321F18701200715017 /* ShowZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowZoneViewController.m; sourceTree = "<group>"; };
 		2939C5FB1E55853200187BE3 /* SmileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileViewController.h; sourceTree = "<group>"; };
 		2939C5FC1E55853200187BE3 /* SmileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmileViewController.m; sourceTree = "<group>"; };
 		2939C6001E55A0D700187BE3 /* smileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smileModel.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 				29CC5D761C8E74FC003129DE /* playerViewController.m */,
 				29532DB81E5BF4A500CBB8E5 /* 樱花瓣1.png */,
 				29532DB91E5BF4A500CBB8E5 /* 樱花瓣2.png */,
+				292D49311F18701200715017 /* ShowZoneViewController.h */,
+				292D49321F18701200715017 /* ShowZoneViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				BD8CC9621E349022009BF861 /* AFURLRequestSerialization.m in Sources */,
 				2939C6021E55A0D700187BE3 /* smileModel.m in Sources */,
 				BD8CC9611E349022009BF861 /* AFSecurityPolicy.m in Sources */,
+				292D49331F18701200715017 /* ShowZoneViewController.m in Sources */,
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
 				297295A41E68348000624F69 /* BianBianViewController.m in Sources */,
@@ -1062,7 +1068,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5YR3RP559Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,7 +1105,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5YR3RP559Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

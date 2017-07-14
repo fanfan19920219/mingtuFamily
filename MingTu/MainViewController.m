@@ -28,6 +28,7 @@
 
 #import "MainViewController.h"
 #import "Header.h"
+#import "ShowZoneViewController.h"
 #import <UserNotifications/UserNotifications.h>
 
 
@@ -313,10 +314,10 @@
 //            [self.navigationController pushViewController:yueVC animated:YES];
 //            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
 //            [[UIApplication sharedApplication ] openURL: url];
-            NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
-            
-            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+//            NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
+//            
+//            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+//            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
             /*
              + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
              if (jsonString == nil) {
@@ -337,27 +338,27 @@
              */
             
             //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"成功了");
-                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-                NSLog(@"dic --- %@",dic);
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            }];
-            [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"此功能暂未开启" andDelayDismissTime:1];
+//            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//                
+//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                NSLog(@"成功了");
+//                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+//                NSLog(@"dic --- %@",dic);
+//                
+//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            }];
+           
+            ShowZoneViewController *showVC = [[ShowZoneViewController alloc]init];
+            [self.navigationController pushViewController:showVC animated:YES];
+            
             
         }
             break;
         case 1:{
             
-            
             SPeedMaxViewController *speedVC = [[SPeedMaxViewController alloc]init];
             speedVC.title = @"极限专区";
             [self.navigationController pushViewController:speedVC animated:YES];
-            
-            
 //            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
 //            showViewcontroller.orHTML = YES;
 //            showViewcontroller.URL = @"<iframe frameborder=0 width=1000 height=498 src=https://v.qq.com/x/page/z03551xb72g.html?vid=h0363yngwqp&tiny=0&auto=0 allowfullscreen></iframe>";
@@ -377,7 +378,6 @@
             //
 //            exchangeViewController *exchangeVC = [[exchangeViewController alloc]init];
 //            [self.navigationController pushViewController:exchangeVC animated:YES];
-            
         }
             break;
         case 3:{
