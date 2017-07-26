@@ -8,10 +8,13 @@
 
 #import "AppDelegate.h"
 #import "Header.h"
+#import "UMessage.h"
+
+#define UMENGAPP_KEY @"595c87ab310c93254e0011aa"
 
 
 
-@interface AppDelegate (){
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>{
     //导航器
     
     
@@ -29,7 +32,7 @@
     //1824e2c7a9a60
     //e307fd8a7aaa3e85d5c6e58febf18f0c
     
-    
+
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -77,12 +80,56 @@
     
     
     [self regeisterShareSdk];
+    [UMessage startWithAppkey:@"595c87ab310c93254e0011aa" launchOptions:launchOptions];
+    [self initUmengPush];
+    
     return YES;
 }
 
 -(void)regeisterShareSdk{
-
+    [[UMSocialManager defaultManager] openLog:YES];
+    [[UMSocialManager defaultManager] setUmSocialAppkey:UMENGAPP_KEY];
+    
+    
+    //集成iqKeyBoard
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 }
+
+//初始化友盟推送
+-(void)initUmengPush{
+    //初始化方法,也可以使用(void)startWithAppkey:(NSString *)appKey launchOptions:(NSDictionary * )launchOptions httpsenable:(BOOL)value;这个方法，方便设置https请求。
+    
+    //注册通知，如果要使用category的自定义策略，可以参考demo中的代码。
+    [UMessage registerForRemoteNotifications];
+    
+    //iOS10必须加下面这段代码。
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate=self;
+    UNAuthorizationOptions types10=UNAuthorizationOptionBadge|  UNAuthorizationOptionAlert|UNAuthorizationOptionSound;
+    [center requestAuthorizationWithOptions:types10     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            //点击允许
+            //这里可以添加一些自己的逻辑
+        } else {
+            //点击不允许
+            //这里可以添加一些自己的逻辑
+        }
+    }];
+    //打开日志，方便调试
+    [UMessage setLogEnabled:YES];
+    
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken{
+    
+    //输出deviceToken
+//    NSLog(@"deviceToken=====%@",deviceToken);
+//    NSString*device = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@" "withString:@""]stringByReplacingOccurrencesOfString:@">"withString:@""];
+//    NSLog(@"deviceToken=====%@",device);
+    
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

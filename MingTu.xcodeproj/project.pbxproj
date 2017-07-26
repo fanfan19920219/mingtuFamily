@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */; };
+		2923C0131F282A2D000A5FA0 /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C0121F282A2D000A5FA0 /* AVPlayerViewController.m */; };
+		2923C0151F2837B0000A5FA0 /* zzh_gumu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2923C0141F2837B0000A5FA0 /* zzh_gumu.mp4 */; };
+		2923C01A1F283947000A5FA0 /* lh_qyc.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2923C0191F283947000A5FA0 /* lh_qyc.mp4 */; };
+		2923C01D1F287501000A5FA0 /* AVplayerDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C01C1F287501000A5FA0 /* AVplayerDownView.m */; };
+		2923C01F1F287528000A5FA0 /* AVplayerDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2923C01E1F287528000A5FA0 /* AVplayerDownView.xib */; };
+		2923C0221F28835B000A5FA0 /* AVPlayerContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C0211F28835B000A5FA0 /* AVPlayerContentModel.m */; };
+		2923C0251F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C0241F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m */; };
+		2923C0291F28965F000A5FA0 /* AVPlayerChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C0271F28965F000A5FA0 /* AVPlayerChatTableViewCell.m */; };
+		2923C02A1F28965F000A5FA0 /* AVPlayerChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2923C0281F28965F000A5FA0 /* AVPlayerChatTableViewCell.xib */; };
+		292500301F2731060021270F /* libUMessage_Sdk_1.5.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925002E1F2731060021270F /* libUMessage_Sdk_1.5.0.a */; };
+		292500321F27311A0021270F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292500311F27311A0021270F /* UserNotifications.framework */; };
 		292D49331F18701200715017 /* ShowZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292D49321F18701200715017 /* ShowZoneViewController.m */; };
 		2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C5FC1E55853200187BE3 /* SmileViewController.m */; };
 		2939C6021E55A0D700187BE3 /* smileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2939C6011E55A0D700187BE3 /* smileModel.m */; };
@@ -107,6 +118,24 @@
 /* Begin PBXFileReference section */
 		2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPeedMaxViewController.h; sourceTree = "<group>"; };
 		2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPeedMaxViewController.m; sourceTree = "<group>"; };
+		2923C0111F282A2D000A5FA0 /* AVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
+		2923C0121F282A2D000A5FA0 /* AVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
+		2923C0141F2837B0000A5FA0 /* zzh_gumu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zzh_gumu.mp4; sourceTree = "<group>"; };
+		2923C0191F283947000A5FA0 /* lh_qyc.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lh_qyc.mp4; sourceTree = "<group>"; };
+		2923C01B1F287501000A5FA0 /* AVplayerDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVplayerDownView.h; sourceTree = "<group>"; };
+		2923C01C1F287501000A5FA0 /* AVplayerDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVplayerDownView.m; sourceTree = "<group>"; };
+		2923C01E1F287528000A5FA0 /* AVplayerDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVplayerDownView.xib; sourceTree = "<group>"; };
+		2923C0201F28835B000A5FA0 /* AVPlayerContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerContentModel.h; sourceTree = "<group>"; };
+		2923C0211F28835B000A5FA0 /* AVPlayerContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerContentModel.m; sourceTree = "<group>"; };
+		2923C0231F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerTableViewDelegateAndDataSource.h; sourceTree = "<group>"; };
+		2923C0241F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerTableViewDelegateAndDataSource.m; sourceTree = "<group>"; };
+		2923C0261F28965F000A5FA0 /* AVPlayerChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerChatTableViewCell.h; sourceTree = "<group>"; };
+		2923C0271F28965F000A5FA0 /* AVPlayerChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerChatTableViewCell.m; sourceTree = "<group>"; };
+		2923C0281F28965F000A5FA0 /* AVPlayerChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVPlayerChatTableViewCell.xib; sourceTree = "<group>"; };
+		2925002E1F2731060021270F /* libUMessage_Sdk_1.5.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0.a; sourceTree = "<group>"; };
+		2925002F1F2731060021270F /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		292500311F27311A0021270F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		292500331F27313D0021270F /* MingTu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MingTu.entitlements; sourceTree = "<group>"; };
 		292D49311F18701200715017 /* ShowZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowZoneViewController.h; sourceTree = "<group>"; };
 		292D49321F18701200715017 /* ShowZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowZoneViewController.m; sourceTree = "<group>"; };
 		2939C5FB1E55853200187BE3 /* SmileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmileViewController.h; sourceTree = "<group>"; };
@@ -240,9 +269,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292500321F27311A0021270F /* UserNotifications.framework in Frameworks */,
 				29532DB71E5BF45D00CBB8E5 /* QuartzCore.framework in Frameworks */,
 				BD66BE401DB8B12400E4BD4E /* MessageUI.framework in Frameworks */,
 				BD66BE2C1DB8A9B800E4BD4E /* libsqlite3.tbd in Frameworks */,
+				292500301F2731060021270F /* libUMessage_Sdk_1.5.0.a in Frameworks */,
 				BD66BE3E1DB8B10100E4BD4E /* ImageIO.framework in Frameworks */,
 				BD66BE3C1DB8B0FB00E4BD4E /* JavaScriptCore.framework in Frameworks */,
 				BD66BE301DB8A9CC00E4BD4E /* libstdc++.tbd in Frameworks */,
@@ -284,8 +315,39 @@
 				2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */,
 				361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */,
 				361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */,
+				2923C0111F282A2D000A5FA0 /* AVPlayerViewController.h */,
+				2923C0121F282A2D000A5FA0 /* AVPlayerViewController.m */,
+				2923C01B1F287501000A5FA0 /* AVplayerDownView.h */,
+				2923C01C1F287501000A5FA0 /* AVplayerDownView.m */,
+				2923C01E1F287528000A5FA0 /* AVplayerDownView.xib */,
+				2923C0201F28835B000A5FA0 /* AVPlayerContentModel.h */,
+				2923C0211F28835B000A5FA0 /* AVPlayerContentModel.m */,
+				2923C0231F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.h */,
+				2923C0241F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m */,
+				2923C0261F28965F000A5FA0 /* AVPlayerChatTableViewCell.h */,
+				2923C0271F28965F000A5FA0 /* AVPlayerChatTableViewCell.m */,
+				2923C0281F28965F000A5FA0 /* AVPlayerChatTableViewCell.xib */,
+				2923C0161F283870000A5FA0 /* 本地视频 */,
 			);
 			name = " 赛王";
+			sourceTree = "<group>";
+		};
+		2923C0161F283870000A5FA0 /* 本地视频 */ = {
+			isa = PBXGroup;
+			children = (
+				2923C0191F283947000A5FA0 /* lh_qyc.mp4 */,
+				2923C0141F2837B0000A5FA0 /* zzh_gumu.mp4 */,
+			);
+			name = "本地视频";
+			sourceTree = "<group>";
+		};
+		2925002D1F2731060021270F /* UMessage_Sdk_1.5.0 */ = {
+			isa = PBXGroup;
+			children = (
+				2925002E1F2731060021270F /* libUMessage_Sdk_1.5.0.a */,
+				2925002F1F2731060021270F /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.5.0;
 			sourceTree = "<group>";
 		};
 		2939C5FA1E5584E300187BE3 /* 笑话 */ = {
@@ -454,6 +516,7 @@
 		29B49EBA1C8804DE00B53C5C /* MingTu */ = {
 			isa = PBXGroup;
 			children = (
+				292500331F27313D0021270F /* MingTu.entitlements */,
 				29B49EF41C88235900B53C5C /* Header.h */,
 				BD3BB5261E4C532000BDD9CF /* xjjProtocol.h */,
 				29B49EBE1C8804DE00B53C5C /* AppDelegate.h */,
@@ -508,6 +571,7 @@
 		29B49F0C1C884E1000B53C5C /* TOOL */ = {
 			isa = PBXGroup;
 			children = (
+				2925002D1F2731060021270F /* UMessage_Sdk_1.5.0 */,
 				298A5FBD1C8D2BB50056AF35 /* URL.h */,
 				29B49F0D1C884E2000B53C5C /* UIView+Layout.h */,
 				29B49F0E1C884E2000B53C5C /* UIView+Layout.m */,
@@ -548,6 +612,7 @@
 		BD66BE221DB8A98A00E4BD4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				292500311F27311A0021270F /* UserNotifications.framework */,
 				29532DB61E5BF45D00CBB8E5 /* QuartzCore.framework */,
 				BD66BE3F1DB8B12400E4BD4E /* MessageUI.framework */,
 				BD66BE3D1DB8B10100E4BD4E /* ImageIO.framework */,
@@ -741,6 +806,11 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 5YR3RP559Y;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					29B49ED01C8804DE00B53C5C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -778,10 +848,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				298A5FB51C8D23C20056AF35 /* tabbar_discover@3x.png in Resources */,
+				2923C01A1F283947000A5FA0 /* lh_qyc.mp4 in Resources */,
 				29B49EF71C883D1F00B53C5C /* 小橘子2.jpg in Resources */,
 				298A5FAF1C8D23B60056AF35 /* tabbar_meHL@3x.png in Resources */,
 				BD36EA151E31FD8C0002D3CF /* renyeping2.png in Resources */,
 				29B49ECB1C8804DE00B53C5C /* LaunchScreen.storyboard in Resources */,
+				2923C0151F2837B0000A5FA0 /* zzh_gumu.mp4 in Resources */,
 				29532DBE1E5BF4A500CBB8E5 /* 樱花瓣2.png in Resources */,
 				BD705CE71D4A174D008B9A2A /* 水冰月.jpeg in Resources */,
 				29B49EC81C8804DE00B53C5C /* Assets.xcassets in Resources */,
@@ -796,7 +868,9 @@
 				298A5FB71C8D23C20056AF35 /* tabbar_discoverHL@3x.png in Resources */,
 				29B49EC61C8804DE00B53C5C /* Main.storyboard in Resources */,
 				298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */,
+				2923C02A1F28965F000A5FA0 /* AVPlayerChatTableViewCell.xib in Resources */,
 				298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */,
+				2923C01F1F287528000A5FA0 /* AVplayerDownView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,7 +898,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MingTu/Pods-MingTu-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MBProgressHUD+JDragon/MBProgressHUD+JDragon/MBProgressHUD+JDragon.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -876,6 +954,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD3BB5231E4C40CC00BDD9CF /* yue_ViewController.m in Sources */,
+				2923C0291F28965F000A5FA0 /* AVPlayerChatTableViewCell.m in Sources */,
 				294ABDAA1E6909FF003AEF0D /* lookBianViewController.m in Sources */,
 				BD6770F51E496A5C00907B6A /* personInformationViewController.m in Sources */,
 				298A5FC71C8D608F0056AF35 /* playVideoViewController.m in Sources */,
@@ -886,6 +965,7 @@
 				297295A81E683FBA00624F69 /* BianModel.m in Sources */,
 				29B49EF01C881F1000B53C5C /* PersonalViewController.m in Sources */,
 				BDFD0F1E1E34B325003030ED /* boringTableViewCell.m in Sources */,
+				2923C0221F28835B000A5FA0 /* AVPlayerContentModel.m in Sources */,
 				2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */,
 				BD832D2D1D3F4D8C00E8B7E5 /* exchangeViewController.m in Sources */,
 				2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */,
@@ -896,6 +976,7 @@
 				294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */,
 				29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */,
 				29B49EF31C881F1C00B53C5C /* MainViewController.m in Sources */,
+				2923C0251F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m in Sources */,
 				BD6770FE1E49742700907B6A /* addFriendViewController.m in Sources */,
 				29B49F0F1C884E2000B53C5C /* UIView+Layout.m in Sources */,
 				BD8CC9641E349022009BF861 /* AFURLSessionManager.m in Sources */,
@@ -903,8 +984,10 @@
 				298A5FCB1C8D744A0056AF35 /* main_cell.m in Sources */,
 				298A5FBC1C8D2B420056AF35 /* showWebViewController.m in Sources */,
 				BD8CC9621E349022009BF861 /* AFURLRequestSerialization.m in Sources */,
+				2923C01D1F287501000A5FA0 /* AVplayerDownView.m in Sources */,
 				2939C6021E55A0D700187BE3 /* smileModel.m in Sources */,
 				BD8CC9611E349022009BF861 /* AFSecurityPolicy.m in Sources */,
+				2923C0131F282A2D000A5FA0 /* AVPlayerViewController.m in Sources */,
 				292D49331F18701200715017 /* ShowZoneViewController.m in Sources */,
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
@@ -1066,6 +1149,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MingTu/MingTu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YR3RP559Y;
@@ -1084,6 +1168,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/UMessage_Sdk_1.5.0",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
@@ -1103,6 +1188,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MingTu/MingTu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YR3RP559Y;
@@ -1121,6 +1207,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/UMessage_Sdk_1.5.0",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mingtu;
 				PRODUCT_NAME = "$(TARGET_NAME)";

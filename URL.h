@@ -9,6 +9,10 @@
 #ifndef URL_h
 #define URL_h
 
+
+
+
+
 //车队首页
 #define MAIN_PAGE_URL @"http://www.fan406608969.icoc.in/"
 //游戏官网
@@ -34,6 +38,8 @@
 
 
 
+//工具
+#import <UMSocialCore/UMSocialCore.h>
 
 
 

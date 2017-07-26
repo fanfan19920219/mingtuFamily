@@ -77,6 +77,7 @@
     [self createPage];
     [self registerNotifaction];
     [self getTestUrl];
+    
 }
 
 -(void)registerNotifaction{
@@ -314,10 +315,10 @@
 //            [self.navigationController pushViewController:yueVC animated:YES];
 //            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
 //            [[UIApplication sharedApplication ] openURL: url];
-//            NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
-//            
-//            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-//            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+            NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
+            
+            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
+            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
             /*
              + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
              if (jsonString == nil) {
@@ -338,15 +339,16 @@
              */
             
             //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-//            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//                
-//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                NSLog(@"成功了");
-//                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
-//                NSLog(@"dic --- %@",dic);
-//                
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//            }];
+            [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                NSLog(@"成功了");
+                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+                NSString *result = [[NSString alloc] initWithData:responseObject  encoding:NSUTF8StringEncoding];
+                NSLog(@"dic --- %@ --- %@",result,[self dictionaryWithJsonString:result]);
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            }];
            
             ShowZoneViewController *showVC = [[ShowZoneViewController alloc]init];
             [self.navigationController pushViewController:showVC animated:YES];
@@ -461,6 +463,7 @@
     }
     return dic;
 }
+
 
 -(void)getTestUrl{
     

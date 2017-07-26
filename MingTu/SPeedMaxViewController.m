@@ -42,7 +42,9 @@
 
 -(void)initMethod{
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _titleArray = (NSMutableArray*)@[@"赛道之王",@"极速之王",@"飞驰之王"];
+    
+    
+    _titleArray = (NSMutableArray*)@[@"沁园春剃刀1:22",@"熔岩古墓1:25"];
     [self.view addSubview:self.tableView];
 }
 
@@ -106,14 +108,13 @@
     NSString *titleString;
     switch (indexPath.row) {
         case 0:{
-            titleString = @"赛道之王";
+            titleString = @"lh_qyc";
         }break;
             
         case 1:{
-            titleString = @"极速之王";
+            titleString = @"zzh_gumu";
         }break;
 
-            
         case 2:{
             titleString = @"飞驰之王";
         }break;
@@ -122,18 +123,14 @@
         case 3:{
             titleString = @"极限之王";
         }break;
-
-            
-            
-            
             
         default:
             break;
     }
     
-    SpeedSecondViewController *secondViewController = [[SpeedSecondViewController alloc]init];
-    secondViewController.title = titleString;
-    [self.navigationController pushViewController:secondViewController animated:YES];
+    AVPlayerViewController *avPlayer = [[AVPlayerViewController alloc]init];
+    avPlayer.videoLocalName = titleString;
+    [self.navigationController pushViewController:avPlayer animated:YES];
     
 }
 

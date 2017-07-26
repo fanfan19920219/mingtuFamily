@@ -12,8 +12,20 @@
 #ifndef Header_h
 #define Header_h
 
+typedef void(^AVPlayerTableViewReturnBlock)(id obj);
+
+
+
+
+
 #import "xjjProtocol.h"
+//倒入框架
+#import <AVFoundation/AVFoundation.h>
 #import <MessageUI/MessageUI.h>
+#import <ZFPlayer.h>
+#import <Masonry.h>
+
+
 #import "MainViewController.h"
 #import "PersonalViewController.h"
 #import "videoViewController.h"
@@ -27,6 +39,8 @@
 #import "BianBianViewController.h"
 #import "SPeedMaxViewController.h"
 #import "BianModel.h"
+#import "AVPlayerViewController.h"
+#import "AVplayerDownView.h"
 
 //View类
 #import "main_cell.h"
@@ -48,6 +62,14 @@
 #import "ZZH_LoadingProject.h"
 #import "MBProgressHUD+JDragon.h"
 #import "MBProgressHUD.h"
+#import "UMessage.h"
+#import <IQKeyboardManager.h>
+
+//其他类
+#import "AVPlayerTableViewDelegateAndDataSource.h"
+
+//模型类
+#import "AVPlayerContentModel.h"
 
 #define ADDVIEW(a) [self.view addSubview:a];
 //宽高

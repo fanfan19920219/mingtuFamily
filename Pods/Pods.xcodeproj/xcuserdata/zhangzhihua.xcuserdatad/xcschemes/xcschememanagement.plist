@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD+JDragon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MingTu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZFPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F1F983EB9E6EFD2683B035EEE7040A8</key>
+		<key>904F4F27FD314010A3812EB2A9306183</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE0F58586C149E52A4F135B15ADBE030</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E1E7DE1ED655B8BD1D9C56CEAD18E7C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB7FC2528F93C926BDEB961B44242A36</key>
 		<dict>
 			<key>primary</key>
 			<true/>

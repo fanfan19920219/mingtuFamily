@@ -80,10 +80,18 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/MBProgressHUD+JDragon/MBProgressHUD+JDragon/MBProgressHUD+JDragon.bundle"
+  install_resource "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
+  install_resource "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"
+  install_resource "${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "${PODS_ROOT}/MBProgressHUD+JDragon/MBProgressHUD+JDragon/MBProgressHUD+JDragon.bundle"
+  install_resource "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
+  install_resource "${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"
+  install_resource "${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
