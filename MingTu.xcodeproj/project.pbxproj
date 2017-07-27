@@ -66,6 +66,8 @@
 		29F482A71F29E1CA00972B69 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F482A51F29E1CA00972B69 /* SocialTableViewCell.m */; };
 		29F482A81F29E1CA00972B69 /* SocialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */; };
 		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
+		369E8B051F2A4DAF0099D78E /* businessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369E8B031F2A4DAF0099D78E /* businessViewController.m */; };
+		369E8B061F2A4DAF0099D78E /* businessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369E8B041F2A4DAF0099D78E /* businessViewController.xib */; };
 		4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965385CF518DAB551107FA8F /* libPods-MingTu.a */; };
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
@@ -221,6 +223,9 @@
 		29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialTableViewCell.xib; sourceTree = "<group>"; };
 		361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedSecondViewController.h; sourceTree = "<group>"; };
 		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
+		369E8B021F2A4DAF0099D78E /* businessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessViewController.h; sourceTree = "<group>"; };
+		369E8B031F2A4DAF0099D78E /* businessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessViewController.m; sourceTree = "<group>"; };
+		369E8B041F2A4DAF0099D78E /* businessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessViewController.xib; sourceTree = "<group>"; };
 		965385CF518DAB551107FA8F /* libPods-MingTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MingTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.release.xcconfig"; sourceTree = "<group>"; };
 		AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -610,6 +615,9 @@
 		29F4829F1F29D97500972B69 /* 业务专区 */ = {
 			isa = PBXGroup;
 			children = (
+				369E8B021F2A4DAF0099D78E /* businessViewController.h */,
+				369E8B031F2A4DAF0099D78E /* businessViewController.m */,
+				369E8B041F2A4DAF0099D78E /* businessViewController.xib */,
 			);
 			name = "业务专区";
 			sourceTree = "<group>";
@@ -893,6 +901,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				298A5FB51C8D23C20056AF35 /* tabbar_discover@3x.png in Resources */,
+				369E8B061F2A4DAF0099D78E /* businessViewController.xib in Resources */,
 				2923C01A1F283947000A5FA0 /* lh_qyc.mp4 in Resources */,
 				29B49EF71C883D1F00B53C5C /* 小橘子2.jpg in Resources */,
 				298A5FAF1C8D23B60056AF35 /* tabbar_meHL@3x.png in Resources */,
@@ -1014,6 +1023,7 @@
 				BDFD0F1E1E34B325003030ED /* boringTableViewCell.m in Sources */,
 				2923C0221F28835B000A5FA0 /* AVPlayerContentModel.m in Sources */,
 				29F482A31F29DB0700972B69 /* SocialViewController.m in Sources */,
+				369E8B051F2A4DAF0099D78E /* businessViewController.m in Sources */,
 				2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */,
 				BD832D2D1D3F4D8C00E8B7E5 /* exchangeViewController.m in Sources */,
 				2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */,
