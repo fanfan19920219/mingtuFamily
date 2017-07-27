@@ -39,8 +39,10 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 #import "BianBianViewController.h"
 #import "SPeedMaxViewController.h"
 #import "BianModel.h"
-#import "AVPlayerViewController.h"
+#import "AVPlayerViewController1.h"
 #import "AVplayerDownView.h"
+#import "ShowZone1ViewController.h"
+#import "SocialViewController.h"
 
 //View类
 #import "main_cell.h"

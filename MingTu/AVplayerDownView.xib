@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hag-R4-dRL">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入评论内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hag-R4-dRL">
                     <rect key="frame" x="16" y="7" width="291" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,13 +62,13 @@
                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-VJ-Vua">
-                    <rect key="frame" x="305" y="12" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdD-VJ-Vua">
+                    <rect key="frame" x="283" y="12" width="64" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="42" id="FKF-vd-STi"/>
+                        <constraint firstAttribute="width" constant="64" id="FKF-vd-STi"/>
                         <constraint firstAttribute="height" constant="21" id="j3i-6h-O3B"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -77,7 +77,7 @@
             <constraints>
                 <constraint firstItem="L3E-XY-El3" firstAttribute="top" secondItem="lDq-jK-XhL" secondAttribute="top" constant="12" id="8jL-ll-QiZ"/>
                 <constraint firstItem="UdD-VJ-Vua" firstAttribute="top" secondItem="lDq-jK-XhL" secondAttribute="top" constant="12" id="HDE-xE-W5y"/>
-                <constraint firstItem="UdD-VJ-Vua" firstAttribute="leading" secondItem="L3E-XY-El3" secondAttribute="trailing" constant="30" id="T1c-BW-zov"/>
+                <constraint firstItem="UdD-VJ-Vua" firstAttribute="leading" secondItem="L3E-XY-El3" secondAttribute="trailing" constant="8" id="T1c-BW-zov"/>
                 <constraint firstAttribute="trailing" secondItem="UdD-VJ-Vua" secondAttribute="trailing" constant="8" id="nyX-XP-iwb"/>
                 <constraint firstItem="L3E-XY-El3" firstAttribute="leading" secondItem="lDq-jK-XhL" secondAttribute="leading" constant="16" id="sGz-hG-esB"/>
             </constraints>

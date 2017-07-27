@@ -1,18 +1,18 @@
 //
-//  AVPlayerViewController.m
+//  AVPlayerViewController1.m
 //  MingTu
 //
 //  Created by zhangzhihua on 2017/7/26.
 //  Copyright © 2017年 zhangzhihua. All rights reserved.
 //
 
-#import "AVPlayerViewController.h"
+#import "AVPlayerViewController1.h"
 #import "ZFPlayerView.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 #define PLAYER_VIEW_HEIGHT 200.f
 
-@interface AVPlayerViewController ()<ZFPlayerDelegate>
+@interface AVPlayerViewController1 ()<ZFPlayerDelegate>
 @property (nonatomic , strong)AVPlayer *player ;
 @property (nonatomic , strong)ZFPlayerView *playerView;
 @property (nonatomic , strong)NSURL *url;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation AVPlayerViewController
+@implementation AVPlayerViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,20 +44,19 @@
 
 -(void)create_Views{
     AVplayerDownView *downViewTop = [AVplayerDownView BView];
-    downViewTop.VideoName.text = @"视频的名字";
-    downViewTop.PlayerNum.text = @"33次";
+    downViewTop.VideoName.text = self.videoShowName;
+    downViewTop.PlayerNum.text = @"播放33次";
     downViewTop.frame = CGRectMake(0,  64 + PLAYER_VIEW_HEIGHT, VIEW_WIDTH, 44);
     [self.view addSubview:downViewTop];
     
     _downViewDown = [AVplayerDownView AView];
-    _downViewDown.contentText.text = @"哈哈哈哈";
+//    _downViewDown.contentText.text = @"";
     [_downViewDown.sendButton addTarget:self action:@selector(sendClick:) forControlEvents:UIControlEventTouchUpInside];
     _downViewDown.frame = CGRectMake(0, VIEW_HEIGHT - 44, VIEW_WIDTH, 44);
     [self.view addSubview:_downViewDown];
     
     _chatContentArray = [[NSMutableArray alloc]init];
     
-    [_chatContentArray addObject:@"张蔚然"];
     _chatContentTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 108 + PLAYER_VIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - ( 108 + PLAYER_VIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _chatContentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _chatContentTableView.tableFooterView = [[UIView alloc]init];
@@ -80,6 +79,8 @@
     [_chatContentArray addObject:contentModel];
     NSLog(@"contenarray --- %@",_chatContentArray);
     [_chatContentTableView reloadData];
+    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:_chatContentArray.count-1 inSection:0];
+    [_chatContentTableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 

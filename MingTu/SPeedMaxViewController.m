@@ -106,13 +106,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString *titleString;
+    NSString *showName;
     switch (indexPath.row) {
         case 0:{
             titleString = @"lh_qyc";
+            showName = @"沁园春剃刀1:22";
         }break;
             
         case 1:{
             titleString = @"zzh_gumu";
+            showName = @"熔岩古墓雷诺1:25";
         }break;
 
         case 2:{
@@ -128,8 +131,9 @@
             break;
     }
     
-    AVPlayerViewController *avPlayer = [[AVPlayerViewController alloc]init];
+    AVPlayerViewController1 *avPlayer = [[AVPlayerViewController1 alloc]init];
     avPlayer.videoLocalName = titleString;
+    avPlayer.videoShowName = showName;
     [self.navigationController pushViewController:avPlayer animated:YES];
     
 }

@@ -8,9 +8,9 @@
 
 #import "showWebViewController.h"
 #import "Header.h"
-
-@interface showWebViewController()<UIWebViewDelegate> {
-    UIWebView *_showWebView;
+#import <WebKit/WebKit.h>
+@interface showWebViewController()<UIWebViewDelegate,WKNavigationDelegate> {
+    WKWebView *_showWebView;
     UIButton *_backButton;
     UIButton *_gobackButton; //返回按钮
     
@@ -29,7 +29,7 @@
     [super viewDidLoad];
     [self create_webView];
     self.view.backgroundColor = [UIColor blackColor];
-    [MBProgressHUD showActivityMessageInWindow:@"加载中..."];
+//    [MBProgressHUD showActivityMessageInWindow:@"加载中..."];
     
 }
 
@@ -41,13 +41,19 @@
 }
 
 -(void)create_webView{
-    _showWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 15, VIEW_WIDTH, VIEW_HEIGHT-45)];
+    
+//    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+//    [self.view addSubview:webView];
+    _showWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 15, VIEW_WIDTH, VIEW_HEIGHT-45)];
     //_showWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT/2)];
-    _showWebView.scalesPageToFit = YES;                                  //自动对页面进行缩放以适应屏幕
-    _showWebView.detectsPhoneNumbers = YES;//自动检测网页上的电话号码，单击可以拨打
-    _showWebView.delegate = self;
+//    _showWebView.scalesPageToFit = YES;                                  //自动对页面进行缩放以适应屏幕
+//    _showWebView.delegate = self;
     _showWebView.scrollView.bounces = NO;
     [self.view addSubview:_showWebView];
+    
+    
+    
     if(!self.orHTML){
         NSString *urlString = [NSString stringWithFormat:@"%@",self.URL];
         

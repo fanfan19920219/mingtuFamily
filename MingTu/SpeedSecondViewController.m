@@ -7,7 +7,7 @@
 //
 
 #import "SpeedSecondViewController.h"
-#import "AVPlayerViewController.h"
+#import "AVPlayerViewController1.h"
 @interface SpeedSecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong)NSMutableArray *titleArray;
 @property (nonatomic , strong)NSMutableArray *urlArray;
@@ -109,7 +109,7 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    AVPlayerViewController *intoVC = [[AVPlayerViewController alloc]init];
+    AVPlayerViewController1 *intoVC = [[AVPlayerViewController1 alloc]init];
     [self.navigationController pushViewController:intoVC animated:YES];
     
 //    showWebViewController *showViewcontroller = [[showWebViewController alloc]init];

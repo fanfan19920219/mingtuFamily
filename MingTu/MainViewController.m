@@ -247,7 +247,7 @@
     
     
     _buttonArray = [[NSMutableArray alloc]init];
-    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"极限专区",@"官方论坛",@"百度飞吧",@"hahaha",@"命徒外卖", nil];
+    _titleArray = [[NSArray alloc]initWithObjects:@"展示区",@"极限专区",@"社交专区",@"业务专区",@"常用工具",@"联系人", nil];
     for(int i = 0  ; i < _titleArray.count ; i++){
         UIButton *videoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [videoButton setSlide:videoButton andSlideColor:nil];
@@ -311,49 +311,23 @@
 -(void)videoClick:(UIButton*)sender{
     switch (sender.tag) {
         case 0:{
-//            yue_ViewController *yueVC = [[yue_ViewController alloc]init];
-//            [self.navigationController pushViewController:yueVC animated:YES];
-//            NSURL* url = [[ NSURL alloc ] initWithString :E_L_M];
-//            [[UIApplication sharedApplication ] openURL: url];
             NSString*domainStr=@"http://localhost:8080/localServlet/mainpage";
-            
             AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
             manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-            /*
-             + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
-             if (jsonString == nil) {
-             return nil;
-             }
-             
-             NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-             NSError *err;
-             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
-             options:NSJSONReadingMutableContainers
-             error:&err];
-             if(err) {
-             NSLog(@"json解析失败：%@",err);
-             return nil;
-             }
-             return dic;
-             }
-             */
-            
             //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
             [manager GET:domainStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSLog(@"成功了");
-                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+//                NSDictionary*dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
                 NSString *result = [[NSString alloc] initWithData:responseObject  encoding:NSUTF8StringEncoding];
                 NSLog(@"dic --- %@ --- %@",result,[self dictionaryWithJsonString:result]);
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             }];
            
-            ShowZoneViewController *showVC = [[ShowZoneViewController alloc]init];
+            ShowZone1ViewController *showVC = [[ShowZone1ViewController alloc]init];
             [self.navigationController pushViewController:showVC animated:YES];
-            
-            
         }
             break;
         case 1:{
@@ -371,12 +345,15 @@
         }
             break;
         case 2:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = SPEEDLUNTAN;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                
-            }];
+            SocialViewController *socialVC = [[SocialViewController alloc]init];
+            [self.navigationController pushViewController:socialVC animated:YES];
+            
+//            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+//            showViewcontroller.URL = SPEEDLUNTAN;
+//            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
+//            [self presentViewController:showViewcontroller animated:YES completion:^{
+//                
+//            }];
             //
 //            exchangeViewController *exchangeVC = [[exchangeViewController alloc]init];
 //            [self.navigationController pushViewController:exchangeVC animated:YES];

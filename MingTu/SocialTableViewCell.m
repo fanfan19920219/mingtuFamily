@@ -1,14 +1,14 @@
 //
-//  AVPlayerChatTableViewCell.m
+//  SocialTableViewCell.m
 //  MingTu
 //
 //  Created by zhangzhihua on 2017/7/27.
 //  Copyright © 2017年 zhangzhihua. All rights reserved.
 //
 
-#import "AVPlayerChatTableViewCell.h"
+#import "SocialTableViewCell.h"
 
-@implementation AVPlayerChatTableViewCell
+@implementation SocialTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
