@@ -68,6 +68,8 @@
 		29F482A71F29E1CA00972B69 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F482A51F29E1CA00972B69 /* SocialTableViewCell.m */; };
 		29F482A81F29E1CA00972B69 /* SocialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */; };
 		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
+		369E8B051F2A4DAF0099D78E /* businessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369E8B031F2A4DAF0099D78E /* businessViewController.m */; };
+		369E8B061F2A4DAF0099D78E /* businessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369E8B041F2A4DAF0099D78E /* businessViewController.xib */; };
 		4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965385CF518DAB551107FA8F /* libPods-MingTu.a */; };
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
@@ -226,6 +228,9 @@
 		29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialTableViewCell.xib; sourceTree = "<group>"; };
 		361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedSecondViewController.h; sourceTree = "<group>"; };
 		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
+		369E8B021F2A4DAF0099D78E /* businessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessViewController.h; sourceTree = "<group>"; };
+		369E8B031F2A4DAF0099D78E /* businessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessViewController.m; sourceTree = "<group>"; };
+		369E8B041F2A4DAF0099D78E /* businessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessViewController.xib; sourceTree = "<group>"; };
 		965385CF518DAB551107FA8F /* libPods-MingTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MingTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.release.xcconfig"; sourceTree = "<group>"; };
 		AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.debug.xcconfig"; sourceTree = "<group>"; };
