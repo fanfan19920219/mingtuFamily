@@ -30,7 +30,13 @@
 //赛道之王
 #define SAIDAOZHIWANG @"http://speed.gamebbs.qq.com/forum.php?mod=viewthread&tid=1466818&extra=page%3D1"
 //QQ飞车吧
-#define SPEEDBA @"https://tieba.baidu.com/f?kw=qq%B7%C9%B3%B5&fr=ala0&tpl=5"
+#define SPEEDBA @"https://tieba.baidu.com/f?kw=qq飞车&pn=0&"
+//QQ飞车交易吧
+#define SPEED_TRANSACTION @"https://tieba.baidu.com/f?kw=飞车交易&pn=0&"
+
+//QQ飞车卖号吧
+#define SPEED_SALE @"https://tieba.baidu.com/f?kw=飞车卖号&pn=0&"
+
 //飞车论坛
 #define SPEEDLUNTAN @"http://speed.gamebbs.qq.com/forum.php?mod=forumdisplay&fid=30501"
 

@@ -360,12 +360,17 @@
         }
             break;
         case 3:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-//            showViewcontroller.URL = [NSString stringWithFormat:@"%@",_testURL];
-            showViewcontroller.URL = @"https://tieba.baidu.com/f?kw=qq飞车&pn=0&";
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                
-            }];
+            
+            businessViewController *businessVC = [[businessViewController alloc]init];
+            [self.navigationController pushViewController:businessVC animated:YES];
+
+            
+//            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+////            showViewcontroller.URL = [NSString stringWithFormat:@"%@",_testURL];
+//            showViewcontroller.URL = @"https://tieba.baidu.com/f?kw=qq飞车&pn=0&";
+//            [self presentViewController:showViewcontroller animated:YES completion:^{
+//                
+//            }];
         }
             
             break;

@@ -27,8 +27,8 @@
 
 -(void)initMethod{
     _tableViewDataArray = [[NSMutableArray alloc]init];
-    NSDictionary *dic1 = @{@"title":@"QQ飞车吧",@"imgename":@"Logo1.png"};
-    NSDictionary *dic2 = @{@"title":@"QQ飞车官方论坛",@"imgename":@"Logo2.png"};
+    NSDictionary *dic1 = @{@"title":@"QQ飞车吧",@"imgename":@"Logo1.png",@"url":SPEEDBA};
+    NSDictionary *dic2 = @{@"title":@"QQ飞车官方论坛",@"imgename":@"Logo2.png",@"url":SPEEDLUNTAN};
     [_tableViewDataArray addObject:dic1];
     [_tableViewDataArray addObject:dic2];
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -57,8 +57,21 @@
     cell.showImageView.image = [UIImage imageNamed:[dic objectForKey:@"imgename"]];
     cell.socialDetailLabel.text = @"";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+    
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
+    showViewcontroller.URL = [[_tableViewDataArray objectAtIndex:indexPath.row] objectForKey:@"url"];
+    [self presentViewController:showViewcontroller animated:YES completion:^{
+        
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -66,13 +79,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
