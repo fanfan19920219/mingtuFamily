@@ -9,7 +9,7 @@
 #import "showWebViewController.h"
 #import "Header.h"
 #import <WebKit/WebKit.h>
-@interface showWebViewController()<UIWebViewDelegate,WKNavigationDelegate> {
+@interface showWebViewController()<UIWebViewDelegate,WKNavigationDelegate,WKUIDelegate> {
     WKWebView *_showWebView;
     UIButton *_backButton;
     UIButton *_gobackButton; //返回按钮
@@ -17,7 +17,7 @@
     UIView *_downView;
 //    SYLoadingLoopView *loadingLoopView;
 }
-
+@property (nonatomic , strong)UIProgressView *progressView;
 @end
 
 @implementation showWebViewController
@@ -42,15 +42,16 @@
 
 -(void)create_webView{
     
-//    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
-//    [self.view addSubview:webView];
+
     _showWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 15, VIEW_WIDTH, VIEW_HEIGHT-45)];
-    //_showWebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT/2)];
-//    _showWebView.scalesPageToFit = YES;                                  //自动对页面进行缩放以适应屏幕
-//    _showWebView.delegate = self;
+    _showWebView.UIDelegate = self;
+    _showWebView.navigationDelegate = self;
     _showWebView.scrollView.bounces = NO;
     [self.view addSubview:_showWebView];
+    _progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 65, CGRectGetWidth(self.view.frame),2)];
+    [self.view addSubview:_progressView];
+    
+    [_showWebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld context:nil];
     
     
     
@@ -122,14 +123,23 @@
 
 
 #pragma mark - uiwebViewDelegate
--(void)webViewDidStartLoad:(UIWebView *)webView{
-    [self createLoadView];
-}
-
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-//    [loadingLoopView endAnimation];
-    [MBProgressHUD hideHUD];
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    NSLog(@" %s,change = %@",__FUNCTION__,change);
+    if ([keyPath isEqual: @"estimatedProgress"] && object == _showWebView) {
+        [self.progressView setAlpha:1.0f];
+        [self.progressView setProgress:_showWebView.estimatedProgress animated:YES];
+        if(_showWebView.estimatedProgress >= 1.0f)
+        {
+            [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                [self.progressView setAlpha:0.0f];
+            } completion:^(BOOL finished) {
+                [self.progressView setProgress:0.0f animated:NO];
+            }];
+        }
+    }
+    else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
 
@@ -140,6 +150,12 @@
 -(void)backclick:(UIButton*)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+- (void)dealloc {
+    [_showWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+    
+    // if you have set either WKWebView delegate also set these to nil here
+    [_showWebView setNavigationDelegate:nil];
+    [_showWebView setUIDelegate:nil];
+}
 
 @end
