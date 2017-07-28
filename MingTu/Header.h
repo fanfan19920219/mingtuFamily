@@ -24,6 +24,7 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 #import <MessageUI/MessageUI.h>
 #import <ZFPlayer.h>
 #import <Masonry.h>
+#import <IQKeyboardManager.h>
 
 
 #import "MainViewController.h"
@@ -66,7 +67,7 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 #import "MBProgressHUD+JDragon.h"
 #import "MBProgressHUD.h"
 #import "UMessage.h"
-#import <IQKeyboardManager.h>
+#import "LDProgressView.h"
 
 //其他类
 #import "AVPlayerTableViewDelegateAndDataSource.h"

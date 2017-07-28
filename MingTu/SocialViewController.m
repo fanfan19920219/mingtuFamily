@@ -8,6 +8,7 @@
 
 #import "SocialViewController.h"
 #import "SocialTableViewCell.h"
+#import "UIViewController+tabbar.h"
 
 @interface SocialViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -23,20 +24,39 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initMethod];
+    UIView *tabbarView = [self tabbarViewWithBackColor:RGBA(44, 44, 44, 0.5)];
+    [self.view addSubview:tabbarView];
 }
+
+
 
 -(void)initMethod{
     _tableViewDataArray = [[NSMutableArray alloc]init];
     NSDictionary *dic1 = @{@"title":@"QQ飞车吧",@"imgename":@"Logo1.png",@"url":SPEEDBA};
     NSDictionary *dic2 = @{@"title":@"QQ飞车官方论坛",@"imgename":@"Logo2.png",@"url":SPEEDLUNTAN};
+    NSDictionary *dic3 = @{@"title":@"晓枫寒叶吧",@"imgename":@"Logo3.png",@"url":SPEED_XFHY};
+    NSDictionary *dic4 = @{@"title":@"飞车美衣吧",@"imgename":@"Logo4.png",@"url":SPEED_MEIYI};
+    NSDictionary *dic5 = @{@"title":@"飞车交易吧",@"imgename":@"Logo5.png",@"url":SPEED_TRANSACTION};
+    NSDictionary *dic6 = @{@"title":@"飞车卖号吧",@"imgename":@"Logo6.png",@"url":SPEED_SALE};
+
     [_tableViewDataArray addObject:dic1];
     [_tableViewDataArray addObject:dic2];
+    [_tableViewDataArray addObject:dic3];
+    [_tableViewDataArray addObject:dic4];
+    [_tableViewDataArray addObject:dic5];
+    [_tableViewDataArray addObject:dic6];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _showTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, VIEW_WIDTH, VIEW_HEIGHT - 64 - 44) style:UITableViewStylePlain];
+    _showTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT - 44) style:UITableViewStylePlain];
     _showTableView.delegate = self;
     _showTableView.dataSource = self;
     _showTableView.rowHeight = 60;
     _showTableView.tableFooterView = [[UIView alloc]init];
+    _showTableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 64)];
+    UIImageView *backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"贴吧背景图"]];
+    backImageView.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT);
+    backImageView.userInteractionEnabled = YES;
+    backImageView.contentMode = UIViewContentModeScaleAspectFill;
+    _showTableView.backgroundView = backImageView;
     [self.view addSubview:_showTableView];
 }
 
@@ -58,6 +78,7 @@
     cell.socialDetailLabel.text = @"";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.backgroundColor = RGBA(255, 255, 255, 0.4);
     return cell;
     
 }
@@ -70,6 +91,24 @@
         
     }];
     
+}
+//关闭返回手势
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    // 禁用返回手势
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+}
+//开启返回手势
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    // 开启返回手势
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
 }
 
 

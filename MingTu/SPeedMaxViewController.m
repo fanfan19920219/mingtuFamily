@@ -21,12 +21,6 @@
 @implementation SPeedMaxViewController
 
 
--(void)viewWillAppear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = YES;
-}
--(void)viewWillDisappear:(BOOL)animated{
-    self.navigationController.navigationBarHidden = NO;
-}
 
 
 
@@ -57,14 +51,14 @@
         titleLabel.center = CGPointMake(VIEW_WIDTH/2, 40);
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.font = [UIFont systemFontOfSize:16 weight:0.1];
-        titleLabel.textColor = RGBA(44, 44, 44, 1);
+        titleLabel.textColor = RGBA(255, 255, 255, 1);
         titleLabel.text = self.title;
         
         UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
         backButton.frame = CGRectMake(20, 30, 40, 20);
         [backButton setTitle:@"上一页" forState:UIControlStateNormal];
         backButton.titleLabel.font = [UIFont systemFontOfSize:12 weight:.1];
-        [backButton setTitleColor:RGBA(44, 44, 44, 1) forState:UIControlStateNormal];
+        [backButton setTitleColor:RGBA(255, 255, 255, 1) forState:UIControlStateNormal];
         [backButton addTarget:self action:@selector(backMethod) forControlEvents:UIControlEventTouchUpInside];
         [_selfTabbar addSubview:backButton];
         [_selfTabbar addSubview:titleLabel];
@@ -78,6 +72,13 @@
 -(void)backMethod{
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
+}
+
 
 
 -(UITableView*)tableView{

@@ -15,9 +15,11 @@
     UIButton *_gobackButton; //返回按钮
     
     UIView *_downView;
+    CAGradientLayer *_gradient;
 //    SYLoadingLoopView *loadingLoopView;
 }
 @property (nonatomic , strong)UIProgressView *progressView;
+@property (nonatomic , strong)LDProgressView *LDProgressView;
 @end
 
 @implementation showWebViewController
@@ -48,8 +50,16 @@
     _showWebView.navigationDelegate = self;
     _showWebView.scrollView.bounces = NO;
     [self.view addSubview:_showWebView];
-    _progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 65, CGRectGetWidth(self.view.frame),2)];
-    [self.view addSubview:_progressView];
+    
+    // flat, green, animated
+    _LDProgressView = [[LDProgressView alloc] initWithFrame:CGRectMake(VIEW_WIDTH/2 - 100, VIEW_HEIGHT/2 - 20, 200, 22)];
+    _LDProgressView.color = RGBA(35, 131, 221, 1);
+    _LDProgressView.flat = @YES;
+    
+    _LDProgressView.animate = @YES;
+    [self.view addSubview:_LDProgressView];
+    
+    
     
     [_showWebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew| NSKeyValueObservingOptionOld context:nil];
     
@@ -80,19 +90,19 @@
     //创建downView
     _downView = [[UIView alloc]initWithFrame:CGRectMake(0, VIEW_HEIGHT -40, VIEW_WIDTH, 40)];
     _downView.backgroundColor = [UIColor clearColor];
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame =CGRectMake(0, 0, VIEW_WIDTH, 64);
+    _gradient = [CAGradientLayer layer];
+    _gradient.frame =CGRectMake(0, 0, VIEW_WIDTH, 64);
     //            [selfView.navigationController.view.layer addSublayer:gradient];
     // 颜色分配
-    gradient.colors = @[(__bridge id)[UIColor clearColor].CGColor,(__bridge id)[UIColor blackColor].CGColor];
+    _gradient.colors = @[(__bridge id)[UIColor clearColor].CGColor,(__bridge id)[UIColor blackColor].CGColor];
     // 颜色分割线
-    gradient.locations  = @[@(0),@(1)];
+    _gradient.locations  = @[@(0),@(1)];
     // 起始点
-    gradient.startPoint = CGPointMake(0, 0.0);
+    _gradient.startPoint = CGPointMake(0, 0.0);
     // 结束点
-    gradient.endPoint   = CGPointMake(0, 0.4);
+    _gradient.endPoint   = CGPointMake(0, 0.4);
     
-    [_downView.layer addSublayer:gradient];
+    [_downView.layer addSublayer:_gradient];
     [self.view addSubview:_downView];
     
     //创建返回按钮
@@ -124,16 +134,26 @@
 
 #pragma mark - uiwebViewDelegate
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    NSLog(@" %s,change = %@",__FUNCTION__,change);
+//    NSLog(@" %s,change = %@",__FUNCTION__,change);
+//    
+//    NSLog(@"dic ----- %.2f",_showWebView.estimatedProgress);
+    
     if ([keyPath isEqual: @"estimatedProgress"] && object == _showWebView) {
-        [self.progressView setAlpha:1.0f];
-        [self.progressView setProgress:_showWebView.estimatedProgress animated:YES];
+        
+        _LDProgressView.alpha = 0.8;
+//        [self.progressView setAlpha:1.0f];
+        _LDProgressView.progress =_showWebView.estimatedProgress;
+//        [self.progressView setProgress:_showWebView.estimatedProgress animated:YES];
         if(_showWebView.estimatedProgress >= 1.0f)
         {
             [UIView animateWithDuration:0.3 delay:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                [self.progressView setAlpha:0.0f];
+//                [self.progressView setAlpha:0.0f];
+                _LDProgressView.alpha = 0;
+                _gradient.colors = @[(__bridge id)[self colorOfPoint:CGPointMake(VIEW_WIDTH/2, 20)].CGColor,(__bridge id)[UIColor blackColor].CGColor];
+                
             } completion:^(BOOL finished) {
-                [self.progressView setProgress:0.0f animated:NO];
+//                [self.progressView setProgress:0.0f animated:NO];
+                _LDProgressView.progress = 0 ;
             }];
         }
     }
@@ -150,6 +170,29 @@
 -(void)backclick:(UIButton*)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+//吸取颜色的办法
+- (UIColor *) colorOfPoint:(CGPoint)point
+{
+    unsigned char pixel[4] = {0};
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(pixel, 1, 1, 8, 4, colorSpace, kCGImageAlphaPremultipliedLast);
+    
+    CGContextTranslateCTM(context, -point.x, -point.y);
+    
+    [_showWebView.layer renderInContext:context];
+    
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    
+    NSLog(@"pixel: %d %d %d %d", pixel[0], pixel[1], pixel[2], pixel[3]);
+    
+    UIColor *color = [UIColor colorWithRed:pixel[0]/255.0 green:pixel[1]/255.0 blue:pixel[2]/255.0 alpha:pixel[3]/255.0];
+    
+    return color;
+}
+
+
 - (void)dealloc {
     [_showWebView removeObserver:self forKeyPath:@"estimatedProgress"];
     

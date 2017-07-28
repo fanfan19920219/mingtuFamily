@@ -33,10 +33,14 @@
 #define SPEEDBA @"https://tieba.baidu.com/f?kw=qq飞车&pn=0&"
 //QQ飞车交易吧
 #define SPEED_TRANSACTION @"https://tieba.baidu.com/f?kw=飞车交易&pn=0&"
-
+//飞车抽奖交易吧
+#define SPEED_CHOUJIANGJIAOYI @"https://tieba.baidu.com/f?kw=飞车抽奖交易&pn=0&"
 //QQ飞车卖号吧
 #define SPEED_SALE @"https://tieba.baidu.com/f?kw=飞车卖号&pn=0&"
-
+//晓风寒夜
+#define SPEED_XFHY @"https://tieba.baidu.com/f?kw=晓枫寒叶&pn=0&"
+//飞车美衣
+#define SPEED_MEIYI @"https://tieba.baidu.com/f?kw=飞车美衣&pn=0&"
 //飞车论坛
 #define SPEEDLUNTAN @"http://speed.gamebbs.qq.com/forum.php?mod=forumdisplay&fid=30501"
 

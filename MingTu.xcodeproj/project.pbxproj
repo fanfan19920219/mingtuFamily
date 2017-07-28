@@ -10,6 +10,9 @@
 		2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */; };
 		29068CE71F2AC5DA00694BA2 /* businessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29068CE51F2AC5DA00694BA2 /* businessViewController.m */; };
 		29068CE81F2AC5DA00694BA2 /* businessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29068CE61F2AC5DA00694BA2 /* businessViewController.xib */; };
+		29068CEE1F2B10FE00694BA2 /* LDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29068CEB1F2B10FE00694BA2 /* LDProgressView.m */; };
+		29068CEF1F2B10FE00694BA2 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 29068CED1F2B10FE00694BA2 /* UIColor+RGBValues.m */; };
+		2915CE501F2B2BA2006A5D8D /* UIViewController+tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2915CE4F1F2B2BA2006A5D8D /* UIViewController+tabbar.m */; };
 		2923C0131F282A2D000A5FA0 /* AVPlayerViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2923C0121F282A2D000A5FA0 /* AVPlayerViewController1.m */; };
 		2923C0151F2837B0000A5FA0 /* zzh_gumu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2923C0141F2837B0000A5FA0 /* zzh_gumu.mp4 */; };
 		2923C01A1F283947000A5FA0 /* lh_qyc.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2923C0191F283947000A5FA0 /* lh_qyc.mp4 */; };
@@ -68,8 +71,6 @@
 		29F482A71F29E1CA00972B69 /* SocialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F482A51F29E1CA00972B69 /* SocialTableViewCell.m */; };
 		29F482A81F29E1CA00972B69 /* SocialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */; };
 		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
-		369E8B051F2A4DAF0099D78E /* businessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369E8B031F2A4DAF0099D78E /* businessViewController.m */; };
-		369E8B061F2A4DAF0099D78E /* businessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369E8B041F2A4DAF0099D78E /* businessViewController.xib */; };
 		4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965385CF518DAB551107FA8F /* libPods-MingTu.a */; };
 		BD36EA111E31F9870002D3CF /* renyeping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA101E31F9870002D3CF /* renyeping.jpg */; };
 		BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */ = {isa = PBXBuildFile; fileRef = BD36EA121E31FBB70002D3CF /* renyeping1.png */; };
@@ -130,6 +131,12 @@
 		29068CE41F2AC5DA00694BA2 /* businessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessViewController.h; sourceTree = "<group>"; };
 		29068CE51F2AC5DA00694BA2 /* businessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessViewController.m; sourceTree = "<group>"; };
 		29068CE61F2AC5DA00694BA2 /* businessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessViewController.xib; sourceTree = "<group>"; };
+		29068CEA1F2B10FE00694BA2 /* LDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDProgressView.h; sourceTree = "<group>"; };
+		29068CEB1F2B10FE00694BA2 /* LDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressView.m; sourceTree = "<group>"; };
+		29068CEC1F2B10FE00694BA2 /* UIColor+RGBValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGBValues.h"; sourceTree = "<group>"; };
+		29068CED1F2B10FE00694BA2 /* UIColor+RGBValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGBValues.m"; sourceTree = "<group>"; };
+		2915CE4E1F2B2BA2006A5D8D /* UIViewController+tabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+tabbar.h"; sourceTree = "<group>"; };
+		2915CE4F1F2B2BA2006A5D8D /* UIViewController+tabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+tabbar.m"; sourceTree = "<group>"; };
 		2923C0111F282A2D000A5FA0 /* AVPlayerViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController1.h; sourceTree = "<group>"; };
 		2923C0121F282A2D000A5FA0 /* AVPlayerViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController1.m; sourceTree = "<group>"; };
 		2923C0141F2837B0000A5FA0 /* zzh_gumu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zzh_gumu.mp4; sourceTree = "<group>"; };
@@ -228,9 +235,6 @@
 		29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialTableViewCell.xib; sourceTree = "<group>"; };
 		361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedSecondViewController.h; sourceTree = "<group>"; };
 		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
-		369E8B021F2A4DAF0099D78E /* businessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessViewController.h; sourceTree = "<group>"; };
-		369E8B031F2A4DAF0099D78E /* businessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessViewController.m; sourceTree = "<group>"; };
-		369E8B041F2A4DAF0099D78E /* businessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessViewController.xib; sourceTree = "<group>"; };
 		965385CF518DAB551107FA8F /* libPods-MingTu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MingTu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96D29A2D4C1FC7C7AE09FF3 /* Pods-MingTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.release.xcconfig"; sourceTree = "<group>"; };
 		AA6576C12FB1A5BBFC794BD0 /* Pods-MingTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MingTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MingTu/Pods-MingTu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,6 +359,17 @@
 			name = " 赛王";
 			sourceTree = "<group>";
 		};
+		29068CE91F2B10D800694BA2 /* LDProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				29068CEA1F2B10FE00694BA2 /* LDProgressView.h */,
+				29068CEB1F2B10FE00694BA2 /* LDProgressView.m */,
+				29068CEC1F2B10FE00694BA2 /* UIColor+RGBValues.h */,
+				29068CED1F2B10FE00694BA2 /* UIColor+RGBValues.m */,
+			);
+			name = LDProgressView;
+			sourceTree = "<group>";
+		};
 		2923C0161F283870000A5FA0 /* 本地视频 */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +458,7 @@
 		298A5FB81C8D28DF0056AF35 /* ToolView */ = {
 			isa = PBXGroup;
 			children = (
+				29068CE91F2B10D800694BA2 /* LDProgressView */,
 				29532DC21E5C0FA300CBB8E5 /* SYLoadingLoopView.h */,
 				29532DC31E5C0FA300CBB8E5 /* SYLoadingLoopView.m */,
 				298A5FBA1C8D2B420056AF35 /* showWebViewController.h */,
@@ -601,6 +617,8 @@
 				298A5FBD1C8D2BB50056AF35 /* URL.h */,
 				29B49F0D1C884E2000B53C5C /* UIView+Layout.h */,
 				29B49F0E1C884E2000B53C5C /* UIView+Layout.m */,
+				2915CE4E1F2B2BA2006A5D8D /* UIViewController+tabbar.h */,
+				2915CE4F1F2B2BA2006A5D8D /* UIViewController+tabbar.m */,
 			);
 			name = TOOL;
 			sourceTree = "<group>";
@@ -1030,6 +1048,7 @@
 				29F482A31F29DB0700972B69 /* SocialViewController.m in Sources */,
 				29068CE71F2AC5DA00694BA2 /* businessViewController.m in Sources */,
 				2904614F1F0108AC009A5C86 /* SPeedMaxViewController.m in Sources */,
+				2915CE501F2B2BA2006A5D8D /* UIViewController+tabbar.m in Sources */,
 				BD832D2D1D3F4D8C00E8B7E5 /* exchangeViewController.m in Sources */,
 				2939C5FD1E55853200187BE3 /* SmileViewController.m in Sources */,
 				BD8CC95F1E349022009BF861 /* AFHTTPSessionManager.m in Sources */,
@@ -1039,6 +1058,7 @@
 				294ABDAD1E690CF1003AEF0D /* showBianViewController.m in Sources */,
 				29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */,
 				29B49EF31C881F1C00B53C5C /* MainViewController.m in Sources */,
+				29068CEF1F2B10FE00694BA2 /* UIColor+RGBValues.m in Sources */,
 				2923C0251F2883B1000A5FA0 /* AVPlayerTableViewDelegateAndDataSource.m in Sources */,
 				BD6770FE1E49742700907B6A /* addFriendViewController.m in Sources */,
 				29B49F0F1C884E2000B53C5C /* UIView+Layout.m in Sources */,
@@ -1057,6 +1077,7 @@
 				298A5FC41C8D306E0056AF35 /* videoViewController.m in Sources */,
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
 				297295A41E68348000624F69 /* BianBianViewController.m in Sources */,
+				29068CEE1F2B10FE00694BA2 /* LDProgressView.m in Sources */,
 				BD6771011E49A01900907B6A /* personModel.m in Sources */,
 				361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */,
 				BD6770F81E49712A00907B6A /* ZZH_LoadingProject.m in Sources */,

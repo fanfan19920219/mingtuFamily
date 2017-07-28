@@ -62,26 +62,53 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-N1-ENb">
-                    <rect key="frame" x="26" y="473" width="77" height="30"/>
+                    <rect key="frame" x="26" y="473" width="108" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="wnn-8T-oP9"/>
-                        <constraint firstAttribute="width" constant="77" id="zcv-ex-Fpa"/>
+                        <constraint firstAttribute="width" constant="108" id="zcv-ex-Fpa"/>
                     </constraints>
-                    <state key="normal" title="飞车交易吧"/>
+                    <state key="normal" title="飞车交易吧 &gt;&gt;"/>
                     <connections>
                         <action selector="gotoFeiCheJiaoYi:" destination="-1" eventType="touchUpInside" id="yUy-P7-Nvn"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo0-NI-7Vh">
-                    <rect key="frame" x="26" y="504" width="77" height="30"/>
+                    <rect key="frame" x="26" y="504" width="108" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="77" id="6n2-vB-rgK"/>
+                        <constraint firstAttribute="width" constant="108" id="6n2-vB-rgK"/>
                         <constraint firstAttribute="height" constant="30" id="woN-Kd-CTE"/>
                     </constraints>
-                    <state key="normal" title="飞车卖号吧"/>
+                    <state key="normal" title="飞车卖号吧&gt;&gt;"/>
                     <connections>
                         <action selector="gotoFeiCheMaiHao:" destination="-1" eventType="touchUpInside" id="hiz-nQ-fpu"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-Zw-Sx4">
+                    <rect key="frame" x="26" y="535" width="143" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4sO-jk-gng"/>
+                        <constraint firstAttribute="width" constant="143" id="8lF-uS-ocb"/>
+                    </constraints>
+                    <state key="normal" title="飞车抽奖交易吧 &gt;&gt;"/>
+                    <connections>
+                        <action selector="choujiangjiaoyi:" destination="-1" eventType="touchUpInside" id="lNK-6N-Fja"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-bu-1ht">
+                    <rect key="frame" x="188" y="473" width="122" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="6h6-aA-7sF"/>
+                        <constraint firstAttribute="height" constant="30" id="YIZ-9y-5V4"/>
+                    </constraints>
+                    <state key="normal" title="5173交易平台  &gt;&gt;"/>
+                    <connections>
+                        <action selector="go5173:" destination="-1" eventType="touchUpInside" id="Icm-sR-JCA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-px-ZYO">
+                    <rect key="frame" x="248" y="407" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,12 +117,16 @@
                 <constraint firstAttribute="trailing" secondItem="VVn-zc-ZYi" secondAttribute="trailing" id="59d-Ma-4BA"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7NX-iw-Iob"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8d4-T0-2Cf"/>
+                <constraint firstItem="Lex-bu-1ht" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="8ln-jh-cA6"/>
+                <constraint firstItem="Lex-bu-1ht" firstAttribute="leading" secondItem="uD0-N1-ENb" secondAttribute="trailing" constant="54" id="9Bd-dg-GGQ"/>
                 <constraint firstItem="uD0-N1-ENb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="DwN-Hl-FMw"/>
                 <constraint firstItem="BUw-gg-IoI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="LX9-59-S4E"/>
                 <constraint firstItem="BUw-gg-IoI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="Rgc-xq-gxo"/>
                 <constraint firstItem="mo0-NI-7Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="T4h-bZ-PF9"/>
+                <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="VBa-n8-Efm"/>
                 <constraint firstItem="mo0-NI-7Vh" firstAttribute="top" secondItem="uD0-N1-ENb" secondAttribute="bottom" constant="1" id="aPB-IV-W4t"/>
                 <constraint firstAttribute="bottom" secondItem="VVn-zc-ZYi" secondAttribute="bottom" id="kGs-ML-YIW"/>
+                <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="top" secondItem="mo0-NI-7Vh" secondAttribute="bottom" constant="1" id="rVz-Xd-TGk"/>
                 <constraint firstItem="MCX-MP-oCD" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="8" id="tTL-E2-P5C"/>
                 <constraint firstItem="uD0-N1-ENb" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="wzl-bX-W7J"/>
             </constraints>
