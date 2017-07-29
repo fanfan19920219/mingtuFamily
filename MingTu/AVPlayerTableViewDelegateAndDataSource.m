@@ -69,7 +69,7 @@
     } @finally {
     }
     
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

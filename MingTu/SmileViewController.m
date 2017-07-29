@@ -44,7 +44,6 @@
     }else{
         indexNum = 0;
     }
-    self.view.backgroundColor = [UIColor whiteColor];
     
     
     
@@ -101,7 +100,7 @@
 
 
 -(void)create_Views{
-    _showTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 74, VIEW_WIDTH - 20, VIEW_HEIGHT - 74 - 44 -20 )];
+    _showTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 20, VIEW_WIDTH - 20, VIEW_HEIGHT  - 44 -60 )];
     _showTextView.backgroundColor = RGBA(250, 250, 250, 1);
     _showTextView.font = [UIFont systemFontOfSize:14 weight:0.001];
     _showTextView.textColor = RGBA(122, 122, 122, 1);
@@ -109,14 +108,14 @@
     [self.view addSubview:_showTextView];
     
     _nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _nextButton.frame = CGRectMake(10, VIEW_HEIGHT - 44 - 30, 100, 20);
+    _nextButton.frame = CGRectMake(10, _showTextView.frame.origin.y + _showTextView.frame.size.height -30, 100, 20);
     [_nextButton setTitle:@"上一个" forState:UIControlStateNormal];
     [_nextButton addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
     [_nextButton setTitleColor:RGBA(144, 144, 144, 1) forState:UIControlStateNormal];
     [self.view addSubview:_nextButton];
     
     _lastButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _lastButton.frame = CGRectMake(VIEW_WIDTH - 110, VIEW_HEIGHT - 44-  30, 100, 20);
+    _lastButton.frame = CGRectMake(VIEW_WIDTH - 110, _showTextView.frame.origin.y + _showTextView.frame.size.height -30, 100, 20);
     [_lastButton addTarget:self action:@selector(last) forControlEvents:UIControlEventTouchUpInside];
     [_lastButton setTitleColor:RGBA(144, 144, 144, 1) forState:UIControlStateNormal];
     [_lastButton setTitle:@"下一个" forState:UIControlStateNormal];
@@ -204,6 +203,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
+
 -(void)viewWillDisappear:(BOOL)animated{
     [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%ld",(long)indexNum] forKey:@"xiaohua_index"];
     [[NSUserDefaults standardUserDefaults]setObject:_page forKey:@"page"];

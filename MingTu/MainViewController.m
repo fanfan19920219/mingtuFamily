@@ -375,8 +375,12 @@
             
             break;
         case 4:{
-            SmileViewController *smileVC = [[SmileViewController alloc]init];
-            [self.navigationController pushViewController:smileVC animated:YES];
+            
+            TOOLViewController *toolVC = [[TOOLViewController alloc]init];
+            [self.navigationController pushViewController:toolVC animated:YES];
+            
+//            SmileViewController *smileVC = [[SmileViewController alloc]init];
+//            [self.navigationController pushViewController:smileVC animated:YES];
         }
             break;
         case 5:{

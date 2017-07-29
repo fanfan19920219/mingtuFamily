@@ -81,6 +81,8 @@
     [_chatContentTableView reloadData];
     NSIndexPath *indexpath = [NSIndexPath indexPathForRow:_chatContentArray.count-1 inSection:0];
     [_chatContentTableView scrollToRowAtIndexPath:indexpath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.view endEditing:YES];
+    _downViewDown.contentText.text = @"";
 }
 
 
