@@ -21,7 +21,7 @@
     titleLabel.text = self.title;
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(20, 30, 40, 20);
+    backButton.frame = CGRectMake(20, 30, 50, 30);
     [backButton setTitle:@"上一页" forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont systemFontOfSize:12 weight:.1];
     [backButton setTitleColor:RGBA(255, 255, 255, 1) forState:UIControlStateNormal];

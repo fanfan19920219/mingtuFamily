@@ -13,6 +13,7 @@
 #define HEADERBUTTON_SIZE 100.f
 #define HEADERVIEW_HEIGHT 240.f
 #define TOPBUTTONSIZE 33.f
+#define TOPBUTTONFONT [UIFont systemFontOfSize:13 weight:0.001]
 
 
 @interface addFriendViewController (){
@@ -68,12 +69,15 @@
 
 -(void)createView{
     _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, HEADERVIEW_HEIGHT)];
-    _headerView.backgroundColor = MainColor;
+    _headerView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_headerView];
     
     _headerButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _headerButton.frame = CGRectMake((VIEW_WIDTH/2) - HEADERBUTTON_SIZE/2, 74, HEADERBUTTON_SIZE, HEADERBUTTON_SIZE);
     [_headerButton setImage:[UIImage imageNamed:@"wx_header"] forState:UIControlStateNormal];
+//    [_headerButton setTitle:@"QQ" forState:UIControlStateNormal];
+//    [_headerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal]
+    
     _headerButton.layer.cornerRadius = HEADERBUTTON_SIZE/2;
     [_headerButton.imageView setContentMode:UIViewContentModeScaleAspectFill];
     [self setSlide:_headerButton];
@@ -98,23 +102,40 @@
         _topMessageButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _topMessageButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 120, TOPBUTTONSIZE, TOPBUTTONSIZE);
         _topMessageButton.tag = 0;
+        _topMessageButton.contentMode = UIViewContentModeRight;
+        _topMessageButton.titleLabel.font = TOPBUTTONFONT;
         [_topMessageButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [_topMessageButton setBackgroundImage:[UIImage imageNamed:@"shopping_folder_chat_pres.png"] forState:UIControlStateNormal];
+//        [_topMessageButton setBackgroundImage:[UIImage imageNamed:@"shopping_folder_chat_pres.png"] forState:UIControlStateNormal];
+        [_topMessageButton setTitle:@"QQ >" forState:UIControlStateNormal];
+        [_topMessageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_headerView addSubview:_topMessageButton];
         
+        
+        
+        ///
         _topYueButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _topYueButton.tag=1;
         _topYueButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 80, TOPBUTTONSIZE, TOPBUTTONSIZE);
-        [_topYueButton setBackgroundImage:[UIImage imageNamed:@"header_icon_group.png"] forState:UIControlStateNormal];
+//        [_topYueButton setBackgroundImage:[UIImage imageNamed:@"header_icon_group.png"] forState:UIControlStateNormal];
+        [_topYueButton setTitle:@"MSG >" forState:UIControlStateNormal];
+        [_topYueButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_topYueButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        _topYueButton.alpha = 0.5;
+        _topYueButton.contentMode = UIViewContentModeRight;
+        _topYueButton.titleLabel.font = TOPBUTTONFONT;
+        
         [_headerView addSubview:_topYueButton];
         
+        
+        //////
         _topPhoneButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _topPhoneButton.tag=2;
-        _topPhoneButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 40, TOPBUTTONSIZE, TOPBUTTONSIZE);
+        _topPhoneButton.frame = CGRectMake(VIEW_WIDTH - 70, _headerView.frame.size.height - 40, TOPBUTTONSIZE + 20, TOPBUTTONSIZE);
+        _topPhoneButton.contentMode = UIViewContentModeRight;
+        _topPhoneButton.titleLabel.font = TOPBUTTONFONT;
         [_topPhoneButton addTarget:self action:@selector(headerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [_topPhoneButton setBackgroundImage:[UIImage imageNamed:@"phone1.png"] forState:UIControlStateNormal];
+        [_topPhoneButton setTitle:@"Phone >" forState:UIControlStateNormal];
+        [_topPhoneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_headerView addSubview:_topPhoneButton];
     }
     

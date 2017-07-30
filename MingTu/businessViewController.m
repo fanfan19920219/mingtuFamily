@@ -22,6 +22,29 @@
     [self.view addSubview:tabbarView];
 }
 
+- (IBAction)makePay:(UIButton *)sender {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = @"19609272";
+    // for iOS 8
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:@"QQ19609272已经复制到剪贴板，请备注下单业务" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *paylAction = [UIAlertAction actionWithTitle:@"去加好友" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSString *urlString = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",@"19609272"];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString]];
+        
+    
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"我再看看" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) { }];
+    
+    
+    [alert addAction:paylAction];
+    [alert addAction:cancelAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 - (IBAction)gotoFeiCheJiaoYi:(UIButton *)sender {
     showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
     showViewcontroller.URL = SPEED_TRANSACTION;

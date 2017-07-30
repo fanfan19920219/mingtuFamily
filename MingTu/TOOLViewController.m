@@ -9,8 +9,10 @@
 #import "TOOLViewController.h"
 #import "UIViewController+tabbar.h"
 #import "SocialTableViewCell.h"
+#import <CoreLocation/CoreLocation.h>
+//CLLocationManager
 
-@interface TOOLViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface TOOLViewController ()<UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>{
     
     SmileViewController *smallVC;
 }
@@ -27,43 +29,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blackColor];
     // Do any additional setup after loading the view from its nib.
     self.automaticallyAdjustsScrollViewInsets = NO;
+    _tabbarView = [self tabbarViewWithBackColor:RGBA(44, 44, 44, 0.7)];
     [self initalMethod];
     
-    _tabbarView = [self tabbarViewWithBackColor:RGBA(44, 44, 44, 0.7)];
-    [self.view addSubview:_tabbarView];
     
+    _topView.frame = CGRectMake(0, 0, VIEW_WIDTH, 109);
+    _tabbarView.alpha = 0;
+    _topView.alpha = 1;
 }
 
 
 -(void)initalMethod{
     _tableViewDataArray = [[NSMutableArray alloc]init];
-    NSDictionary *dic1 = @{@"title":@"QQ飞车吧",@"imgename":@"Logo1.png",@"url":SPEEDBA};
-    NSDictionary *dic2 = @{@"title":@"QQ飞车官方论坛",@"imgename":@"Logo2.png",@"url":SPEEDLUNTAN};
-    [_tableViewDataArray addObject:dic1];
+    NSDictionary *dic2 = @{@"title":@"饿了么",@"imgename":@"Logo2.png",@"url":SPEEDLUNTAN};
     [_tableViewDataArray addObject:dic2];
     
-    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 60, VIEW_WIDTH, VIEW_HEIGHT - 44)];
+    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 60, VIEW_WIDTH, VIEW_HEIGHT)];
     [self.view addSubview:_backView];
     smallVC = [[SmileViewController alloc]init];
-    smallVC.view.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT );
+    
+    
+    
     [self addChildViewController:smallVC];
     
-    [_backView addSubview:smallVC.view];
+    
     
     _topView = [TOOLViewTopView TView];
-    _topView.frame = CGRectMake(0, -27, VIEW_WIDTH, 79);
+    _topView.frame = CGRectMake(0, -27, VIEW_WIDTH, 109);
     _topView.downButton.layer.cornerRadius = 4;
     _topView.downButton.clipsToBounds = YES;
     _topView.alpha = 0.3;
     [_topView.downButton addTarget:self action:@selector(controlTop:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:_topView];
+    
     
     [_topView.leftButton addTarget:self action:@selector(TopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [_topView.centerButton addTarget:self action:@selector(TopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        smallVC.view.frame = CGRectMake(0, 10, VIEW_WIDTH, VIEW_HEIGHT );
+        [_backView addSubview:smallVC.view];
+        [self.view addSubview:_topView];
+        [self.view addSubview:_tabbarView];
+    });
     
 }
 
@@ -72,13 +84,20 @@
         [_backView addSubview:smallVC.view];
     }else{
         
-        _selectView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, _backView.frame.size.width, _backView.frame.size.height) style:UITableViewStylePlain];
+        _selectView = [[UITableView alloc]initWithFrame:CGRectMake(0, 10, _backView.frame.size.width, _backView.frame.size.height) style:UITableViewStylePlain];
         _selectView.delegate = self;
         _selectView.dataSource = self;
         _selectView.tableFooterView = [[UIView alloc]init];
         _selectView.rowHeight = 60;
         [_backView addSubview:_selectView];
     }
+    [UIView animateWithDuration:0.5 animations:^{
+        _topView.frame = CGRectMake(0, -27, VIEW_WIDTH, 109);
+        _tabbarView.alpha = 1;
+        _topView.alpha = 0.3;
+        _topView.downButton.tag=0;
+    }];
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -87,19 +106,7 @@
         showViewcontroller.URL = E_L_M;
         //            [self.navigationController pushViewController:showViewcontroller animated:YES];
         [self presentViewController:showViewcontroller animated:YES completion:^{
-            [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"打开定位哦" andDelayDismissTime:1.5];
-            AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-            manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-            
-            //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-            [manager GET:TESTURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                
-            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"成功了");
-                responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-                NSLog(@"success --- obj --- %@",responseObject);
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            }];
+            [self judgmentLocal];
         }];
     }
     
@@ -108,6 +115,63 @@
     }
 }
 
+
+//判断定位的方法
+-(void)judgmentLocal{
+    //判断定位是否开启
+    if ([CLLocationManager locationServicesEnabled])
+    {
+        //  判断用户是否允许程序获取位置权限
+        if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedWhenInUse||[CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorizedAlways)
+        {
+            //用户允许获取位置权限
+            NSLog(@"用户允许权限定位");
+        }else
+        {
+            //用户拒绝开启用户权限
+            UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"打开[定位服务权限]来允许[XXX]确定您的位置" message:@"请在系统设置中开启定位服务(设置>隐私>定位服务>开启)" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
+            alertView.delegate=self;
+            alertView.tag=2;
+            [alertView show];
+        }
+    }
+    else
+    {
+        UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"打开[定位服务]来允许[XXX]确定您的位置" message:@"请在系统设置中开启定位服务(设置>隐私>定位服务>XXX>始终)" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去设置", nil];
+        alertView.delegate=self;
+        alertView.tag=1;
+        [alertView show];
+    }
+
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.000000) {
+                //跳转到定位权限页面
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if( [[UIApplication sharedApplication]canOpenURL:url] ) {
+                    [[UIApplication sharedApplication] openURL:url];
+                }
+            }else {
+                //跳转到定位开关界面
+                NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+                if( [[UIApplication sharedApplication]canOpenURL:url] ) {
+                    [[UIApplication sharedApplication] openURL:url];
+                }
+            }
+        }
+    } else if (alertView.tag == 2) {
+        if (buttonIndex == 1) {
+            //跳转到定位权限页面
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if( [[UIApplication sharedApplication]canOpenURL:url] ) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }
+    }
+}
 
 -(void)controlTop:(UIButton*)sender{
     

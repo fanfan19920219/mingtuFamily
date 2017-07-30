@@ -72,7 +72,6 @@
 		29F482A81F29E1CA00972B69 /* SocialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F482A61F29E1CA00972B69 /* SocialTableViewCell.xib */; };
 		361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */; };
 		36B1C2DC1F2CCE640073921B /* TOOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B1C2DA1F2CCE640073921B /* TOOLViewController.m */; };
-		36B1C2DD1F2CCE640073921B /* TOOLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B1C2DB1F2CCE640073921B /* TOOLViewController.xib */; };
 		36B1C2DF1F2CDC0D0073921B /* TOOLViewTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B1C2DE1F2CDC0D0073921B /* TOOLViewTopView.xib */; };
 		36B1C2E21F2CDC3C0073921B /* TOOLViewTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B1C2E11F2CDC3C0073921B /* TOOLViewTopView.m */; };
 		4BB81DDB054118F2A88B8DA7 /* libPods-MingTu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965385CF518DAB551107FA8F /* libPods-MingTu.a */; };
@@ -241,7 +240,6 @@
 		361C74431F07AFBE00D19B5A /* SpeedSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedSecondViewController.m; sourceTree = "<group>"; };
 		36B1C2D91F2CCE640073921B /* TOOLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOLViewController.h; sourceTree = "<group>"; };
 		36B1C2DA1F2CCE640073921B /* TOOLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOLViewController.m; sourceTree = "<group>"; };
-		36B1C2DB1F2CCE640073921B /* TOOLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOOLViewController.xib; sourceTree = "<group>"; };
 		36B1C2DE1F2CDC0D0073921B /* TOOLViewTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOOLViewTopView.xib; sourceTree = "<group>"; };
 		36B1C2E01F2CDC3C0073921B /* TOOLViewTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOLViewTopView.h; sourceTree = "<group>"; };
 		36B1C2E11F2CDC3C0073921B /* TOOLViewTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOLViewTopView.m; sourceTree = "<group>"; };
@@ -660,7 +658,6 @@
 			children = (
 				36B1C2D91F2CCE640073921B /* TOOLViewController.h */,
 				36B1C2DA1F2CCE640073921B /* TOOLViewController.m */,
-				36B1C2DB1F2CCE640073921B /* TOOLViewController.xib */,
 				36B1C2E01F2CDC3C0073921B /* TOOLViewTopView.h */,
 				36B1C2E11F2CDC3C0073921B /* TOOLViewTopView.m */,
 				36B1C2DE1F2CDC0D0073921B /* TOOLViewTopView.xib */,
@@ -964,7 +961,6 @@
 				29F4829D1F29C33B00972B69 /* ShowZone1ViewController.xib in Resources */,
 				29B49EC61C8804DE00B53C5C /* Main.storyboard in Resources */,
 				298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */,
-				36B1C2DD1F2CCE640073921B /* TOOLViewController.xib in Resources */,
 				29F482981F29995B00972B69 /* AVPlayerChatTableViewCell.xib in Resources */,
 				298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */,
 				2923C01F1F287528000A5FA0 /* AVplayerDownView.xib in Resources */,

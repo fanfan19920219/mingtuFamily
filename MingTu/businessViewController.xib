@@ -105,10 +105,16 @@
                         <action selector="go5173:" destination="-1" eventType="touchUpInside" id="Icm-sR-JCA"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-px-ZYO">
-                    <rect key="frame" x="248" y="407" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-px-ZYO">
+                    <rect key="frame" x="26" y="407" width="62" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="eNX-jU-xKZ"/>
+                        <constraint firstAttribute="height" constant="30" id="whR-8Y-eK0"/>
+                    </constraints>
+                    <state key="normal" title="我要下单"/>
+                    <connections>
+                        <action selector="makePay:" destination="-1" eventType="touchUpInside" id="JqG-yR-1jI"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,6 +122,7 @@
                 <constraint firstItem="MCX-MP-oCD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="20y-M5-79X"/>
                 <constraint firstAttribute="trailing" secondItem="VVn-zc-ZYi" secondAttribute="trailing" id="59d-Ma-4BA"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7NX-iw-Iob"/>
+                <constraint firstItem="JEr-px-ZYO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="407" id="7a4-hh-oiS"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8d4-T0-2Cf"/>
                 <constraint firstItem="Lex-bu-1ht" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="8ln-jh-cA6"/>
                 <constraint firstItem="Lex-bu-1ht" firstAttribute="leading" secondItem="uD0-N1-ENb" secondAttribute="trailing" constant="54" id="9Bd-dg-GGQ"/>
@@ -125,6 +132,7 @@
                 <constraint firstItem="mo0-NI-7Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="T4h-bZ-PF9"/>
                 <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="VBa-n8-Efm"/>
                 <constraint firstItem="mo0-NI-7Vh" firstAttribute="top" secondItem="uD0-N1-ENb" secondAttribute="bottom" constant="1" id="aPB-IV-W4t"/>
+                <constraint firstItem="JEr-px-ZYO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="b29-fO-PNR"/>
                 <constraint firstAttribute="bottom" secondItem="VVn-zc-ZYi" secondAttribute="bottom" id="kGs-ML-YIW"/>
                 <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="top" secondItem="mo0-NI-7Vh" secondAttribute="bottom" constant="1" id="rVz-Xd-TGk"/>
                 <constraint firstItem="MCX-MP-oCD" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="8" id="tTL-E2-P5C"/>

@@ -384,24 +384,8 @@
         }
             break;
         case 5:{
-            showWebViewController *showViewcontroller = [[showWebViewController alloc]init];
-            showViewcontroller.URL = E_L_M;
-            //            [self.navigationController pushViewController:showViewcontroller animated:YES];
-            [self presentViewController:showViewcontroller animated:YES completion:^{
-                [[ZZH_LoadingProject shareMBProgress]showAlkerInformation:@"打开定位哦" andDelayDismissTime:1.5];
-                AFHTTPSessionManager*manager=[AFHTTPSessionManager manager];
-                manager.responseSerializer=[AFHTTPResponseSerializer serializer];
-                
-                //以GET的形式提交，只需要将上面的请求地址给GET做参数就可以
-                [manager GET:TESTURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-                    
-                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    NSLog(@"成功了");
-                    responseObject = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
-                    NSLog(@"success --- obj --- %@",responseObject);
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                }];
-            }];
+            personInformationViewController *personVC = [[personInformationViewController alloc]init];
+            [self.navigationController pushViewController:personVC animated:YES];
         }
             break;
         case 6:

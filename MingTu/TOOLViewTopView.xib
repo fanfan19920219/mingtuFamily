@@ -40,7 +40,7 @@
                         <constraint firstAttribute="width" constant="72" id="XLW-3u-kxT"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="呼叫外卖"/>
+                    <state key="normal" title="我要外卖"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0Y-jP-uWE">
                     <rect key="frame" x="20" y="10" width="72" height="72"/>
@@ -52,14 +52,14 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="精选段子"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-dJ-e7s">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-dJ-e7s">
                     <rect key="frame" x="172" y="79" width="72" height="30"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="72" id="diD-Er-w4b"/>
                         <constraint firstAttribute="height" constant="30" id="eBf-wt-HH3"/>
                     </constraints>
-                    <state key="normal" title="展开栏目">
+                    <state key="normal" title="收起栏目">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
