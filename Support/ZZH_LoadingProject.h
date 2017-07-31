@@ -24,7 +24,9 @@
 
 -(void)showAlkerInformation:(NSString*)showString andDelayDismissTime:(CGFloat)time;
 
--(void)save:(NSString *)saveString forKey:(NSString*)key;
+-(BOOL)save:(NSString *)saveString forKey:(NSString*)key;
+
+-(id)getObjectForKey:(NSString*)keyString;
 
 -(void)removeObjectforKey:(NSString*)key;
 

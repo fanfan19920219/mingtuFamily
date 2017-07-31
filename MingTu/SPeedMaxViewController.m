@@ -9,9 +9,10 @@
 #import "SPeedMaxViewController.h"
 #import "SpeedSecondViewController.h"
 #import "Header.h"
+#import "SocialTableViewCell.h"
 
 @interface SPeedMaxViewController ()<UITableViewDelegate , UITableViewDataSource>
-@property (nonatomic , strong)NSMutableArray *titleArray;
+@property (nonatomic , strong)NSMutableArray *tableViewDataArray;
 @property (nonatomic , strong)UITableView *tableView;
 @property (nonatomic , strong)UIView *selfTabbar;
 
@@ -37,8 +38,22 @@
 -(void)initMethod{
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    _tableViewDataArray = [[NSMutableArray alloc]init];
+    /*
+     titleString = @"lh_qyc";
+     showName = @"沁园春剃刀1:22";
+     */
+    NSDictionary *dic1 = @{@"title":@"沁园春剃刀1:22",@"imgename":@"沁园春赛道.png",@"titleString":@"lh_qyc",@"detail":@"|收藏幸运|"};
+    /*
+     titleString = @"zzh_gumu";
+     showName = @"熔岩古墓雷诺1:25";
+     */
+    NSDictionary *dic2 = @{@"title":@"熔岩古墓雷诺1:25",@"imgename":@"熔岩古墓赛道.png",@"titleString":@"zzh_gumu",@"detail":@"命徒丶张蔚然"};
+    [_tableViewDataArray addObject:dic1];
+    [_tableViewDataArray addObject:dic2];
+
     
-    _titleArray = (NSMutableArray*)@[@"沁园春剃刀1:22",@"熔岩古墓1:25"];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -46,7 +61,7 @@
 -(UIView*)selfTabbar{
     if(!_selfTabbar){
         _selfTabbar = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 64)];
-        _selfTabbar.backgroundColor = RGBA(137, 137, 137, 0.7);
+        _selfTabbar.backgroundColor = RGBA(137, 137, 137, 0.5);
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
         titleLabel.center = CGPointMake(VIEW_WIDTH/2, 40);
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -55,7 +70,7 @@
         titleLabel.text = self.title;
         
         UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        backButton.frame = CGRectMake(20, 30, 40, 20);
+        backButton.frame = CGRectMake(20, 30, 50, 30);
         [backButton setTitle:@"上一页" forState:UIControlStateNormal];
         backButton.titleLabel.font = [UIFont systemFontOfSize:12 weight:.1];
         [backButton setTitleColor:RGBA(255, 255, 255, 1) forState:UIControlStateNormal];
@@ -87,9 +102,11 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc]init];
-        UIImageView *tableBackImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"赛道之王背景1.png"]];
+        UIImageView *tableBackImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"赛道之王背景图1.jpg"]];
         tableBackImageView.contentMode = UIViewContentModeScaleAspectFill;
         _tableView.backgroundView = tableBackImageView;
+        _tableView.rowHeight = 60;
+        _tableView.separatorColor = RGBA(44, 44, 44, 1);
         UIView *cleanView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 64)];
         cleanView.backgroundColor = [UIColor clearColor];
         _tableView.tableHeaderView = cleanView;
@@ -108,29 +125,10 @@
     
     NSString *titleString;
     NSString *showName;
-    switch (indexPath.row) {
-        case 0:{
-            titleString = @"lh_qyc";
-            showName = @"沁园春剃刀1:22";
-        }break;
-            
-        case 1:{
-            titleString = @"zzh_gumu";
-            showName = @"熔岩古墓雷诺1:25";
-        }break;
-
-        case 2:{
-            titleString = @"飞驰之王";
-        }break;
-
-            
-        case 3:{
-            titleString = @"极限之王";
-        }break;
-            
-        default:
-            break;
-    }
+    NSDictionary *dic = [_tableViewDataArray objectAtIndex:indexPath.row];
+    //@{@"title":@"沁园春剃刀1:22",@"imgename":@"Logo1.png",@"titleString":@"lh_qyc"};
+    titleString = [dic objectForKey:@"titleString"];
+    showName = [dic objectForKey:@"title"];
     
     AVPlayerViewController1 *avPlayer = [[AVPlayerViewController1 alloc]init];
     avPlayer.videoLocalName = titleString;
@@ -140,21 +138,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _titleArray.count;
+    return _tableViewDataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *cellString = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellString];
-    if(cell==nil){
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
+    static NSString *cellIndentifier = @"SocialTableViewCell";//这里的cellID就是cell的xib对应的名称
+    SocialTableViewCell *cell = (SocialTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIndentifier];
+    if(nil == cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIndentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
-    cell.textLabel.text = [_titleArray objectAtIndex:indexPath.row];
+    NSDictionary *dic = [_tableViewDataArray objectAtIndex:indexPath.row];
+    cell.socialTitleLabel.text = [dic objectForKey:@"title"];
+    cell.socialTitleLabel.textColor = RGBA(222, 222, 222, 1);
+    cell.showImageView.image = [UIImage imageNamed:[dic objectForKey:@"imgename"]];
+    cell.socialDetailLabel.text = [dic objectForKey:@"detail"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = RGBA(255, 255, 255, 0.6);
-    cell.textLabel.textColor = RGBA(183, 68, 117, 1);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.backgroundColor = RGBA(255, 255, 255, 0.3);
     return cell;
 }
 

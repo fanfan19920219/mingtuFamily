@@ -19,15 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="327" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-eu-DHP">
-                        <rect key="frame" x="8" y="5" width="49" height="49"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-eu-DHP">
+                        <rect key="frame" x="8" y="5" width="62" height="49"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="49" id="asH-kL-ngW"/>
-                            <constraint firstAttribute="width" constant="49" id="uqn-Wf-bbY"/>
+                            <constraint firstAttribute="width" constant="62" id="uqn-Wf-bbY"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKH-Jx-9Er">
-                        <rect key="frame" x="65" y="8" width="134" height="21"/>
+                        <rect key="frame" x="78" y="5" width="221" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="H62-dD-gBe"/>
                         </constraints>
@@ -36,23 +36,23 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-sv-91s">
-                        <rect key="frame" x="65" y="37" width="188" height="17"/>
+                        <rect key="frame" x="78" y="37" width="188" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="lxN-9l-53U"/>
                             <constraint firstAttribute="width" constant="188" id="oFS-FC-6wf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vKH-Jx-9Er" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FTc-OK-qIX"/>
+                    <constraint firstItem="vKH-Jx-9Er" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="FTc-OK-qIX"/>
                     <constraint firstItem="3rZ-eu-DHP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="JNJ-u1-XJj"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="vKH-Jx-9Er" secondAttribute="trailing" constant="120" id="KsO-af-d35"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vKH-Jx-9Er" secondAttribute="trailing" constant="20" id="KsO-af-d35"/>
                     <constraint firstItem="1Kc-sv-91s" firstAttribute="leading" secondItem="3rZ-eu-DHP" secondAttribute="trailing" constant="8" id="NdK-mf-TWP"/>
                     <constraint firstItem="vKH-Jx-9Er" firstAttribute="leading" secondItem="3rZ-eu-DHP" secondAttribute="trailing" constant="8" id="bFj-Cy-Sj5"/>
-                    <constraint firstItem="1Kc-sv-91s" firstAttribute="top" secondItem="vKH-Jx-9Er" secondAttribute="bottom" constant="8" id="sfM-5y-rMQ"/>
+                    <constraint firstItem="1Kc-sv-91s" firstAttribute="top" secondItem="vKH-Jx-9Er" secondAttribute="bottom" constant="11" id="sfM-5y-rMQ"/>
                     <constraint firstItem="3rZ-eu-DHP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wRj-4c-uSI"/>
                 </constraints>
             </tableViewCellContentView>

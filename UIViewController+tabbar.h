@@ -10,4 +10,5 @@
 
 @interface UIViewController (tabbar)
 -(UIView*)tabbarViewWithBackColor:(UIColor*)color;
+-(UIView*)tabbarViewWithImageView:(UIImage*)image;
 @end

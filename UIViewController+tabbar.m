@@ -32,6 +32,38 @@
     
     return _tabbarView;
 }
+
+-(UIView*)tabbarViewWithImageView:(UIImage*)image{
+    UIView* _tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
+    
+    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
+    imageview.image = [UIImage imageNamed:@"视频背景Top.png"];
+    imageview.contentMode = UIViewContentModeScaleToFill;
+    [_tabbarView addSubview:imageview];
+    
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
+    titleLabel.center = CGPointMake(VIEW_WIDTH/2, 40);
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:16 weight:0.1];
+    titleLabel.textColor = RGBA(255, 255, 255, 1);
+    titleLabel.text = self.title;
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    backButton.frame = CGRectMake(20, 30, 50, 30);
+    [backButton setTitle:@"上一页" forState:UIControlStateNormal];
+    backButton.titleLabel.font = [UIFont systemFontOfSize:12 weight:.1];
+    [backButton setTitleColor:RGBA(255, 255, 255, 1) forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backMethod) forControlEvents:UIControlEventTouchUpInside];
+    [_tabbarView addSubview:backButton];
+    [_tabbarView addSubview:titleLabel];
+    self.navigationController.navigationBarHidden = YES;
+    
+    return _tabbarView;
+}
+
+
+
 -(void)backMethod{
     self.navigationController.navigationBarHidden = NO;
     [self.navigationController popViewControllerAnimated:YES];

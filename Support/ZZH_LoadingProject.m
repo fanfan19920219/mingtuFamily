@@ -76,10 +76,20 @@ ZZH_LoadingProject *selfProject;
     });
 }
 
--(void)save:(NSString *)saveString forKey:(NSString*)key{
+-(BOOL)save:(NSString *)saveString forKey:(NSString*)key{
     [[NSUserDefaults standardUserDefaults]setObject:saveString forKey:key];
     if([[NSUserDefaults standardUserDefaults] synchronize]){
         NSLog(@"保存成功  --- token --- %@",saveString);
+    }
+    return [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(id)getObjectForKey:(NSString*)keyString{
+    @try {
+        id ReturnBoject = [[NSUserDefaults standardUserDefaults]objectForKey:keyString];
+        return ReturnBoject;
+    } @catch (NSException *exception) {
+    } @finally {
     }
 }
 

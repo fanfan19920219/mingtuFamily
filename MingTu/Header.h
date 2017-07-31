@@ -47,6 +47,7 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 #import "businessViewController.h"
 #import "TOOLViewTopView.h"
 #import "TOOLViewController.h"
+#import "EditPersonalViewController.h"
 
 
 //View类
@@ -86,6 +87,7 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 
 #define HEADER_IMAGENAME @"背景大图.png"
 #define HEAD_INDEXIMAGE @"背景大图1.png"
+#define NICKNAMEKEY @"selfNickName"
 
 
 
@@ -93,6 +95,9 @@ typedef void(^AVPlayerTableViewReturnBlock)(id obj);
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define MainColor RGBA(198, 31, 30, 1)
 #define TEXT_COLOR RGBA(152, 122, 122, 1)
+
+#define TABBARSHOW self.tabBarController.tabBar.hidden=NO
+#define TABBARHIDDEN self.tabBarController.tabBar.hidden=YES
 
 //判断版本型号
 #define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)

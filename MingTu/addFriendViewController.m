@@ -115,7 +115,7 @@
         ///
         _topYueButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _topYueButton.tag=1;
-        _topYueButton.frame = CGRectMake(VIEW_WIDTH - 50, _headerView.frame.size.height - 80, TOPBUTTONSIZE, TOPBUTTONSIZE);
+        _topYueButton.frame = CGRectMake(VIEW_WIDTH - 60, _headerView.frame.size.height - 80, TOPBUTTONSIZE + 10, TOPBUTTONSIZE);
 //        [_topYueButton setBackgroundImage:[UIImage imageNamed:@"header_icon_group.png"] forState:UIControlStateNormal];
         [_topYueButton setTitle:@"MSG >" forState:UIControlStateNormal];
         [_topYueButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -313,8 +313,6 @@
     //存
     NSLog(@"saveArray --- %@",_friendArray);
     
-        
-    
     person.name = [_nameButton titleForState:UIControlStateNormal];
     
     person.qq = [_qqButton titleForState:UIControlStateNormal];
@@ -360,9 +358,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBarHidden = YES;
+    TABBARHIDDEN;
 }
 -(void)viewWillDisappear:(BOOL)animated{
     self.navigationController.navigationBarHidden = NO;
+    TABBARSHOW;
 }
 
 /*

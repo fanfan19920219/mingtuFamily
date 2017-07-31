@@ -7,6 +7,7 @@
 //
 
 #import "ShowZone1ViewController.h"
+#import "UIViewController+tabbar.h"
 
 @interface ShowZone1ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIView *tabbarView = [self tabbarViewWithBackColor:RGBA(44, 44, 44, 0.5)];
+    [self.view addSubview:tabbarView];
 }
 
 - (IBAction)gotoSecondVideo:(UIButton *)sender {
@@ -40,9 +43,19 @@
     pasteboard.string = @"146769193";
     // for iOS 8
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
-                                                                   message:@"复制成功" preferredStyle:UIAlertControllerStyleAlert];
+                                                                   message:@"复制群号成功" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) { }];
     [alert addAction:cancelAction];
+    
+    UIAlertAction *paylAction = [UIAlertAction actionWithTitle:@"我要加群" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSString *urlString = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&version=1&src_type=web"];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString]];
+        
+        
+    }];
+    
+    
+    [alert addAction:paylAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
 

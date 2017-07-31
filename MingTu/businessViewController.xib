@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,10 +23,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BUw-gg-IoI">
-                    <rect key="frame" x="26" y="86" width="245" height="351"/>
+                    <rect key="frame" x="26" y="86" width="245" height="350"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="351" id="480-AW-AXn"/>
+                        <constraint firstAttribute="height" constant="350" id="480-AW-AXn"/>
                         <constraint firstAttribute="width" constant="245" id="ZIK-hd-7lN"/>
                     </constraints>
                     <string key="text">挂号业务：  
@@ -51,21 +51,11 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号交易信息提供" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCX-MP-oCD">
-                    <rect key="frame" x="26" y="445" width="168" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="5y7-g5-01u"/>
-                        <constraint firstAttribute="width" constant="168" id="zel-Br-7Mc"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD0-N1-ENb">
-                    <rect key="frame" x="26" y="473" width="108" height="30"/>
+                    <rect key="frame" x="37" y="460" width="108" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="wnn-8T-oP9"/>
-                        <constraint firstAttribute="width" constant="108" id="zcv-ex-Fpa"/>
+                        <constraint firstAttribute="height" constant="30" id="kjL-2i-Pm4"/>
+                        <constraint firstAttribute="width" constant="108" id="ugb-nh-NrW"/>
                     </constraints>
                     <state key="normal" title="飞车交易吧 &gt;&gt;"/>
                     <connections>
@@ -73,10 +63,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo0-NI-7Vh">
-                    <rect key="frame" x="26" y="504" width="108" height="30"/>
+                    <rect key="frame" x="37" y="491" width="108" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="108" id="6n2-vB-rgK"/>
-                        <constraint firstAttribute="height" constant="30" id="woN-Kd-CTE"/>
+                        <constraint firstAttribute="width" constant="108" id="7mm-h9-jCV"/>
+                        <constraint firstAttribute="height" constant="30" id="FSN-xI-hxT"/>
                     </constraints>
                     <state key="normal" title="飞车卖号吧&gt;&gt;"/>
                     <connections>
@@ -84,10 +74,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-Zw-Sx4">
-                    <rect key="frame" x="26" y="535" width="143" height="30"/>
+                    <rect key="frame" x="194" y="491" width="143" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="4sO-jk-gng"/>
-                        <constraint firstAttribute="width" constant="143" id="8lF-uS-ocb"/>
+                        <constraint firstAttribute="height" constant="30" id="K4j-bd-7g8"/>
+                        <constraint firstAttribute="width" constant="143" id="zug-XO-FUL"/>
                     </constraints>
                     <state key="normal" title="飞车抽奖交易吧 &gt;&gt;"/>
                     <connections>
@@ -95,20 +85,20 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-bu-1ht">
-                    <rect key="frame" x="188" y="473" width="122" height="30"/>
+                    <rect key="frame" x="204" y="460" width="122" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="122" id="6h6-aA-7sF"/>
-                        <constraint firstAttribute="height" constant="30" id="YIZ-9y-5V4"/>
+                        <constraint firstAttribute="height" constant="30" id="4wh-Ys-TAE"/>
+                        <constraint firstAttribute="width" constant="122" id="bJW-r6-elG"/>
                     </constraints>
                     <state key="normal" title="5173交易平台  &gt;&gt;"/>
                     <connections>
                         <action selector="go5173:" destination="-1" eventType="touchUpInside" id="Icm-sR-JCA"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-px-ZYO">
-                    <rect key="frame" x="26" y="407" width="62" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-px-ZYO">
+                    <rect key="frame" x="143" y="394" width="89" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="62" id="eNX-jU-xKZ"/>
+                        <constraint firstAttribute="width" constant="89" id="eNX-jU-xKZ"/>
                         <constraint firstAttribute="height" constant="30" id="whR-8Y-eK0"/>
                     </constraints>
                     <state key="normal" title="我要下单"/>
@@ -116,27 +106,37 @@
                         <action selector="makePay:" destination="-1" eventType="touchUpInside" id="JqG-yR-1jI"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号交易信息提供" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCX-MP-oCD">
+                    <rect key="frame" x="37" y="432" width="168" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="4kt-0B-gQK"/>
+                        <constraint firstAttribute="width" constant="168" id="pNZ-ZI-HvR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="MCX-MP-oCD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="20y-M5-79X"/>
                 <constraint firstAttribute="trailing" secondItem="VVn-zc-ZYi" secondAttribute="trailing" id="59d-Ma-4BA"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7NX-iw-Iob"/>
-                <constraint firstItem="JEr-px-ZYO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="407" id="7a4-hh-oiS"/>
+                <constraint firstItem="JEr-px-ZYO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="394" id="7a4-hh-oiS"/>
                 <constraint firstItem="VVn-zc-ZYi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8d4-T0-2Cf"/>
-                <constraint firstItem="Lex-bu-1ht" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="8ln-jh-cA6"/>
-                <constraint firstItem="Lex-bu-1ht" firstAttribute="leading" secondItem="uD0-N1-ENb" secondAttribute="trailing" constant="54" id="9Bd-dg-GGQ"/>
-                <constraint firstItem="uD0-N1-ENb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="DwN-Hl-FMw"/>
+                <constraint firstItem="uD0-N1-ENb" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="8xh-8D-MfX"/>
+                <constraint firstItem="Lex-bu-1ht" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="24" id="9Ne-47-J8F"/>
+                <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="55" id="DlW-n9-AdZ"/>
                 <constraint firstItem="BUw-gg-IoI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="LX9-59-S4E"/>
+                <constraint firstItem="mo0-NI-7Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="MTg-fa-Ljp"/>
+                <constraint firstItem="mo0-NI-7Vh" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="39" id="QKS-fQ-xjs"/>
                 <constraint firstItem="BUw-gg-IoI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="Rgc-xq-gxo"/>
-                <constraint firstItem="mo0-NI-7Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="T4h-bZ-PF9"/>
-                <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="VBa-n8-Efm"/>
-                <constraint firstItem="mo0-NI-7Vh" firstAttribute="top" secondItem="uD0-N1-ENb" secondAttribute="bottom" constant="1" id="aPB-IV-W4t"/>
-                <constraint firstItem="JEr-px-ZYO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="b29-fO-PNR"/>
+                <constraint firstItem="MCX-MP-oCD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="YYv-30-fcd"/>
+                <constraint firstAttribute="trailing" secondItem="Lex-bu-1ht" secondAttribute="trailing" constant="49" id="ZW6-Q5-CaA"/>
+                <constraint firstItem="JEr-px-ZYO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="143" id="b29-fO-PNR"/>
+                <constraint firstItem="uD0-N1-ENb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="37" id="fst-FM-SUe"/>
+                <constraint firstItem="MCX-MP-oCD" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="-4" id="gQG-Li-CP3"/>
+                <constraint firstAttribute="trailing" secondItem="hJ0-Zw-Sx4" secondAttribute="trailing" constant="38" id="h39-xu-HIR"/>
                 <constraint firstAttribute="bottom" secondItem="VVn-zc-ZYi" secondAttribute="bottom" id="kGs-ML-YIW"/>
-                <constraint firstItem="hJ0-Zw-Sx4" firstAttribute="top" secondItem="mo0-NI-7Vh" secondAttribute="bottom" constant="1" id="rVz-Xd-TGk"/>
-                <constraint firstItem="MCX-MP-oCD" firstAttribute="top" secondItem="BUw-gg-IoI" secondAttribute="bottom" constant="8" id="tTL-E2-P5C"/>
-                <constraint firstItem="uD0-N1-ENb" firstAttribute="top" secondItem="MCX-MP-oCD" secondAttribute="bottom" constant="8" id="wzl-bX-W7J"/>
             </constraints>
             <point key="canvasLocation" x="34.5" y="70.5"/>
         </view>
