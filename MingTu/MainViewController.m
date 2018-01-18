@@ -196,7 +196,7 @@
     //[_backGroundView addSubview:_LogoLabel];
     
     _footLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, _backGroundView.contentSize.height-40, VIEW_WIDTH, 20)];
-    _footLabel.text = @"create by : 张智华";
+    _footLabel.text = @"create by : 张蔚然";
     _footLabel.textAlignment = NSTextAlignmentCenter;
     _footLabel.font = [UIFont systemFontOfSize:13 weight:0.1];
     _footLabel.textColor = RGBA(166, 166, 166, 1);

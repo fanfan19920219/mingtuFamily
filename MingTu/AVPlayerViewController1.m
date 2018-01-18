@@ -9,6 +9,7 @@
 #import "AVPlayerViewController1.h"
 #import "ZFPlayerView.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "UIViewController+tabbar.h"
 
 #define PLAYER_VIEW_HEIGHT 200.f
 
@@ -23,6 +24,7 @@
 @property (nonatomic , strong)NSMutableArray *chatContentArray;
 @property (nonatomic , strong)AVplayerDownView *downViewDown;
 @property (nonatomic , strong)AVPlayerTableViewDelegateAndDataSource *delegateAndDataSource;
+@property (nonatomic , strong)NSString *selfNickName;
 
 @end
 
@@ -31,15 +33,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self initplayer];
+    self.view.backgroundColor = [UIColor blackColor];
     UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     playButton.frame = CGRectMake(100, 100, 40, 40);
     playButton.backgroundColor = [UIColor redColor];
     [playButton addTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playButton];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self initMPPlayer];
     [self create_Views];
+    if([[ZZH_LoadingProject shareMBProgress]getObjectForKey:NICKNAMEKEY]){
+        @try {
+            self.selfNickName =[[ZZH_LoadingProject shareMBProgress]getObjectForKey:NICKNAMEKEY];
+        } @catch (NSException *exception) {
+        } @finally {
+        }
+    }else{
+        self.selfNickName = @"匿名()";
+    }
     
+    
+    
+    UIView *tabbarView = [self tabbarViewWithImageView:nil];
+    [self.view addSubview:tabbarView];
 }
 
 -(void)create_Views{
@@ -60,6 +75,21 @@
     _chatContentTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 108 + PLAYER_VIEW_HEIGHT, VIEW_WIDTH, VIEW_HEIGHT - ( 108 + PLAYER_VIEW_HEIGHT) - 44) style:UITableViewStylePlain];
     _chatContentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _chatContentTableView.tableFooterView = [[UIView alloc]init];
+    _chatContentTableView.backgroundColor = [UIColor clearColor];
+    
+    //设置变色层
+    //变色view
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame =_chatContentTableView.frame;
+    //            [selfView.navigationController.view.layer addSublayer:gradient];
+    // 颜色分配
+    gradient.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)RGBA(69, 69, 70, 1).CGColor];
+    // 颜色分割线
+    gradient.locations  = @[@(0),@(1)];
+    // 起始点
+    gradient.startPoint = CGPointMake(0, 0.8);
+    // 结束点
+    gradient.endPoint   = CGPointMake(0, 1);
     
     
     _delegateAndDataSource = [[AVPlayerTableViewDelegateAndDataSource alloc]init_withdataArray:_chatContentArray withReturnBlock:^(id obj) {
@@ -67,6 +97,7 @@
     }];
     _chatContentTableView.dataSource =_delegateAndDataSource;
     _chatContentTableView.delegate = _delegateAndDataSource;
+    [self.view.layer addSublayer:gradient];
     [self.view addSubview:_chatContentTableView];
     
 }
@@ -74,7 +105,7 @@
 
 -(void)sendClick:(UIButton*)sender{
     AVPlayerContentModel *contentModel = [[AVPlayerContentModel alloc]init];
-    contentModel.userName = @"张蔚然";
+    contentModel.userName = self.selfNickName;
     contentModel.userContent = [NSString stringWithFormat:@"%@",_downViewDown.contentText.text];
     [_chatContentArray addObject:contentModel];
     NSLog(@"contenarray --- %@",_chatContentArray);

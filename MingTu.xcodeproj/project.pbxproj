@@ -49,6 +49,12 @@
 		298A5FCB1C8D744A0056AF35 /* main_cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 298A5FCA1C8D744A0056AF35 /* main_cell.m */; };
 		298A5FCD1C8D77480056AF35 /* 视频placeholer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 298A5FCC1C8D77480056AF35 /* 视频placeholer.jpg */; };
 		298A5FD11C8D80460056AF35 /* video_model.m in Sources */ = {isa = PBXBuildFile; fileRef = 298A5FD01C8D80460056AF35 /* video_model.m */; };
+		299DC59A1F2EF39400B5C7F2 /* EditPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299DC5981F2EF39400B5C7F2 /* EditPersonalViewController.m */; };
+		299DC59B1F2EF39400B5C7F2 /* EditPersonalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299DC5991F2EF39400B5C7F2 /* EditPersonalViewController.xib */; };
+		299DC5A01F2F08B000B5C7F2 /* 熔岩古墓赛道.png in Resources */ = {isa = PBXBuildFile; fileRef = 299DC59E1F2F08B000B5C7F2 /* 熔岩古墓赛道.png */; };
+		299DC5A11F2F08B000B5C7F2 /* 沁园春赛道.png in Resources */ = {isa = PBXBuildFile; fileRef = 299DC59F1F2F08B000B5C7F2 /* 沁园春赛道.png */; };
+		299DC5A31F2F098000B5C7F2 /* 赛道之王背景图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 299DC5A21F2F098000B5C7F2 /* 赛道之王背景图.jpg */; };
+		299DC5A51F2F0AFC00B5C7F2 /* 赛道之王背景图1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 299DC5A41F2F0AFC00B5C7F2 /* 赛道之王背景图1.jpg */; };
 		29A0038C1E5AEDB50007A4DD /* yue_scrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A0038B1E5AEDB50007A4DD /* yue_scrollView.m */; };
 		29B49EBD1C8804DE00B53C5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B49EBC1C8804DE00B53C5C /* main.m */; };
 		29B49EC01C8804DE00B53C5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B49EBF1C8804DE00B53C5C /* AppDelegate.m */; };
@@ -197,6 +203,13 @@
 		298A5FCC1C8D77480056AF35 /* 视频placeholer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "视频placeholer.jpg"; sourceTree = "<group>"; };
 		298A5FCF1C8D80460056AF35 /* video_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_model.h; sourceTree = "<group>"; };
 		298A5FD01C8D80460056AF35 /* video_model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = video_model.m; sourceTree = "<group>"; };
+		299DC5971F2EF39400B5C7F2 /* EditPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonalViewController.h; sourceTree = "<group>"; };
+		299DC5981F2EF39400B5C7F2 /* EditPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPersonalViewController.m; sourceTree = "<group>"; };
+		299DC5991F2EF39400B5C7F2 /* EditPersonalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPersonalViewController.xib; sourceTree = "<group>"; };
+		299DC59E1F2F08B000B5C7F2 /* 熔岩古墓赛道.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "熔岩古墓赛道.png"; sourceTree = "<group>"; };
+		299DC59F1F2F08B000B5C7F2 /* 沁园春赛道.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "沁园春赛道.png"; sourceTree = "<group>"; };
+		299DC5A21F2F098000B5C7F2 /* 赛道之王背景图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "赛道之王背景图.jpg"; sourceTree = "<group>"; };
+		299DC5A41F2F0AFC00B5C7F2 /* 赛道之王背景图1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "赛道之王背景图1.jpg"; sourceTree = "<group>"; };
 		29A0038A1E5AEDB50007A4DD /* yue_scrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yue_scrollView.h; sourceTree = "<group>"; };
 		29A0038B1E5AEDB50007A4DD /* yue_scrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yue_scrollView.m; sourceTree = "<group>"; };
 		29B49EB81C8804DE00B53C5C /* MingTu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MingTu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +359,11 @@
 		2904614B1F010872009A5C86 /*  赛王 */ = {
 			isa = PBXGroup;
 			children = (
+				299DC5A41F2F0AFC00B5C7F2 /* 赛道之王背景图1.jpg */,
+				299DC5A21F2F098000B5C7F2 /* 赛道之王背景图.jpg */,
+				299DC59E1F2F08B000B5C7F2 /* 熔岩古墓赛道.png */,
+				299DC59F1F2F08B000B5C7F2 /* 沁园春赛道.png */,
+				299DC59D1F2F08A700B5C7F2 /* 赛道图片 */,
 				2904614C1F0108AC009A5C86 /* SPeedMaxViewController.h */,
 				2904614D1F0108AC009A5C86 /* SPeedMaxViewController.m */,
 				361C74421F07AFBD00D19B5A /* SpeedSecondViewController.h */,
@@ -536,6 +554,13 @@
 				29CC5D791C8E7621003129DE /* player_model.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		299DC59D1F2F08A700B5C7F2 /* 赛道图片 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "赛道图片";
 			sourceTree = "<group>";
 		};
 		29B49EAF1C8804DE00B53C5C = {
@@ -732,6 +757,9 @@
 				BD6770F41E496A5C00907B6A /* personInformationViewController.m */,
 				BD6770FC1E49742700907B6A /* addFriendViewController.h */,
 				BD6770FD1E49742700907B6A /* addFriendViewController.m */,
+				299DC5971F2EF39400B5C7F2 /* EditPersonalViewController.h */,
+				299DC5981F2EF39400B5C7F2 /* EditPersonalViewController.m */,
+				299DC5991F2EF39400B5C7F2 /* EditPersonalViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -942,14 +970,18 @@
 				29B49EF71C883D1F00B53C5C /* 小橘子2.jpg in Resources */,
 				298A5FAF1C8D23B60056AF35 /* tabbar_meHL@3x.png in Resources */,
 				BD36EA151E31FD8C0002D3CF /* renyeping2.png in Resources */,
+				299DC5A51F2F0AFC00B5C7F2 /* 赛道之王背景图1.jpg in Resources */,
 				36B1C2DF1F2CDC0D0073921B /* TOOLViewTopView.xib in Resources */,
 				29B49ECB1C8804DE00B53C5C /* LaunchScreen.storyboard in Resources */,
 				2923C0151F2837B0000A5FA0 /* zzh_gumu.mp4 in Resources */,
 				29532DBE1E5BF4A500CBB8E5 /* 樱花瓣2.png in Resources */,
+				299DC59B1F2EF39400B5C7F2 /* EditPersonalViewController.xib in Resources */,
 				BD705CE71D4A174D008B9A2A /* 水冰月.jpeg in Resources */,
 				29B49EC81C8804DE00B53C5C /* Assets.xcassets in Resources */,
+				299DC5A01F2F08B000B5C7F2 /* 熔岩古墓赛道.png in Resources */,
 				29F482A81F29E1CA00972B69 /* SocialTableViewCell.xib in Resources */,
 				298A5FAC1C8D23B60056AF35 /* tabbar_me@2x.png in Resources */,
+				299DC5A11F2F08B000B5C7F2 /* 沁园春赛道.png in Resources */,
 				298A5FB41C8D23C20056AF35 /* tabbar_discover@2x.png in Resources */,
 				29532DBD1E5BF4A500CBB8E5 /* 樱花瓣1.png in Resources */,
 				BD36EA131E31FBB70002D3CF /* renyeping1.png in Resources */,
@@ -962,6 +994,7 @@
 				29B49EC61C8804DE00B53C5C /* Main.storyboard in Resources */,
 				298A5FAD1C8D23B60056AF35 /* tabbar_me@3x.png in Resources */,
 				29F482981F29995B00972B69 /* AVPlayerChatTableViewCell.xib in Resources */,
+				299DC5A31F2F098000B5C7F2 /* 赛道之王背景图.jpg in Resources */,
 				298A5FAE1C8D23B60056AF35 /* tabbar_meHL@2x.png in Resources */,
 				2923C01F1F287528000A5FA0 /* AVplayerDownView.xib in Resources */,
 			);
@@ -1094,6 +1127,7 @@
 				BD3715441E4B172100B885EE /* selectPersonViewController.m in Sources */,
 				297295A41E68348000624F69 /* BianBianViewController.m in Sources */,
 				29068CEE1F2B10FE00694BA2 /* LDProgressView.m in Sources */,
+				299DC59A1F2EF39400B5C7F2 /* EditPersonalViewController.m in Sources */,
 				BD6771011E49A01900907B6A /* personModel.m in Sources */,
 				361C74441F07AFBE00D19B5A /* SpeedSecondViewController.m in Sources */,
 				BD6770F81E49712A00907B6A /* ZZH_LoadingProject.m in Sources */,

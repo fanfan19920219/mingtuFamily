@@ -49,6 +49,10 @@
     _showWebView.UIDelegate = self;
     _showWebView.navigationDelegate = self;
     _showWebView.scrollView.bounces = NO;
+    UIImageView *backImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"贴吧背景图"]];
+    backImageView.frame = _showWebView.frame;
+    [self.view addSubview:backImageView];
+    _showWebView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_showWebView];
     
     // flat, green, animated

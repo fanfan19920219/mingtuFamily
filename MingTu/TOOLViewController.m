@@ -44,18 +44,11 @@
 
 -(void)initalMethod{
     _tableViewDataArray = [[NSMutableArray alloc]init];
-    NSDictionary *dic2 = @{@"title":@"饿了么",@"imgename":@"Logo2.png",@"url":SPEEDLUNTAN};
+    NSDictionary *dic2 = @{@"title":@"饿了么",@"imgename":@"饿了么.jpg",@"url":SPEEDLUNTAN};
     [_tableViewDataArray addObject:dic2];
     
     _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 60, VIEW_WIDTH, VIEW_HEIGHT)];
     [self.view addSubview:_backView];
-    smallVC = [[SmileViewController alloc]init];
-    
-    
-    
-    [self addChildViewController:smallVC];
-    
-    
     
     _topView = [TOOLViewTopView TView];
     _topView.frame = CGRectMake(0, -27, VIEW_WIDTH, 109);
@@ -71,7 +64,7 @@
     [_topView.centerButton addTarget:self action:@selector(TopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        smallVC.view.frame = CGRectMake(0, 10, VIEW_WIDTH, VIEW_HEIGHT );
+        
         [_backView addSubview:smallVC.view];
         [self.view addSubview:_topView];
         [self.view addSubview:_tabbarView];
@@ -81,14 +74,18 @@
 
 -(void)TopButtonClick:(UIButton*)sender{
     if(sender.tag==0){
+        smallVC = [[SmileViewController alloc]init];
+        smallVC.view.frame = CGRectMake(0, 10, VIEW_WIDTH, VIEW_HEIGHT );
+        [self addChildViewController:smallVC];
         [_backView addSubview:smallVC.view];
     }else{
         
-        _selectView = [[UITableView alloc]initWithFrame:CGRectMake(0, 10, _backView.frame.size.width, _backView.frame.size.height) style:UITableViewStylePlain];
+        _selectView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, _backView.frame.size.width, _backView.frame.size.height - 10) style:UITableViewStylePlain];
         _selectView.delegate = self;
         _selectView.dataSource = self;
         _selectView.tableFooterView = [[UIView alloc]init];
         _selectView.rowHeight = 60;
+        _selectView.backgroundColor = [UIColor blackColor];
         [_backView addSubview:_selectView];
     }
     [UIView animateWithDuration:0.5 animations:^{
@@ -211,11 +208,12 @@
     }
     NSDictionary *dic = [_tableViewDataArray objectAtIndex:indexPath.row];
     cell.socialTitleLabel.text = [dic objectForKey:@"title"];
+    cell.socialTitleLabel.textColor = [UIColor whiteColor];
     cell.showImageView.image = [UIImage imageNamed:[dic objectForKey:@"imgename"]];
     cell.socialDetailLabel.text = @"";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.backgroundColor = RGBA(255, 255, 255, 0.4);
+    cell.backgroundColor = RGBA(1, 1, 1, 0.4);
     return cell;
     
 }
